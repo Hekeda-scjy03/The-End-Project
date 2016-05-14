@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		961E53C661D7ACCFB600BA38 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 406DE60B564A7A8F61973FAE /* libPods.a */; };
+		D90B2F901CDB4E2C00B762CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F8F1CDB4E2C00B762CF /* main.m */; };
+		D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F921CDB4E2C00B762CF /* AppDelegate.m */; };
+		D90B2F961CDB4E2C00B762CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F951CDB4E2C00B762CF /* ViewController.m */; };
+		D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90B2F971CDB4E2C00B762CF /* Main.storyboard */; };
+		D90B2F9B1CDB4E2C00B762CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D90B2F9A1CDB4E2C00B762CF /* Assets.xcassets */; };
+		D90B2F9E1CDB4E2C00B762CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90B2F9C1CDB4E2C00B762CF /* LaunchScreen.storyboard */; };
+		D90B2FB01CDB4FAC00B762CF /* QFXCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FAF1CDB4FAC00B762CF /* QFXCustomViewController.m */; };
+		D90B2FBB1CDB51E400B762CF /* UIBarButtonItem+InitType.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FBA1CDB51E400B762CF /* UIBarButtonItem+InitType.m */; };
+		D90B2FC01CDC405100B762CF /* UIStoryboard+NavPopToVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FBF1CDC405100B762CF /* UIStoryboard+NavPopToVC.m */; };
+		D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FC61CDC430200B762CF /* UINavigationController+Pop.m */; };
+		D90B2FCA1CDC461900B762CF /* QFXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FC91CDC461900B762CF /* QFXTabBarController.m */; };
+		D90B2FCD1CDC463300B762CF /* QFXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FCC1CDC463300B762CF /* QFXTabBar.m */; };
+		D90B2FE31CDC76E400B762CF /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FE11CDC76E400B762CF /* MineViewController.m */; };
+		D90B2FE41CDC76E400B762CF /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FE21CDC76E400B762CF /* MineViewController.xib */; };
+		D90B2FE81CDC76FF00B762CF /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FE61CDC76FF00B762CF /* DynamicViewController.m */; };
+		D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FE71CDC76FF00B762CF /* DynamicViewController.xib */; };
+		D90B2FEE1CDC771900B762CF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FEC1CDC771900B762CF /* HomeViewController.m */; };
+		D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FED1CDC771900B762CF /* HomeViewController.xib */; };
+		D90B2FF31CDC772800B762CF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FF11CDC772800B762CF /* SearchViewController.m */; };
+		D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FF21CDC772800B762CF /* SearchViewController.xib */; };
+		D90B2FFA1CDC7AA200B762CF /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FF81CDC7AA200B762CF /* FindViewController.m */; };
+		D90B2FFB1CDC7AA200B762CF /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FF91CDC7AA200B762CF /* FindViewController.xib */; };
+		D93A42D51CE34D7E000B359B /* FindCubeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D93A42D31CE34D7E000B359B /* FindCubeCollectionViewCell.m */; };
+		D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93A42D41CE34D7E000B359B /* FindCubeCollectionViewCell.xib */; };
+		D93A42DB1CE35248000B359B /* FooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D93A42D91CE35248000B359B /* FooterCollectionReusableView.m */; };
+		D93A42DC1CE35248000B359B /* FooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93A42DA1CE35248000B359B /* FooterCollectionReusableView.xib */; };
+		D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */; };
+		D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */; };
+		D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BB31CE5FF8400953D54 /* ShareButton.m */; };
+		D9871BB61CE5FFA200953D54 /* ShareButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BB51CE5FFA200953D54 /* ShareButton.xib */; };
+		D9871BBB1CE6137600953D54 /* CubeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BB91CE6137600953D54 /* CubeDetailViewController.m */; };
+		D9871BBC1CE6137600953D54 /* CubeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BBA1CE6137600953D54 /* CubeDetailViewController.xib */; };
+		D9BCC9221CE20A080094CECB /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCC8B61CE20A080094CECB /* UIColor+HexColor.m */; };
+		D9CFBED21CE21F4B00DD775B /* QFXNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFBED11CE21F4B00DD775B /* QFXNavgationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25330BC64C74FC8276B42F12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		406DE60B564A7A8F61973FAE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8B2F5898E6E255BB1C5CAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuFaXian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90B2F8F1CDB4E2C00B762CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D90B2F911CDB4E2C00B762CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D90B2F921CDB4E2C00B762CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D90B2F941CDB4E2C00B762CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D90B2F951CDB4E2C00B762CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D90B2F981CDB4E2C00B762CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D90B2F9A1CDB4E2C00B762CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D90B2F9D1CDB4E2C00B762CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D90B2F9F1CDB4E2C00B762CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90B2FAE1CDB4FAC00B762CF /* QFXCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXCustomViewController.h; sourceTree = "<group>"; };
+		D90B2FAF1CDB4FAC00B762CF /* QFXCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXCustomViewController.m; sourceTree = "<group>"; };
+		D90B2FB91CDB51E400B762CF /* UIBarButtonItem+InitType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+InitType.h"; sourceTree = "<group>"; };
+		D90B2FBA1CDB51E400B762CF /* UIBarButtonItem+InitType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+InitType.m"; sourceTree = "<group>"; };
+		D90B2FBE1CDC405100B762CF /* UIStoryboard+NavPopToVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+NavPopToVC.h"; sourceTree = "<group>"; };
+		D90B2FBF1CDC405100B762CF /* UIStoryboard+NavPopToVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+NavPopToVC.m"; sourceTree = "<group>"; };
+		D90B2FC51CDC430200B762CF /* UINavigationController+Pop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Pop.h"; sourceTree = "<group>"; };
+		D90B2FC61CDC430200B762CF /* UINavigationController+Pop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Pop.m"; sourceTree = "<group>"; };
+		D90B2FC81CDC461900B762CF /* QFXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXTabBarController.h; sourceTree = "<group>"; };
+		D90B2FC91CDC461900B762CF /* QFXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXTabBarController.m; sourceTree = "<group>"; };
+		D90B2FCB1CDC463300B762CF /* QFXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXTabBar.h; sourceTree = "<group>"; };
+		D90B2FCC1CDC463300B762CF /* QFXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXTabBar.m; sourceTree = "<group>"; };
+		D90B2FE01CDC76E400B762CF /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		D90B2FE11CDC76E400B762CF /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		D90B2FE21CDC76E400B762CF /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		D90B2FE51CDC76FF00B762CF /* DynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
+		D90B2FE61CDC76FF00B762CF /* DynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
+		D90B2FE71CDC76FF00B762CF /* DynamicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicViewController.xib; sourceTree = "<group>"; };
+		D90B2FEB1CDC771900B762CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D90B2FEC1CDC771900B762CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D90B2FED1CDC771900B762CF /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D90B2FF01CDC772800B762CF /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		D90B2FF11CDC772800B762CF /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		D90B2FF21CDC772800B762CF /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		D90B2FF71CDC7AA200B762CF /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		D90B2FF81CDC7AA200B762CF /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		D90B2FF91CDC7AA200B762CF /* FindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
+		D93A42D21CE34D7E000B359B /* FindCubeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCubeCollectionViewCell.h; sourceTree = "<group>"; };
+		D93A42D31CE34D7E000B359B /* FindCubeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCubeCollectionViewCell.m; sourceTree = "<group>"; };
+		D93A42D41CE34D7E000B359B /* FindCubeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCubeCollectionViewCell.xib; sourceTree = "<group>"; };
+		D93A42D81CE35248000B359B /* FooterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterCollectionReusableView.h; sourceTree = "<group>"; };
+		D93A42D91CE35248000B359B /* FooterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterCollectionReusableView.m; sourceTree = "<group>"; };
+		D93A42DA1CE35248000B359B /* FooterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterCollectionReusableView.xib; sourceTree = "<group>"; };
+		D9871BAC1CE3608500953D54 /* FindCreaterListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCreaterListTableViewCell.h; sourceTree = "<group>"; };
+		D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCreaterListTableViewCell.m; sourceTree = "<group>"; };
+		D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCreaterListTableViewCell.xib; sourceTree = "<group>"; };
+		D9871BB21CE5FF8400953D54 /* ShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareButton.h; sourceTree = "<group>"; };
+		D9871BB31CE5FF8400953D54 /* ShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareButton.m; sourceTree = "<group>"; };
+		D9871BB51CE5FFA200953D54 /* ShareButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareButton.xib; sourceTree = "<group>"; };
+		D9871BB81CE6137600953D54 /* CubeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeDetailViewController.h; sourceTree = "<group>"; };
+		D9871BB91CE6137600953D54 /* CubeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeDetailViewController.m; sourceTree = "<group>"; };
+		D9871BBA1CE6137600953D54 /* CubeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CubeDetailViewController.xib; sourceTree = "<group>"; };
+		D9BCC8B51CE20A080094CECB /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		D9BCC8B61CE20A080094CECB /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		D9CFBED01CE21F4B00DD775B /* QFXNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXNavgationController.h; sourceTree = "<group>"; };
+		D9CFBED11CE21F4B00DD775B /* QFXNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXNavgationController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D90B2F881CDB4E2C00B762CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				961E53C661D7ACCFB600BA38 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		822A3F16FD835B35AE24FDB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				406DE60B564A7A8F61973FAE /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E1DF823A746BAD98C55E829 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F8B2F5898E6E255BB1C5CAA /* Pods.debug.xcconfig */,
+				25330BC64C74FC8276B42F12 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D90B2F821CDB4E2C00B762CF = {
+			isa = PBXGroup;
+			children = (
+				D9BCC7D11CE209E30094CECB /* Import */,
+				D90B2FF61CDC774300B762CF /* Cell */,
+				D90B2FF51CDC773B00B762CF /* Model */,
+				D90B2FBC1CDC3A8100B762CF /* ViewControllersss */,
+				D90B2FB81CDB51AD00B762CF /* 类别 */,
+				D90B2FAA1CDB4F1900B762CF /* WebRequest */,
+				D90B2FA91CDB4F0100B762CF /* 工具类 */,
+				D90B2FA81CDB4EE900B762CF /* 自定义TabBar */,
+				D90B2FA51CDB4E5100B762CF /* 自定义Nav和VC */,
+				D90B2F8D1CDB4E2C00B762CF /* QuFaXian */,
+				D90B2F8C1CDB4E2C00B762CF /* Products */,
+				8E1DF823A746BAD98C55E829 /* Pods */,
+				822A3F16FD835B35AE24FDB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D90B2F8C1CDB4E2C00B762CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D90B2F8D1CDB4E2C00B762CF /* QuFaXian */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2F911CDB4E2C00B762CF /* AppDelegate.h */,
+				D90B2F921CDB4E2C00B762CF /* AppDelegate.m */,
+				D90B2F941CDB4E2C00B762CF /* ViewController.h */,
+				D90B2F951CDB4E2C00B762CF /* ViewController.m */,
+				D90B2F971CDB4E2C00B762CF /* Main.storyboard */,
+				D90B2F9A1CDB4E2C00B762CF /* Assets.xcassets */,
+				D90B2F9C1CDB4E2C00B762CF /* LaunchScreen.storyboard */,
+				D90B2F9F1CDB4E2C00B762CF /* Info.plist */,
+				D90B2F8E1CDB4E2C00B762CF /* Supporting Files */,
+			);
+			path = QuFaXian;
+			sourceTree = "<group>";
+		};
+		D90B2F8E1CDB4E2C00B762CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2F8F1CDB4E2C00B762CF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D90B2FA51CDB4E5100B762CF /* 自定义Nav和VC */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FA71CDB4EB700B762CF /* VC */,
+				D90B2FA61CDB4EAC00B762CF /* Nav */,
+			);
+			name = "自定义Nav和VC";
+			path = "QuFaXian/自定义Nav和VC";
+			sourceTree = "<group>";
+		};
+		D90B2FA61CDB4EAC00B762CF /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				D9CFBED01CE21F4B00DD775B /* QFXNavgationController.h */,
+				D9CFBED11CE21F4B00DD775B /* QFXNavgationController.m */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		D90B2FA71CDB4EB700B762CF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FAE1CDB4FAC00B762CF /* QFXCustomViewController.h */,
+				D90B2FAF1CDB4FAC00B762CF /* QFXCustomViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D90B2FA81CDB4EE900B762CF /* 自定义TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FC81CDC461900B762CF /* QFXTabBarController.h */,
+				D90B2FC91CDC461900B762CF /* QFXTabBarController.m */,
+				D90B2FCB1CDC463300B762CF /* QFXTabBar.h */,
+				D90B2FCC1CDC463300B762CF /* QFXTabBar.m */,
+			);
+			name = "自定义TabBar";
+			path = "QuFaXian/自定义TabBar";
+			sourceTree = "<group>";
+		};
+		D90B2FA91CDB4F0100B762CF /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "工具类";
+			path = "QuFaXian/工具类";
+			sourceTree = "<group>";
+		};
+		D90B2FAA1CDB4F1900B762CF /* WebRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WebRequest;
+			path = QuFaXian/WebRequest;
+			sourceTree = "<group>";
+		};
+		D90B2FB81CDB51AD00B762CF /* 类别 */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FC31CDC42C500B762CF /* NavController */,
+				D90B2FC21CDC406300B762CF /* Storyboard */,
+				D90B2FC11CDC405700B762CF /* BarButtonItem */,
+			);
+			name = "类别";
+			path = QuFaXian/Category;
+			sourceTree = "<group>";
+		};
+		D90B2FBC1CDC3A8100B762CF /* ViewControllersss */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FDF1CDC730700B762CF /* 我的 */,
+				D90B2FDE1CDC72FF00B762CF /* 动态 */,
+				D90B2FDD1CDC72FA00B762CF /* 发现 */,
+				D90B2FDC1CDC72F200B762CF /* 首页 */,
+				D90B2FBD1CDC3AF900B762CF /* 搜索 */,
+			);
+			name = ViewControllersss;
+			path = QuFaXian/ViewControllersss;
+			sourceTree = "<group>";
+		};
+		D90B2FBD1CDC3AF900B762CF /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FF01CDC772800B762CF /* SearchViewController.h */,
+				D90B2FF11CDC772800B762CF /* SearchViewController.m */,
+				D90B2FF21CDC772800B762CF /* SearchViewController.xib */,
+			);
+			name = "搜索";
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D90B2FC11CDC405700B762CF /* BarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FB91CDB51E400B762CF /* UIBarButtonItem+InitType.h */,
+				D90B2FBA1CDB51E400B762CF /* UIBarButtonItem+InitType.m */,
+			);
+			name = BarButtonItem;
+			sourceTree = "<group>";
+		};
+		D90B2FC21CDC406300B762CF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FBE1CDC405100B762CF /* UIStoryboard+NavPopToVC.h */,
+				D90B2FBF1CDC405100B762CF /* UIStoryboard+NavPopToVC.m */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		D90B2FC31CDC42C500B762CF /* NavController */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FC51CDC430200B762CF /* UINavigationController+Pop.h */,
+				D90B2FC61CDC430200B762CF /* UINavigationController+Pop.m */,
+			);
+			name = NavController;
+			sourceTree = "<group>";
+		};
+		D90B2FDC1CDC72F200B762CF /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FEB1CDC771900B762CF /* HomeViewController.h */,
+				D90B2FEC1CDC771900B762CF /* HomeViewController.m */,
+				D90B2FED1CDC771900B762CF /* HomeViewController.xib */,
+			);
+			name = "首页";
+			path = Find;
+			sourceTree = "<group>";
+		};
+		D90B2FDD1CDC72FA00B762CF /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				D9871BB71CE6132B00953D54 /* Cube点进去的vc */,
+				D90B2FF71CDC7AA200B762CF /* FindViewController.h */,
+				D90B2FF81CDC7AA200B762CF /* FindViewController.m */,
+				D90B2FF91CDC7AA200B762CF /* FindViewController.xib */,
+			);
+			name = "发现";
+			path = Find;
+			sourceTree = "<group>";
+		};
+		D90B2FDE1CDC72FF00B762CF /* 动态 */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FE51CDC76FF00B762CF /* DynamicViewController.h */,
+				D90B2FE61CDC76FF00B762CF /* DynamicViewController.m */,
+				D90B2FE71CDC76FF00B762CF /* DynamicViewController.xib */,
+			);
+			name = "动态";
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		D90B2FDF1CDC730700B762CF /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				D90B2FE01CDC76E400B762CF /* MineViewController.h */,
+				D90B2FE11CDC76E400B762CF /* MineViewController.m */,
+				D90B2FE21CDC76E400B762CF /* MineViewController.xib */,
+			);
+			name = "我的";
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		D90B2FF51CDC773B00B762CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = QuFaXian/Model;
+			sourceTree = "<group>";
+		};
+		D90B2FF61CDC774300B762CF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D9871BB11CE5FEDB00953D54 /* 分享 */,
+				D93A42D01CE34D14000B359B /* 发现 */,
+			);
+			name = Cell;
+			path = QuFaXian/Cell;
+			sourceTree = "<group>";
+		};
+		D93A42D01CE34D14000B359B /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				D9871BAB1CE3602C00953D54 /* 造物主列表cell */,
+				D93A42D71CE350AC000B359B /* 发现界面footerCell */,
+				D93A42D11CE34D28000B359B /* 发现界面小方块cell */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		D93A42D11CE34D28000B359B /* 发现界面小方块cell */ = {
+			isa = PBXGroup;
+			children = (
+				D93A42D21CE34D7E000B359B /* FindCubeCollectionViewCell.h */,
+				D93A42D31CE34D7E000B359B /* FindCubeCollectionViewCell.m */,
+				D93A42D41CE34D7E000B359B /* FindCubeCollectionViewCell.xib */,
+			);
+			name = "发现界面小方块cell";
+			sourceTree = "<group>";
+		};
+		D93A42D71CE350AC000B359B /* 发现界面footerCell */ = {
+			isa = PBXGroup;
+			children = (
+				D93A42D81CE35248000B359B /* FooterCollectionReusableView.h */,
+				D93A42D91CE35248000B359B /* FooterCollectionReusableView.m */,
+				D93A42DA1CE35248000B359B /* FooterCollectionReusableView.xib */,
+			);
+			name = "发现界面footerCell";
+			sourceTree = "<group>";
+		};
+		D9871BAB1CE3602C00953D54 /* 造物主列表cell */ = {
+			isa = PBXGroup;
+			children = (
+				D9871BAC1CE3608500953D54 /* FindCreaterListTableViewCell.h */,
+				D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */,
+				D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */,
+			);
+			name = "造物主列表cell";
+			sourceTree = "<group>";
+		};
+		D9871BB11CE5FEDB00953D54 /* 分享 */ = {
+			isa = PBXGroup;
+			children = (
+				D9871BB21CE5FF8400953D54 /* ShareButton.h */,
+				D9871BB31CE5FF8400953D54 /* ShareButton.m */,
+				D9871BB51CE5FFA200953D54 /* ShareButton.xib */,
+			);
+			name = "分享";
+			sourceTree = "<group>";
+		};
+		D9871BB71CE6132B00953D54 /* Cube点进去的vc */ = {
+			isa = PBXGroup;
+			children = (
+				D9871BB81CE6137600953D54 /* CubeDetailViewController.h */,
+				D9871BB91CE6137600953D54 /* CubeDetailViewController.m */,
+				D9871BBA1CE6137600953D54 /* CubeDetailViewController.xib */,
+			);
+			path = "Cube点进去的vc";
+			sourceTree = "<group>";
+		};
+		D9BCC7D11CE209E30094CECB /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				D9BCC8B41CE20A080094CECB /* UIColor */,
+			);
+			name = Import;
+			path = QuFaXian/Import;
+			sourceTree = "<group>";
+		};
+		D9BCC8B41CE20A080094CECB /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				D9BCC8B51CE20A080094CECB /* UIColor+HexColor.h */,
+				D9BCC8B61CE20A080094CECB /* UIColor+HexColor.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D90B2F8A1CDB4E2C00B762CF /* QuFaXian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D90B2FA21CDB4E2C00B762CF /* Build configuration list for PBXNativeTarget "QuFaXian" */;
+			buildPhases = (
+				34C4259DC1B5D2B54B6A35EA /* Check Pods Manifest.lock */,
+				D90B2F871CDB4E2C00B762CF /* Sources */,
+				D90B2F881CDB4E2C00B762CF /* Frameworks */,
+				D90B2F891CDB4E2C00B762CF /* Resources */,
+				2931A48CC985D55F85F4B97E /* Embed Pods Frameworks */,
+				5A89EBE003BBDDBF3042E161 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuFaXian;
+			productName = QuFaXian;
+			productReference = D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90B2F831CDB4E2C00B762CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Sugar;
+				TargetAttributes = {
+					D90B2F8A1CDB4E2C00B762CF = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UK2GY2YU7T;
+					};
+				};
+			};
+			buildConfigurationList = D90B2F861CDB4E2C00B762CF /* Build configuration list for PBXProject "QuFaXian" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D90B2F821CDB4E2C00B762CF;
+			productRefGroup = D90B2F8C1CDB4E2C00B762CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D90B2F8A1CDB4E2C00B762CF /* QuFaXian */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D90B2F891CDB4E2C00B762CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90B2F9E1CDB4E2C00B762CF /* LaunchScreen.storyboard in Resources */,
+				D90B2F9B1CDB4E2C00B762CF /* Assets.xcassets in Resources */,
+				D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */,
+				D9871BBC1CE6137600953D54 /* CubeDetailViewController.xib in Resources */,
+				D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */,
+				D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */,
+				D90B2FE41CDC76E400B762CF /* MineViewController.xib in Resources */,
+				D93A42DC1CE35248000B359B /* FooterCollectionReusableView.xib in Resources */,
+				D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */,
+				D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */,
+				D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */,
+				D90B2FFB1CDC7AA200B762CF /* FindViewController.xib in Resources */,
+				D9871BB61CE5FFA200953D54 /* ShareButton.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2931A48CC985D55F85F4B97E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34C4259DC1B5D2B54B6A35EA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5A89EBE003BBDDBF3042E161 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D90B2F871CDB4E2C00B762CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90B2F961CDB4E2C00B762CF /* ViewController.m in Sources */,
+				D90B2FF31CDC772800B762CF /* SearchViewController.m in Sources */,
+				D90B2FCD1CDC463300B762CF /* QFXTabBar.m in Sources */,
+				D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */,
+				D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */,
+				D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */,
+				D90B2FB01CDB4FAC00B762CF /* QFXCustomViewController.m in Sources */,
+				D90B2FBB1CDB51E400B762CF /* UIBarButtonItem+InitType.m in Sources */,
+				D9BCC9221CE20A080094CECB /* UIColor+HexColor.m in Sources */,
+				D90B2FE81CDC76FF00B762CF /* DynamicViewController.m in Sources */,
+				D9871BBB1CE6137600953D54 /* CubeDetailViewController.m in Sources */,
+				D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */,
+				D90B2FC01CDC405100B762CF /* UIStoryboard+NavPopToVC.m in Sources */,
+				D90B2FE31CDC76E400B762CF /* MineViewController.m in Sources */,
+				D93A42DB1CE35248000B359B /* FooterCollectionReusableView.m in Sources */,
+				D90B2F901CDB4E2C00B762CF /* main.m in Sources */,
+				D90B2FCA1CDC461900B762CF /* QFXTabBarController.m in Sources */,
+				D9CFBED21CE21F4B00DD775B /* QFXNavgationController.m in Sources */,
+				D90B2FEE1CDC771900B762CF /* HomeViewController.m in Sources */,
+				D90B2FFA1CDC7AA200B762CF /* FindViewController.m in Sources */,
+				D93A42D51CE34D7E000B359B /* FindCubeCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D90B2F971CDB4E2C00B762CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90B2F981CDB4E2C00B762CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D90B2F9C1CDB4E2C00B762CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D90B2F9D1CDB4E2C00B762CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D90B2FA01CDB4E2C00B762CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D90B2FA11CDB4E2C00B762CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D90B2FA31CDB4E2C00B762CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F8B2F5898E6E255BB1C5CAA /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QuFaXian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sugar.mario.QuFaXian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		D90B2FA41CDB4E2C00B762CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25330BC64C74FC8276B42F12 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QuFaXian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sugar.mario.QuFaXian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D90B2F861CDB4E2C00B762CF /* Build configuration list for PBXProject "QuFaXian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90B2FA01CDB4E2C00B762CF /* Debug */,
+				D90B2FA11CDB4E2C00B762CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D90B2FA21CDB4E2C00B762CF /* Build configuration list for PBXNativeTarget "QuFaXian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D90B2FA31CDB4E2C00B762CF /* Debug */,
+				D90B2FA41CDB4E2C00B762CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D90B2F831CDB4E2C00B762CF /* Project object */;
+}

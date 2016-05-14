@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cubeCell" reuseIdentifier="cubeCell" id="gTV-IL-0wX" customClass="FindCubeCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="193"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="201" height="193"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sP2-RK-PCP">
+                        <rect key="frame" x="66" y="35" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Wny-aq-JKo"/>
+                            <constraint firstAttribute="height" constant="70" id="lSc-eV-E4f"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="电影/造物主" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYa-k6-us8">
+                        <rect key="frame" x="69" y="10" width="65" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="影教现场" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-xc-rqq">
+                        <rect key="frame" x="67" y="115" width="68" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="腾讯网非虚构平台，致力于耕耘中国故事" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-s8-Tyb">
+                        <rect key="frame" x="10" y="151" width="181" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="RYa-k6-us8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="7x9-0j-Xw0"/>
+                <constraint firstItem="QAU-xc-rqq" firstAttribute="top" secondItem="sP2-RK-PCP" secondAttribute="bottom" constant="10" id="BoK-Wt-qJ9"/>
+                <constraint firstItem="QAU-xc-rqq" firstAttribute="centerX" secondItem="RYa-k6-us8" secondAttribute="centerX" id="R4F-J1-Wjg"/>
+                <constraint firstItem="sP2-RK-PCP" firstAttribute="top" secondItem="RYa-k6-us8" secondAttribute="bottom" constant="10" id="Vs7-z3-dsw"/>
+                <constraint firstItem="RYa-k6-us8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XbH-cn-5uM"/>
+                <constraint firstItem="WFx-s8-Tyb" firstAttribute="centerX" secondItem="RYa-k6-us8" secondAttribute="centerX" id="aGQ-hj-MWk"/>
+                <constraint firstItem="sP2-RK-PCP" firstAttribute="centerX" secondItem="RYa-k6-us8" secondAttribute="centerX" id="bCe-JQ-yr0"/>
+                <constraint firstItem="WFx-s8-Tyb" firstAttribute="top" secondItem="QAU-xc-rqq" secondAttribute="bottom" constant="15" id="qEj-UK-A10"/>
+                <constraint firstItem="WFx-s8-Tyb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xz6-ue-n5V"/>
+            </constraints>
+            <size key="customSize" width="201" height="193"/>
+            <connections>
+                <outlet property="cubeImg" destination="sP2-RK-PCP" id="k2r-VA-dUM"/>
+                <outlet property="cubeIntroduce" destination="WFx-s8-Tyb" id="fXZ-9e-Lu0"/>
+                <outlet property="cubeTitle" destination="QAU-xc-rqq" id="BEO-Mr-yYZ"/>
+                <outlet property="cubeType" destination="RYa-k6-us8" id="taF-vQ-qYJ"/>
+            </connections>
+            <point key="canvasLocation" x="215.5" y="376.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
