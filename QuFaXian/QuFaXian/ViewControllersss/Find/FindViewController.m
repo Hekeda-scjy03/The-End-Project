@@ -10,6 +10,7 @@
 #import "FindCubeCollectionViewCell.h"
 #import "FooterCollectionReusableView.h"
 #import "CubeDetailViewController.h"
+#import "TopicsFooterCollectionReusableView.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -42,6 +43,8 @@
     
     [_collectionView registerNib:[UINib nibWithNibName:@"FooterCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerCell"];
     
+    [_collectionView registerNib:[UINib nibWithNibName:@"TopicsFooterCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"topicFooter"];
+    
 }
 
 #pragma mark - collection delegate
@@ -70,10 +73,13 @@
 
 #pragma mark - 设置footer
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    
-    FooterCollectionReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"footerCell" forIndexPath:indexPath];
-    return footer;
-    
+    if (indexPath.section % 2 ==0) {
+        TopicsFooterCollectionReusableView *topicFooter = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"topicFooter" forIndexPath:indexPath];
+        return topicFooter;
+    }else{
+        FooterCollectionReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"footerCell" forIndexPath:indexPath];
+        return footer;
+    }
 }
 //设置footer大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
@@ -82,7 +88,10 @@
 
 #pragma mark - 点击collectionview
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    CubeDetailViewController *cubeDetail = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare withNavTitle:<#(NavTitle)#>];
+    CubeDetailViewController *cubeDetail = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:NULL];
+    
+    [self.navigationController pushViewController:cubeDetail animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -21,7 +21,7 @@
  设置button的点击方法
  */
 - (void)addTarget:(id)target action:(SEL)action{
-    [self.btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    [self.btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
 }
 
 @end

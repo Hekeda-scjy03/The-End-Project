@@ -11,10 +11,8 @@
 #import "UIStoryboard+NavPopToVC.h"
 #import "UINavigationController+Pop.h"
 #import "SearchViewController.h"
-#import "ShareButton.h"
+#import "ShareButtonViewController.h"
 
-#define screenWidth [UIScreen mainScreen].bounds.size.width
-#define screenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface QFXCustomViewController ()
 
@@ -51,17 +49,16 @@
     //设置barbuttonitem样式
     switch (self.itemType) {
         case VCItemTypeSearch: //搜索图标
-            self.navigationItem.leftBarButtonItem = [UIBarButtonItem setWithImageName:@"" withHighlightedImage:@"" target:self action:@selector(jumpToSearchVC) title:nil position:UIControlContentHorizontalAlignmentLeft];
+            self.navigationItem.leftBarButtonItem = [UIBarButtonItem setWithImageName:@"icon-search-white" withHighlightedImage:@"icon-search-for-group-part" target:self action:@selector(jumpToSearchVC) title:@"search" position:UIControlContentHorizontalAlignmentLeft];
             break;
             
         case VCItemTypeLeftAdd://➕图标
-            self.navigationItem.rightBarButtonItem = [UIBarButtonItem setWithImageName:@"" withHighlightedImage:@"" target:self action:@selector(addButtonMethod) title:nil position:UIControlContentHorizontalAlignmentRight];
+            self.navigationItem.rightBarButtonItem = [UIBarButtonItem setWithImageName:@"icon-create-group-white" withHighlightedImage:@"icon-create-group-white" target:self action:@selector(addButtonMethod) title:@"send" position:UIControlContentHorizontalAlignmentRight];
             break;
             
         case VCItemTypeShare | VCItemTypeMore: //分享图标
-            self.navigationItem.rightBarButtonItem = [UIBarButtonItem setWithImageName:@"" withHighlightedImage:@"" target:self action:@selector(shareMethod) title:nil position:UIControlContentHorizontalAlignmentRight],
-        
-            self.navigationItem.rightBarButtonItem = [UIBarButtonItem setWithImageName:@"" withHighlightedImage:@"" target:self action:@selector(moreMethod) title:nil position:UIControlContentHorizontalAlignmentRight];
+            self.navigationItem.rightBarButtonItems = @[
+            [UIBarButtonItem setWithImageName:@"btn-top-more" withHighlightedImage:@"btn-top-more-active" target:self action:@selector(moreMethod) title:nil position:UIControlContentHorizontalAlignmentRight],[UIBarButtonItem setWithImageName:@"icon-share-white-in-nav" withHighlightedImage:@"icon-share-white-in-nav" target:self action:@selector(shareMethod) title:nil position:UIControlContentHorizontalAlignmentRight]];
             break;
             
         default:
@@ -108,62 +105,12 @@
 
 #pragma mark - 分享
 - (void)shareMethod{
-    NSArray *itemImageNames = @[@"btn-share-weibo",@"btn-share-friends",@"btn-share-qq"];
+    ShareButtonViewController *shareVC = [[ShareButtonViewController alloc]init];
     
-    NSArray *texts = @[@"新浪微博",@"朋友圈",@"QQ"];
-    
-    for (int i = 0; i<texts.count; i++) {
-        ShareButton *share = [[[NSBundle mainBundle]loadNibNamed:@"ShareButton" owner:nil options:nil] lastObject];
-        
-        share.btn.tag = i;
-        
-        [share setButtonImage:itemImageNames[i] withTitle:texts[i]];
-        int width = 50;
-        int edge = (screenWidth - 3 * width) / 6;
-        
-        
-        if (i == 0) {
-            share.frame = CGRectMake(edge + width, screenHeight * 0.75 + screenHeight, width, width);
-        }else if(i == 1){
-            share.frame = CGRectMake((i + 2) * edge + width, screenHeight * 0.75 + screenHeight, width, width);
-        }else{
-            share.frame = CGRectMake((i + 3) * edge + width, screenHeight * 0.75 + screenHeight, width, width);
-        }
-        
-        [share addTarget:self action:@selector(clickButtonItem:)];
-        
-        [UIView animateWithDuration:1 delay:(i + 1) * 0.1 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionTransitionFlipFromTop animations:^{
-            share.frame = CGRectMake(share.frame.origin.x, - share.frame.origin.y - screenHeight, share.frame.size.width, share.frame.size.height);
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-        
-        [self.view addSubview:share];
-        
-    }
+    [self presentViewController:shareVC animated:YES completion:nil];
     
 }
 
-#pragma mark - 点击分享弹出的button
-- (void)clickButtonItem:(id)sender{
-    UIButton *button = (UIButton *)sender;
-    
-    switch (button.tag) {
-        case 0:
-            
-            break;
-            
-        case 1:
-            
-            break;
-            
-        case 2:
-            
-            break;
-
-    }
-}
 #pragma mark - 更多
 - (void)moreMethod{
     

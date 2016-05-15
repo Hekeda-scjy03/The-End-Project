@@ -24,8 +24,20 @@
     
     [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:15]}];
     
-    
 }
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    /**
+     跳转下一vc时隐藏tabbar
+     */
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    
+    [super pushViewController:viewController animated:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

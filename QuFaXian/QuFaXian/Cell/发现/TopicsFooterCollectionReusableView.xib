@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="TopicsFooterCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-h4-wNG">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音乐门诊部 是时候给你们跑步歌单了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfR-IA-PNU">
+                    <rect key="frame" x="81" y="64" width="212" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共10篇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-iQ-okV">
+                    <rect key="frame" x="331" y="8" width="35" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OZw-iQ-okV" secondAttribute="trailing" constant="8" id="6jl-oe-HFI"/>
+                <constraint firstItem="OZw-iQ-okV" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="7yA-Xb-JQJ"/>
+                <constraint firstAttribute="trailing" secondItem="KFs-h4-wNG" secondAttribute="trailing" id="KvD-m4-ssK"/>
+                <constraint firstItem="RfR-IA-PNU" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="Mjj-zV-aUM"/>
+                <constraint firstItem="KFs-h4-wNG" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Yki-kb-3id"/>
+                <constraint firstAttribute="bottom" secondItem="KFs-h4-wNG" secondAttribute="bottom" id="jy8-RV-STJ"/>
+                <constraint firstItem="RfR-IA-PNU" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="mWa-YA-5Xt"/>
+                <constraint firstItem="KFs-h4-wNG" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="nQS-89-Vhq"/>
+            </constraints>
+            <connections>
+                <outlet property="topicImage" destination="KFs-h4-wNG" id="4IR-OH-txl"/>
+            </connections>
+            <point key="canvasLocation" x="436" y="345"/>
+        </collectionReusableView>
+    </objects>
+</document>
