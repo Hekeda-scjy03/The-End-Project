@@ -44,11 +44,9 @@
 		D9424BFD1CE814E300DC3B76 /* CreaterContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424BFB1CE814E300DC3B76 /* CreaterContentTableViewCell.m */; };
 		D9424BFE1CE814E300DC3B76 /* CreaterContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424BFC1CE814E300DC3B76 /* CreaterContentTableViewCell.xib */; };
 		D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424C001CE815ED00DC3B76 /* CreaterContentHeader.m */; };
-		D9424C041CE8160200DC3B76 /* ContentsStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424C031CE8160200DC3B76 /* ContentsStateHeader.m */; };
 		D9424C071CE8161300DC3B76 /* GroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424C061CE8161300DC3B76 /* GroupHeader.m */; };
 		D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C081CE8162900DC3B76 /* GroupHeader.xib */; };
 		D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C0A1CE8168300DC3B76 /* CreaterContentHeader.xib */; };
-		D9424C0D1CE8169900DC3B76 /* ContentsStateHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C0C1CE8169900DC3B76 /* ContentsStateHeader.xib */; };
 		D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */; };
 		D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */; };
 		D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BB31CE5FF8400953D54 /* ShareButton.m */; };
@@ -122,13 +120,10 @@
 		D9424BFC1CE814E300DC3B76 /* CreaterContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreaterContentTableViewCell.xib; sourceTree = "<group>"; };
 		D9424BFF1CE815ED00DC3B76 /* CreaterContentHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreaterContentHeader.h; sourceTree = "<group>"; };
 		D9424C001CE815ED00DC3B76 /* CreaterContentHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreaterContentHeader.m; sourceTree = "<group>"; };
-		D9424C021CE8160200DC3B76 /* ContentsStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentsStateHeader.h; sourceTree = "<group>"; };
-		D9424C031CE8160200DC3B76 /* ContentsStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentsStateHeader.m; sourceTree = "<group>"; };
 		D9424C051CE8161300DC3B76 /* GroupHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupHeader.h; sourceTree = "<group>"; };
 		D9424C061CE8161300DC3B76 /* GroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupHeader.m; sourceTree = "<group>"; };
 		D9424C081CE8162900DC3B76 /* GroupHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeader.xib; sourceTree = "<group>"; };
 		D9424C0A1CE8168300DC3B76 /* CreaterContentHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreaterContentHeader.xib; sourceTree = "<group>"; };
-		D9424C0C1CE8169900DC3B76 /* ContentsStateHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsStateHeader.xib; sourceTree = "<group>"; };
 		D9871BAC1CE3608500953D54 /* FindCreaterListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCreaterListTableViewCell.h; sourceTree = "<group>"; };
 		D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCreaterListTableViewCell.m; sourceTree = "<group>"; };
 		D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCreaterListTableViewCell.xib; sourceTree = "<group>"; };
@@ -488,7 +483,6 @@
 			isa = PBXGroup;
 			children = (
 				D9424BDD1CE8137D00DC3B76 /* 内容cell */,
-				D9424BDC1CE8137B00DC3B76 /* Header */,
 			);
 			name = "内容站";
 			sourceTree = "<group>";
@@ -549,16 +543,6 @@
 				D9424BFC1CE814E300DC3B76 /* CreaterContentTableViewCell.xib */,
 			);
 			name = "内容cell";
-			sourceTree = "<group>";
-		};
-		D9424BDC1CE8137B00DC3B76 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				D9424C021CE8160200DC3B76 /* ContentsStateHeader.h */,
-				D9424C031CE8160200DC3B76 /* ContentsStateHeader.m */,
-				D9424C0C1CE8169900DC3B76 /* ContentsStateHeader.xib */,
-			);
-			name = Header;
 			sourceTree = "<group>";
 		};
 		D9424BDD1CE8137D00DC3B76 /* 内容cell */ = {
@@ -695,7 +679,6 @@
 				D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */,
 				D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */,
 				D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */,
-				D9424C0D1CE8169900DC3B76 /* ContentsStateHeader.xib in Resources */,
 				D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */,
 				D90B2FFB1CDC7AA200B762CF /* FindViewController.xib in Resources */,
 				D9871BB61CE5FFA200953D54 /* ShareButton.xib in Resources */,
@@ -765,7 +748,6 @@
 				D90B2FCD1CDC463300B762CF /* QFXTabBar.m in Sources */,
 				D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */,
 				D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */,
-				D9424C041CE8160200DC3B76 /* ContentsStateHeader.m in Sources */,
 				D9424BF81CE814CF00DC3B76 /* GroupContentTableViewCell.m in Sources */,
 				D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */,
 				D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */,
