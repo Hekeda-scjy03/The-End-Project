@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44447EE71CE9DF9900F6BE14 /* QFXStatusCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 44447EE61CE9DF9900F6BE14 /* QFXStatusCacheTool.m */; settings = {ASSET_TAGS = (); }; };
+		44447EEF1CE9E05800F6BE14 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44447EED1CE9E05800F6BE14 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44447EF01CE9E05800F6BE14 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44447EEE1CE9E05800F6BE14 /* HomeViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		44447EF51CE9E48900F6BE14 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44447EF31CE9E48900F6BE14 /* HomeHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		44447EF61CE9E48900F6BE14 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44447EF41CE9E48900F6BE14 /* HomeHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		44447EFE1CE9FAF500F6BE14 /* HomeThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44447EFD1CE9FAF500F6BE14 /* HomeThemeButton.m */; settings = {ASSET_TAGS = (); }; };
 		961E53C661D7ACCFB600BA38 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 406DE60B564A7A8F61973FAE /* libPods.a */; };
 		D90B2F901CDB4E2C00B762CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F8F1CDB4E2C00B762CF /* main.m */; };
 		D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F921CDB4E2C00B762CF /* AppDelegate.m */; };
@@ -24,8 +30,6 @@
 		D90B2FE41CDC76E400B762CF /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FE21CDC76E400B762CF /* MineViewController.xib */; };
 		D90B2FE81CDC76FF00B762CF /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FE61CDC76FF00B762CF /* DynamicViewController.m */; };
 		D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FE71CDC76FF00B762CF /* DynamicViewController.xib */; };
-		D90B2FEE1CDC771900B762CF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FEC1CDC771900B762CF /* HomeViewController.m */; };
-		D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FED1CDC771900B762CF /* HomeViewController.xib */; };
 		D90B2FF31CDC772800B762CF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FF11CDC772800B762CF /* SearchViewController.m */; };
 		D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FF21CDC772800B762CF /* SearchViewController.xib */; };
 		D90B2FFA1CDC7AA200B762CF /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FF81CDC7AA200B762CF /* FindViewController.m */; };
@@ -62,6 +66,16 @@
 /* Begin PBXFileReference section */
 		25330BC64C74FC8276B42F12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		406DE60B564A7A8F61973FAE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44447EE51CE9DF9900F6BE14 /* QFXStatusCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXStatusCacheTool.h; sourceTree = "<group>"; };
+		44447EE61CE9DF9900F6BE14 /* QFXStatusCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXStatusCacheTool.m; sourceTree = "<group>"; };
+		44447EEC1CE9E05800F6BE14 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		44447EED1CE9E05800F6BE14 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		44447EEE1CE9E05800F6BE14 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		44447EF21CE9E48900F6BE14 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		44447EF31CE9E48900F6BE14 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
+		44447EF41CE9E48900F6BE14 /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		44447EFC1CE9FAF500F6BE14 /* HomeThemeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeThemeButton.h; sourceTree = "<group>"; };
+		44447EFD1CE9FAF500F6BE14 /* HomeThemeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeThemeButton.m; sourceTree = "<group>"; };
 		9F8B2F5898E6E255BB1C5CAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuFaXian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90B2F8F1CDB4E2C00B762CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,9 +105,6 @@
 		D90B2FE51CDC76FF00B762CF /* DynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
 		D90B2FE61CDC76FF00B762CF /* DynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
 		D90B2FE71CDC76FF00B762CF /* DynamicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicViewController.xib; sourceTree = "<group>"; };
-		D90B2FEB1CDC771900B762CF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		D90B2FEC1CDC771900B762CF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		D90B2FED1CDC771900B762CF /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		D90B2FF01CDC772800B762CF /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		D90B2FF11CDC772800B762CF /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D90B2FF21CDC772800B762CF /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -156,6 +167,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44447EE41CE9DF5C00F6BE14 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				44447EE51CE9DF9900F6BE14 /* QFXStatusCacheTool.h */,
+				44447EE61CE9DF9900F6BE14 /* QFXStatusCacheTool.m */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
+		44447EE81CE9E00700F6BE14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44447EEB1CE9E05800F6BE14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				44447EEC1CE9E05800F6BE14 /* HomeViewController.h */,
+				44447EED1CE9E05800F6BE14 /* HomeViewController.m */,
+				44447EEE1CE9E05800F6BE14 /* HomeViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44447EF11CE9E46500F6BE14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44447EF21CE9E48900F6BE14 /* HomeHeaderView.h */,
+				44447EF31CE9E48900F6BE14 /* HomeHeaderView.m */,
+				44447EF41CE9E48900F6BE14 /* HomeHeaderView.xib */,
+				44447EFC1CE9FAF500F6BE14 /* HomeThemeButton.h */,
+				44447EFD1CE9FAF500F6BE14 /* HomeThemeButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		822A3F16FD835B35AE24FDB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +225,7 @@
 		D90B2F821CDB4E2C00B762CF = {
 			isa = PBXGroup;
 			children = (
+				44447EE41CE9DF5C00F6BE14 /* 数据库 */,
 				D9BCC7D11CE209E30094CECB /* Import */,
 				D90B2FF61CDC774300B762CF /* Cell */,
 				D90B2FF51CDC773B00B762CF /* Model */,
@@ -345,9 +395,9 @@
 		D90B2FDC1CDC72F200B762CF /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				D90B2FEB1CDC771900B762CF /* HomeViewController.h */,
-				D90B2FEC1CDC771900B762CF /* HomeViewController.m */,
-				D90B2FED1CDC771900B762CF /* HomeViewController.xib */,
+				44447EEB1CE9E05800F6BE14 /* Controllers */,
+				44447EF11CE9E46500F6BE14 /* Views */,
+				44447EE81CE9E00700F6BE14 /* Models */,
 			);
 			name = "首页";
 			path = Find;
@@ -685,7 +735,9 @@
 				D9871BBC1CE6137600953D54 /* CubeDetailViewController.xib in Resources */,
 				D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */,
 				D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */,
+				44447EF61CE9E48900F6BE14 /* HomeHeaderView.xib in Resources */,
 				D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */,
+				44447EF01CE9E05800F6BE14 /* HomeViewController.xib in Resources */,
 				D9424BFE1CE814E300DC3B76 /* CreaterContentTableViewCell.xib in Resources */,
 				D9424BF41CE814A700DC3B76 /* ContentsStateTableViewCell.xib in Resources */,
 				D9424BCC1CE72E2C00DC3B76 /* TopicsFooterCollectionReusableView.xib in Resources */,
@@ -693,7 +745,6 @@
 				D9424BF91CE814CF00DC3B76 /* GroupContentTableViewCell.xib in Resources */,
 				D93A42DC1CE35248000B359B /* FooterCollectionReusableView.xib in Resources */,
 				D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */,
-				D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */,
 				D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */,
 				D9424C0D1CE8169900DC3B76 /* ContentsStateHeader.xib in Resources */,
 				D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */,
@@ -759,13 +810,16 @@
 			files = (
 				D9424BCB1CE72E2C00DC3B76 /* TopicsFooterCollectionReusableView.m in Sources */,
 				D9424BF31CE814A700DC3B76 /* ContentsStateTableViewCell.m in Sources */,
+				44447EE71CE9DF9900F6BE14 /* QFXStatusCacheTool.m in Sources */,
 				D9424BFD1CE814E300DC3B76 /* CreaterContentTableViewCell.m in Sources */,
+				44447EFE1CE9FAF500F6BE14 /* HomeThemeButton.m in Sources */,
 				D90B2F961CDB4E2C00B762CF /* ViewController.m in Sources */,
 				D90B2FF31CDC772800B762CF /* SearchViewController.m in Sources */,
 				D90B2FCD1CDC463300B762CF /* QFXTabBar.m in Sources */,
 				D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */,
 				D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */,
 				D9424C041CE8160200DC3B76 /* ContentsStateHeader.m in Sources */,
+				44447EF51CE9E48900F6BE14 /* HomeHeaderView.m in Sources */,
 				D9424BF81CE814CF00DC3B76 /* GroupContentTableViewCell.m in Sources */,
 				D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */,
 				D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */,
@@ -779,11 +833,11 @@
 				D90B2FC01CDC405100B762CF /* UIStoryboard+NavPopToVC.m in Sources */,
 				D90B2FE31CDC76E400B762CF /* MineViewController.m in Sources */,
 				D93A42DB1CE35248000B359B /* FooterCollectionReusableView.m in Sources */,
+				44447EEF1CE9E05800F6BE14 /* HomeViewController.m in Sources */,
 				D90B2F901CDB4E2C00B762CF /* main.m in Sources */,
 				D90B2FCA1CDC461900B762CF /* QFXTabBarController.m in Sources */,
 				D9CFBED21CE21F4B00DD775B /* QFXNavgationController.m in Sources */,
 				D9424C071CE8161300DC3B76 /* GroupHeader.m in Sources */,
-				D90B2FEE1CDC771900B762CF /* HomeViewController.m in Sources */,
 				D90B2FFA1CDC7AA200B762CF /* FindViewController.m in Sources */,
 				D93A42D51CE34D7E000B359B /* FindCubeCollectionViewCell.m in Sources */,
 			);
@@ -903,6 +957,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QuFaXian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sugar.mario.QuFaXian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -918,6 +973,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QuFaXian/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sugar.mario.QuFaXian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
