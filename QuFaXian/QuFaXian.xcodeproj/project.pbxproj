@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4462097A1CEB49E300BF7F57 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 446209761CEB49E300BF7F57 /* HomeHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		4462097B1CEB49E300BF7F57 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446209771CEB49E300BF7F57 /* HomeHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		4462097C1CEB49E300BF7F57 /* HomeThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 446209791CEB49E300BF7F57 /* HomeThemeButton.m */; settings = {ASSET_TAGS = (); }; };
+		448756051CEB48EF000BE61D /* QFXStatusCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 448756041CEB48EF000BE61D /* QFXStatusCacheTool.m */; settings = {ASSET_TAGS = (); }; };
 		961E53C661D7ACCFB600BA38 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 406DE60B564A7A8F61973FAE /* libPods.a */; };
 		D90B2F901CDB4E2C00B762CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F8F1CDB4E2C00B762CF /* main.m */; };
 		D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F921CDB4E2C00B762CF /* AppDelegate.m */; };
@@ -60,6 +64,13 @@
 /* Begin PBXFileReference section */
 		25330BC64C74FC8276B42F12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		406DE60B564A7A8F61973FAE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		446209751CEB49E300BF7F57 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		446209761CEB49E300BF7F57 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
+		446209771CEB49E300BF7F57 /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		446209781CEB49E300BF7F57 /* HomeThemeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeThemeButton.h; sourceTree = "<group>"; };
+		446209791CEB49E300BF7F57 /* HomeThemeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeThemeButton.m; sourceTree = "<group>"; };
+		448756031CEB48EF000BE61D /* QFXStatusCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXStatusCacheTool.h; sourceTree = "<group>"; };
+		448756041CEB48EF000BE61D /* QFXStatusCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXStatusCacheTool.m; sourceTree = "<group>"; };
 		9F8B2F5898E6E255BB1C5CAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuFaXian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90B2F8F1CDB4E2C00B762CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +162,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		446209721CEB497600BF7F57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		446209731CEB498A00BF7F57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				446209751CEB49E300BF7F57 /* HomeHeaderView.h */,
+				446209761CEB49E300BF7F57 /* HomeHeaderView.m */,
+				446209771CEB49E300BF7F57 /* HomeHeaderView.xib */,
+				446209781CEB49E300BF7F57 /* HomeThemeButton.h */,
+				446209791CEB49E300BF7F57 /* HomeThemeButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		446209741CEB499800BF7F57 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		448756021CEB48EF000BE61D /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				448756031CEB48EF000BE61D /* QFXStatusCacheTool.h */,
+				448756041CEB48EF000BE61D /* QFXStatusCacheTool.m */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
 		822A3F16FD835B35AE24FDB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +217,7 @@
 		D90B2F821CDB4E2C00B762CF = {
 			isa = PBXGroup;
 			children = (
+				448756021CEB48EF000BE61D /* 数据库 */,
 				D9BCC7D11CE209E30094CECB /* Import */,
 				D90B2FF61CDC774300B762CF /* Cell */,
 				D90B2FF51CDC773B00B762CF /* Model */,
@@ -343,6 +390,9 @@
 				D90B2FEB1CDC771900B762CF /* HomeViewController.h */,
 				D90B2FEC1CDC771900B762CF /* HomeViewController.m */,
 				D90B2FED1CDC771900B762CF /* HomeViewController.xib */,
+				446209741CEB499800BF7F57 /* Controllers */,
+				446209731CEB498A00BF7F57 /* Views */,
+				446209721CEB497600BF7F57 /* Models */,
 			);
 			name = "首页";
 			path = Find;
@@ -679,6 +729,7 @@
 				D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */,
 				D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */,
 				D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */,
+				4462097B1CEB49E300BF7F57 /* HomeHeaderView.xib in Resources */,
 				D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */,
 				D90B2FFB1CDC7AA200B762CF /* FindViewController.xib in Resources */,
 				D9871BB61CE5FFA200953D54 /* ShareButton.xib in Resources */,
@@ -743,6 +794,7 @@
 				D9424BCB1CE72E2C00DC3B76 /* TopicsFooterCollectionReusableView.m in Sources */,
 				D9424BF31CE814A700DC3B76 /* ContentsStateTableViewCell.m in Sources */,
 				D9424BFD1CE814E300DC3B76 /* CreaterContentTableViewCell.m in Sources */,
+				448756051CEB48EF000BE61D /* QFXStatusCacheTool.m in Sources */,
 				D90B2F961CDB4E2C00B762CF /* ViewController.m in Sources */,
 				D90B2FF31CDC772800B762CF /* SearchViewController.m in Sources */,
 				D90B2FCD1CDC463300B762CF /* QFXTabBar.m in Sources */,
@@ -750,6 +802,7 @@
 				D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */,
 				D9424BF81CE814CF00DC3B76 /* GroupContentTableViewCell.m in Sources */,
 				D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */,
+				4462097C1CEB49E300BF7F57 /* HomeThemeButton.m in Sources */,
 				D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */,
 				D90B2FB01CDB4FAC00B762CF /* QFXCustomViewController.m in Sources */,
 				D90B2FBB1CDB51E400B762CF /* UIBarButtonItem+InitType.m in Sources */,
@@ -759,6 +812,7 @@
 				D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */,
 				D9424BD01CE8060900DC3B76 /* ShareButtonViewController.m in Sources */,
 				D90B2FC01CDC405100B762CF /* UIStoryboard+NavPopToVC.m in Sources */,
+				4462097A1CEB49E300BF7F57 /* HomeHeaderView.m in Sources */,
 				D90B2FE31CDC76E400B762CF /* MineViewController.m in Sources */,
 				D93A42DB1CE35248000B359B /* FooterCollectionReusableView.m in Sources */,
 				D90B2F901CDB4E2C00B762CF /* main.m in Sources */,
