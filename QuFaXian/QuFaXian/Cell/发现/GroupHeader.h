@@ -10,4 +10,14 @@
 
 @interface GroupHeader : UITableViewHeaderFooterView
 
+@property (weak, nonatomic) IBOutlet UILabel *groupName;
+
+@property (weak, nonatomic) IBOutlet UILabel *groupMemberNum;
+
+@property (weak, nonatomic) IBOutlet UILabel *groupIntroduction;
+
+//点击该view会获取成员列表
+@property (weak, nonatomic) IBOutlet UIView *groupMemberMore;
+
+
 @end
