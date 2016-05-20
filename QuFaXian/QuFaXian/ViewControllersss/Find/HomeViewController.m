@@ -7,20 +7,35 @@
 //
 
 #import "HomeViewController.h"
+#import "HomeHeaderView.h"
 
 @interface HomeViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *homeTableView;
+
+
+@property (nonatomic, strong) HomeHeaderView *homeHeaderView;
 
 @end
 
 @implementation HomeViewController
 
+#pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
-    self.view.backgroundColor = [UIColor yellowColor];
-
+    HomeHeaderView *homeHeaderView = [HomeHeaderView homeHeaderView];
+    self.homeTableView.tableHeaderView = homeHeaderView;
+    self.homeHeaderView = homeHeaderView;
 }
+
+
+#pragma mark - viewDidAppear
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.homeHeaderView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
