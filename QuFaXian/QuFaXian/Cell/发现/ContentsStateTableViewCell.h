@@ -10,4 +10,14 @@
 
 @interface ContentsStateTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *contentStateTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *contentStateSubTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *contentStateType;
+
+
+
 @end

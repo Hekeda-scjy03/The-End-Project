@@ -14,8 +14,8 @@
 {
     self = [super init];
     if (self) {
-        self.barTintColor = [UIColor blackColor];
-        self.alpha = 0.8;
+        self.barTintColor = [UIColor whiteColor];
+        self.alpha = 1;
     }
     return self;
 }

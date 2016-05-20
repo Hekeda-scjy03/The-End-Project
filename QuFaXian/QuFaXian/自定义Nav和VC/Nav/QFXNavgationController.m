@@ -18,11 +18,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //push之后 返回只有一个箭头
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake([UIScreen mainScreen].bounds.size.width, 0) forBarMetrics:UIBarMetricsDefault];
     
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];//箭头白色
-    [[UINavigationBar appearance]setBarTintColor:[UIColor blackColor]];
     
-    [[UINavigationBar appearance]setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    if (self.viewControllers.count > 0) {
+        [self.navigationBar setTintColor:[UIColor blackColor]];
+        [[UINavigationBar appearance]setBarTintColor:[UIColor whiteColor]];
+        
+        [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+        
+    }else{
+        [self.navigationBar setTintColor:[UIColor whiteColor]];//箭头白色
+        [[UINavigationBar appearance]setBarTintColor:[UIColor blackColor]];
+        
+        [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+    }
     
 }
 

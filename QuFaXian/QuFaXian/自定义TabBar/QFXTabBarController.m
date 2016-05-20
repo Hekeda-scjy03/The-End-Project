@@ -13,6 +13,7 @@
 #import "HomeViewController.h"
 #import "QFXTabBar.h"
 #import "QFXNavgationController.h"
+#import "UIColor+HexColor.h"
 @interface QFXTabBarController (){
     NSArray *_titles, *_images, *_selectedImgs;
 }
@@ -27,8 +28,8 @@
     /**
      *  设置item默认状态下和被选中时的文字颜色
      */
-    NSDictionary *selectedAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:20.f], NSForegroundColorAttributeName:[UIColor cyanColor]};//被选中时的文字大小和颜色
-    NSDictionary *normalAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};//默认的颜色
+    NSDictionary *selectedAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:20.f], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"45AE8B"]};//被选中时的文字大小和颜色
+    NSDictionary *normalAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"616161"]};//默认的颜色
     UITabBarItem *item = [UITabBarItem appearance];
     
     [item setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];

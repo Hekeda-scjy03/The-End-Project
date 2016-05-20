@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="311" id="KGk-i7-Jjw" customClass="GroupContentTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="311" id="KGk-i7-Jjw" customClass="GroupContentTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="447" height="311"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -18,11 +18,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-d0-Uv5" userLabel="BottomView">
                         <rect key="frame" x="8" y="257" width="431" height="45"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G0-H2-1Kd">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5G0-H2-1Kd">
                                 <rect key="frame" x="50" y="0.0" width="45" height="45"/>
                                 <state key="normal" image="item-btn-thumb-black"/>
                                 <connections>
-                                    <action selector="zanClickMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lSL-1h-Hv0"/>
+                                    <action selector="clickBtnMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UtS-xe-JOv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtX-Px-Cft">
@@ -32,14 +32,14 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="item-btn-like-black"/>
                                 <connections>
-                                    <action selector="likeClickMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SHC-Aj-NUK"/>
+                                    <action selector="clickBtnMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dhv-TM-xZT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuc-il-FUx">
                                 <rect key="frame" x="381" y="0.0" width="45" height="45"/>
                                 <state key="normal" title="Button" image="icon-btn-more"/>
                                 <connections>
-                                    <action selector="moreClickMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oom-my-NyN"/>
+                                    <action selector="clickBtnMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gns-OV-P6K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pny-QT-gJR">
@@ -54,11 +54,11 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6s-ir-x8z">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6s-ir-x8z">
                                 <rect key="frame" x="126" y="0.0" width="45" height="45"/>
                                 <state key="normal" image="item-btn-comment-black"/>
                                 <connections>
-                                    <action selector="commentClickMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Txl-Fa-8tM"/>
+                                    <action selector="clickBtnMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3M8-qV-KPR"/>
                                 </connections>
                             </button>
                         </subviews>

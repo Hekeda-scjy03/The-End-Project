@@ -49,11 +49,11 @@
     //设置barbuttonitem样式
     switch (self.itemType) {
         case VCItemTypeSearch: //搜索图标
-            self.navigationItem.leftBarButtonItem = [UIBarButtonItem setWithImageName:@"icon-search-white" withHighlightedImage:@"icon-search-for-group-part" target:self action:@selector(jumpToSearchVC) title:@"search" position:UIControlContentHorizontalAlignmentLeft];
+            self.navigationItem.leftBarButtonItem = [UIBarButtonItem setWithImageName:@"icon-search-white" withHighlightedImage:@"icon-search-for-group-part" target:self action:@selector(jumpToSearchVC) title:nil position:UIControlContentHorizontalAlignmentLeft];
             break;
             
         case VCItemTypeLeftAdd://➕图标
-            self.navigationItem.rightBarButtonItem = [UIBarButtonItem setWithImageName:@"icon-create-group-white" withHighlightedImage:@"icon-create-group-white" target:self action:@selector(addButtonMethod) title:@"send" position:UIControlContentHorizontalAlignmentRight];
+            self.navigationItem.rightBarButtonItem = [UIBarButtonItem setWithImageName:@"icon-create-group-white" withHighlightedImage:@"icon-create-group-white" target:self action:@selector(addButtonMethod) title:nil position:UIControlContentHorizontalAlignmentRight];
             break;
             
         case VCItemTypeShare | VCItemTypeMore: //分享图标

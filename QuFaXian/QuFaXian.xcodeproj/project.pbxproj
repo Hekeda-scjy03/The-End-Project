@@ -29,7 +29,6 @@
 		D90B2FF31CDC772800B762CF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FF11CDC772800B762CF /* SearchViewController.m */; };
 		D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FF21CDC772800B762CF /* SearchViewController.xib */; };
 		D90B2FFA1CDC7AA200B762CF /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2FF81CDC7AA200B762CF /* FindViewController.m */; };
-		D90B2FFB1CDC7AA200B762CF /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B2FF91CDC7AA200B762CF /* FindViewController.xib */; };
 		D93A42D51CE34D7E000B359B /* FindCubeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D93A42D31CE34D7E000B359B /* FindCubeCollectionViewCell.m */; };
 		D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93A42D41CE34D7E000B359B /* FindCubeCollectionViewCell.xib */; };
 		D93A42DB1CE35248000B359B /* FooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D93A42D91CE35248000B359B /* FooterCollectionReusableView.m */; };
@@ -47,13 +46,25 @@
 		D9424C071CE8161300DC3B76 /* GroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424C061CE8161300DC3B76 /* GroupHeader.m */; };
 		D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C081CE8162900DC3B76 /* GroupHeader.xib */; };
 		D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C0A1CE8168300DC3B76 /* CreaterContentHeader.xib */; };
+		D9610C881CEDF3CA00917597 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9610C871CEDF3CA00917597 /* HTTPRequest.m */; };
 		D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */; };
 		D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */; };
 		D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BB31CE5FF8400953D54 /* ShareButton.m */; };
 		D9871BB61CE5FFA200953D54 /* ShareButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BB51CE5FFA200953D54 /* ShareButton.xib */; };
 		D9871BBB1CE6137600953D54 /* CubeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BB91CE6137600953D54 /* CubeDetailViewController.m */; };
-		D9871BBC1CE6137600953D54 /* CubeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BBA1CE6137600953D54 /* CubeDetailViewController.xib */; };
+		D9B63B121CEC8AF800C5F3A1 /* CreaterListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B101CEC8AF800C5F3A1 /* CreaterListCell.m */; };
+		D9B63B131CEC8AF800C5F3A1 /* CreaterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B63B111CEC8AF800C5F3A1 /* CreaterListCell.xib */; };
+		D9B63B171CEC8B1D00C5F3A1 /* DirectoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B151CEC8B1D00C5F3A1 /* DirectoryListCell.m */; };
+		D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */; };
+		D9B63B1C1CEC946E00C5F3A1 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B1B1CEC946E00C5F3A1 /* MyScrollView.m */; };
+		D9B63B201CEC965B00C5F3A1 /* ListBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B1F1CEC965B00C5F3A1 /* ListBtn.m */; };
+		D9B63B221CEC967200C5F3A1 /* ListBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B63B211CEC967200C5F3A1 /* ListBtn.xib */; };
+		D9B63B271CECA12D00C5F3A1 /* CreatorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B251CECA12D00C5F3A1 /* CreatorListViewController.m */; };
+		D9B63B2B1CECA14D00C5F3A1 /* DirectoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B2A1CECA14D00C5F3A1 /* DirectoryListViewController.m */; };
+		D9B63B301CECABCB00C5F3A1 /* CreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B2F1CECABCB00C5F3A1 /* CreatorModel.m */; };
 		D9BCC9221CE20A080094CECB /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCC8B61CE20A080094CECB /* UIColor+HexColor.m */; };
+		D9CCA3011CEB4B0D0024C2A9 /* JoinIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CCA3001CEB4B0D0024C2A9 /* JoinIn.m */; };
+		D9CCA3031CEB4B2C0024C2A9 /* JoinIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CCA3021CEB4B2C0024C2A9 /* JoinIn.xib */; };
 		D9CFBED21CE21F4B00DD775B /* QFXNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFBED11CE21F4B00DD775B /* QFXNavgationController.m */; };
 /* End PBXBuildFile section */
 
@@ -97,7 +108,6 @@
 		D90B2FF21CDC772800B762CF /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		D90B2FF71CDC7AA200B762CF /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		D90B2FF81CDC7AA200B762CF /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
-		D90B2FF91CDC7AA200B762CF /* FindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
 		D93A42D21CE34D7E000B359B /* FindCubeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCubeCollectionViewCell.h; sourceTree = "<group>"; };
 		D93A42D31CE34D7E000B359B /* FindCubeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCubeCollectionViewCell.m; sourceTree = "<group>"; };
 		D93A42D41CE34D7E000B359B /* FindCubeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCubeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -124,6 +134,8 @@
 		D9424C061CE8161300DC3B76 /* GroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupHeader.m; sourceTree = "<group>"; };
 		D9424C081CE8162900DC3B76 /* GroupHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeader.xib; sourceTree = "<group>"; };
 		D9424C0A1CE8168300DC3B76 /* CreaterContentHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreaterContentHeader.xib; sourceTree = "<group>"; };
+		D9610C861CEDF3CA00917597 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		D9610C871CEDF3CA00917597 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
 		D9871BAC1CE3608500953D54 /* FindCreaterListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCreaterListTableViewCell.h; sourceTree = "<group>"; };
 		D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCreaterListTableViewCell.m; sourceTree = "<group>"; };
 		D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCreaterListTableViewCell.xib; sourceTree = "<group>"; };
@@ -132,9 +144,28 @@
 		D9871BB51CE5FFA200953D54 /* ShareButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareButton.xib; sourceTree = "<group>"; };
 		D9871BB81CE6137600953D54 /* CubeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeDetailViewController.h; sourceTree = "<group>"; };
 		D9871BB91CE6137600953D54 /* CubeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeDetailViewController.m; sourceTree = "<group>"; };
-		D9871BBA1CE6137600953D54 /* CubeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CubeDetailViewController.xib; sourceTree = "<group>"; };
+		D9B63B0F1CEC8AF800C5F3A1 /* CreaterListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreaterListCell.h; sourceTree = "<group>"; };
+		D9B63B101CEC8AF800C5F3A1 /* CreaterListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreaterListCell.m; sourceTree = "<group>"; };
+		D9B63B111CEC8AF800C5F3A1 /* CreaterListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreaterListCell.xib; sourceTree = "<group>"; };
+		D9B63B141CEC8B1D00C5F3A1 /* DirectoryListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryListCell.h; sourceTree = "<group>"; };
+		D9B63B151CEC8B1D00C5F3A1 /* DirectoryListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryListCell.m; sourceTree = "<group>"; };
+		D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectoryListCell.xib; sourceTree = "<group>"; };
+		D9B63B1A1CEC946E00C5F3A1 /* MyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollView.h; sourceTree = "<group>"; };
+		D9B63B1B1CEC946E00C5F3A1 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
+		D9B63B1E1CEC965B00C5F3A1 /* ListBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListBtn.h; sourceTree = "<group>"; };
+		D9B63B1F1CEC965B00C5F3A1 /* ListBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListBtn.m; sourceTree = "<group>"; };
+		D9B63B211CEC967200C5F3A1 /* ListBtn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListBtn.xib; sourceTree = "<group>"; };
+		D9B63B241CECA12D00C5F3A1 /* CreatorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatorListViewController.h; sourceTree = "<group>"; };
+		D9B63B251CECA12D00C5F3A1 /* CreatorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatorListViewController.m; sourceTree = "<group>"; };
+		D9B63B291CECA14D00C5F3A1 /* DirectoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryListViewController.h; sourceTree = "<group>"; };
+		D9B63B2A1CECA14D00C5F3A1 /* DirectoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryListViewController.m; sourceTree = "<group>"; };
+		D9B63B2E1CECABCB00C5F3A1 /* CreatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatorModel.h; sourceTree = "<group>"; };
+		D9B63B2F1CECABCB00C5F3A1 /* CreatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatorModel.m; sourceTree = "<group>"; };
 		D9BCC8B51CE20A080094CECB /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		D9BCC8B61CE20A080094CECB /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		D9CCA2FF1CEB4B0D0024C2A9 /* JoinIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinIn.h; sourceTree = "<group>"; };
+		D9CCA3001CEB4B0D0024C2A9 /* JoinIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinIn.m; sourceTree = "<group>"; };
+		D9CCA3021CEB4B2C0024C2A9 /* JoinIn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinIn.xib; sourceTree = "<group>"; };
 		D9CFBED01CE21F4B00DD775B /* QFXNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXNavgationController.h; sourceTree = "<group>"; };
 		D9CFBED11CE21F4B00DD775B /* QFXNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXNavgationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -270,6 +301,8 @@
 		D90B2FAA1CDB4F1900B762CF /* WebRequest */ = {
 			isa = PBXGroup;
 			children = (
+				D9610C861CEDF3CA00917597 /* HTTPRequest.h */,
+				D9610C871CEDF3CA00917597 /* HTTPRequest.m */,
 			);
 			name = WebRequest;
 			path = QuFaXian/WebRequest;
@@ -351,10 +384,11 @@
 		D90B2FDD1CDC72FA00B762CF /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
+				D9B63B231CECA10300C5F3A1 /* 造物主&目录list */,
+				D9B63B191CEC945B00C5F3A1 /* MyScrollView */,
 				D9871BB71CE6132B00953D54 /* Cube点进去的vc */,
 				D90B2FF71CDC7AA200B762CF /* FindViewController.h */,
 				D90B2FF81CDC7AA200B762CF /* FindViewController.m */,
-				D90B2FF91CDC7AA200B762CF /* FindViewController.xib */,
 			);
 			name = "发现";
 			path = Find;
@@ -385,6 +419,8 @@
 		D90B2FF51CDC773B00B762CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D9B63B2D1CECAB7600C5F3A1 /* 目录 */,
+				D9B63B2C1CECAB6500C5F3A1 /* 造物主 */,
 			);
 			name = Model;
 			path = QuFaXian/Model;
@@ -393,6 +429,9 @@
 		D90B2FF61CDC774300B762CF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D9B63B0E1CEC8AC100C5F3A1 /* 造物主列表cell */,
+				D9B63B0D1CEC8AAC00C5F3A1 /* 目录列表cell */,
+				D9CCA2FE1CEB4AE00024C2A9 /* 加入view */,
 				D9871BB11CE5FEDB00953D54 /* 分享 */,
 				D93A42D01CE34D14000B359B /* 发现 */,
 			);
@@ -403,6 +442,7 @@
 		D93A42D01CE34D14000B359B /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
+				D9B63B1D1CEC962C00C5F3A1 /* 目录&造物主listBtn */,
 				D9424BD31CE8118E00DC3B76 /* Cube点进去的详情cell */,
 				D9871BAB1CE3602C00953D54 /* 造物主列表cell */,
 				D93A42D71CE350AC000B359B /* 发现界面footerCell */,
@@ -579,9 +619,74 @@
 			children = (
 				D9871BB81CE6137600953D54 /* CubeDetailViewController.h */,
 				D9871BB91CE6137600953D54 /* CubeDetailViewController.m */,
-				D9871BBA1CE6137600953D54 /* CubeDetailViewController.xib */,
 			);
 			path = "Cube点进去的vc";
+			sourceTree = "<group>";
+		};
+		D9B63B0D1CEC8AAC00C5F3A1 /* 目录列表cell */ = {
+			isa = PBXGroup;
+			children = (
+				D9B63B141CEC8B1D00C5F3A1 /* DirectoryListCell.h */,
+				D9B63B151CEC8B1D00C5F3A1 /* DirectoryListCell.m */,
+				D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */,
+			);
+			name = "目录列表cell";
+			sourceTree = "<group>";
+		};
+		D9B63B0E1CEC8AC100C5F3A1 /* 造物主列表cell */ = {
+			isa = PBXGroup;
+			children = (
+				D9B63B0F1CEC8AF800C5F3A1 /* CreaterListCell.h */,
+				D9B63B101CEC8AF800C5F3A1 /* CreaterListCell.m */,
+				D9B63B111CEC8AF800C5F3A1 /* CreaterListCell.xib */,
+			);
+			name = "造物主列表cell";
+			sourceTree = "<group>";
+		};
+		D9B63B191CEC945B00C5F3A1 /* MyScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D9B63B1A1CEC946E00C5F3A1 /* MyScrollView.h */,
+				D9B63B1B1CEC946E00C5F3A1 /* MyScrollView.m */,
+			);
+			name = MyScrollView;
+			sourceTree = "<group>";
+		};
+		D9B63B1D1CEC962C00C5F3A1 /* 目录&造物主listBtn */ = {
+			isa = PBXGroup;
+			children = (
+				D9B63B1E1CEC965B00C5F3A1 /* ListBtn.h */,
+				D9B63B1F1CEC965B00C5F3A1 /* ListBtn.m */,
+				D9B63B211CEC967200C5F3A1 /* ListBtn.xib */,
+			);
+			name = "目录&造物主listBtn";
+			sourceTree = "<group>";
+		};
+		D9B63B231CECA10300C5F3A1 /* 造物主&目录list */ = {
+			isa = PBXGroup;
+			children = (
+				D9B63B241CECA12D00C5F3A1 /* CreatorListViewController.h */,
+				D9B63B251CECA12D00C5F3A1 /* CreatorListViewController.m */,
+				D9B63B291CECA14D00C5F3A1 /* DirectoryListViewController.h */,
+				D9B63B2A1CECA14D00C5F3A1 /* DirectoryListViewController.m */,
+			);
+			name = "造物主&目录list";
+			sourceTree = "<group>";
+		};
+		D9B63B2C1CECAB6500C5F3A1 /* 造物主 */ = {
+			isa = PBXGroup;
+			children = (
+				D9B63B2E1CECABCB00C5F3A1 /* CreatorModel.h */,
+				D9B63B2F1CECABCB00C5F3A1 /* CreatorModel.m */,
+			);
+			name = "造物主";
+			sourceTree = "<group>";
+		};
+		D9B63B2D1CECAB7600C5F3A1 /* 目录 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "目录";
 			sourceTree = "<group>";
 		};
 		D9BCC7D11CE209E30094CECB /* Import */ = {
@@ -600,6 +705,16 @@
 				D9BCC8B61CE20A080094CECB /* UIColor+HexColor.m */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		D9CCA2FE1CEB4AE00024C2A9 /* 加入view */ = {
+			isa = PBXGroup;
+			children = (
+				D9CCA2FF1CEB4B0D0024C2A9 /* JoinIn.h */,
+				D9CCA3001CEB4B0D0024C2A9 /* JoinIn.m */,
+				D9CCA3021CEB4B2C0024C2A9 /* JoinIn.xib */,
+			);
+			name = "加入view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -666,10 +781,12 @@
 				D90B2F9E1CDB4E2C00B762CF /* LaunchScreen.storyboard in Resources */,
 				D90B2F9B1CDB4E2C00B762CF /* Assets.xcassets in Resources */,
 				D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */,
-				D9871BBC1CE6137600953D54 /* CubeDetailViewController.xib in Resources */,
 				D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */,
 				D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */,
 				D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */,
+				D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */,
+				D9B63B221CEC967200C5F3A1 /* ListBtn.xib in Resources */,
+				D9B63B131CEC8AF800C5F3A1 /* CreaterListCell.xib in Resources */,
 				D9424BFE1CE814E300DC3B76 /* CreaterContentTableViewCell.xib in Resources */,
 				D9424BF41CE814A700DC3B76 /* ContentsStateTableViewCell.xib in Resources */,
 				D9424BCC1CE72E2C00DC3B76 /* TopicsFooterCollectionReusableView.xib in Resources */,
@@ -677,10 +794,10 @@
 				D9424BF91CE814CF00DC3B76 /* GroupContentTableViewCell.xib in Resources */,
 				D93A42DC1CE35248000B359B /* FooterCollectionReusableView.xib in Resources */,
 				D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */,
+				D9CCA3031CEB4B2C0024C2A9 /* JoinIn.xib in Resources */,
 				D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */,
 				D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */,
 				D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */,
-				D90B2FFB1CDC7AA200B762CF /* FindViewController.xib in Resources */,
 				D9871BB61CE5FFA200953D54 /* ShareButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,10 +865,12 @@
 				D90B2FCD1CDC463300B762CF /* QFXTabBar.m in Sources */,
 				D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */,
 				D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */,
+				D9B63B2B1CECA14D00C5F3A1 /* DirectoryListViewController.m in Sources */,
 				D9424BF81CE814CF00DC3B76 /* GroupContentTableViewCell.m in Sources */,
 				D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */,
 				D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */,
 				D90B2FB01CDB4FAC00B762CF /* QFXCustomViewController.m in Sources */,
+				D9B63B121CEC8AF800C5F3A1 /* CreaterListCell.m in Sources */,
 				D90B2FBB1CDB51E400B762CF /* UIBarButtonItem+InitType.m in Sources */,
 				D9BCC9221CE20A080094CECB /* UIColor+HexColor.m in Sources */,
 				D90B2FE81CDC76FF00B762CF /* DynamicViewController.m in Sources */,
@@ -759,12 +878,19 @@
 				D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */,
 				D9424BD01CE8060900DC3B76 /* ShareButtonViewController.m in Sources */,
 				D90B2FC01CDC405100B762CF /* UIStoryboard+NavPopToVC.m in Sources */,
+				D9610C881CEDF3CA00917597 /* HTTPRequest.m in Sources */,
 				D90B2FE31CDC76E400B762CF /* MineViewController.m in Sources */,
+				D9B63B301CECABCB00C5F3A1 /* CreatorModel.m in Sources */,
 				D93A42DB1CE35248000B359B /* FooterCollectionReusableView.m in Sources */,
 				D90B2F901CDB4E2C00B762CF /* main.m in Sources */,
+				D9B63B271CECA12D00C5F3A1 /* CreatorListViewController.m in Sources */,
 				D90B2FCA1CDC461900B762CF /* QFXTabBarController.m in Sources */,
 				D9CFBED21CE21F4B00DD775B /* QFXNavgationController.m in Sources */,
+				D9B63B1C1CEC946E00C5F3A1 /* MyScrollView.m in Sources */,
+				D9CCA3011CEB4B0D0024C2A9 /* JoinIn.m in Sources */,
+				D9B63B171CEC8B1D00C5F3A1 /* DirectoryListCell.m in Sources */,
 				D9424C071CE8161300DC3B76 /* GroupHeader.m in Sources */,
+				D9B63B201CEC965B00C5F3A1 /* ListBtn.m in Sources */,
 				D90B2FEE1CDC771900B762CF /* HomeViewController.m in Sources */,
 				D90B2FFA1CDC7AA200B762CF /* FindViewController.m in Sources */,
 				D93A42D51CE34D7E000B359B /* FindCubeCollectionViewCell.m in Sources */,

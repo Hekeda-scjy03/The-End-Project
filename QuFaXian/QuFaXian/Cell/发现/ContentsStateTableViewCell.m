@@ -15,6 +15,28 @@
     // Initialization code
 }
 
+- (IBAction)clickBtnMethod:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    switch (btn.tag) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        default:
+            break;
+    }
+    
+}
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

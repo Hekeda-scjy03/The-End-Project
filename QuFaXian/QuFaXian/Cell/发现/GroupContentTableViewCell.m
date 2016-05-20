@@ -15,23 +15,29 @@
     // Initialization code
 }
 
-#pragma mark - 收藏
-- (IBAction)likeClickMethod:(id)sender {
+#pragma mark - button点击事件
+- (IBAction)clickBtnMethod:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    switch (btn.tag) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        default:
+            break;
+    }
+    
 }
 
-#pragma mark - 点赞
-- (IBAction)zanClickMethod:(id)sender {
-}
 
-
-#pragma mark - 评论
-- (IBAction)commentClickMethod:(id)sender {
-}
-
-
-#pragma mark - 更多
-- (IBAction)moreClickMethod:(id)sender {
-}
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -12,6 +12,7 @@
 @implementation CreaterContentHeader
 
 - (void)awakeFromNib{
+    [super awakeFromNib];
     
     self.headerBigHeadImage.layer.cornerRadius = self.headerBigHeadImage.frame.size.width / 2;
     self.headerBigHeadImage.layer.masksToBounds = YES;
@@ -44,7 +45,9 @@
             
         case 1:
         {
-            
+            if ([self.delegate respondsToSelector:@selector(clickBtnToRefreshList)]) {
+                [self.delegate clickBtnToRefreshList];
+            }
         }
             break;
             
