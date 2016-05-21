@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>每日提醒</string>
+		<key>titleImage</key>
+		<string>meiritixing.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>省流量模式</string>
+		<key>titleImage</key>
+		<string>shengliuliangmoshi.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>使用系统字体</string>
+		<key>titleImage</key>
+		<string>xitongziti.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>阅读历史</string>
+		<key>titleImage</key>
+		<string>yuedulishi.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>趣发现动画</string>
+		<key>titleImage</key>
+		<string>qufaxiandonghua.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>清除缓存</string>
+		<key>titleImage</key>
+		<string>qingchuhuancun.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>检查更新</string>
+		<key>titleImage</key>
+		<string>jianchagengxin.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>和我们聊聊</string>
+		<key>titleImage</key>
+		<string>liaotian.png</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>退出登录</string>
+		<key>titleImage</key>
+		<string>tuichudenglu.png</string>
+	</dict>
+</array>
+</plist>

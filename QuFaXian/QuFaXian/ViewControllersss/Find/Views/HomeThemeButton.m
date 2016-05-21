@@ -8,10 +8,16 @@
 
 #import "HomeThemeButton.h"
 
+@interface HomeThemeButton ()
+
+
+@end
+
 @implementation HomeThemeButton
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
+    
     self = [super initWithFrame:frame];
     if (self) {
         self.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -20,6 +26,8 @@
     }
     return self;
 }
+
+
 
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
