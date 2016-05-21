@@ -28,8 +28,6 @@
 // themeView相对于底部的间距
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *themeMarginBottom;
 // 主题按钮
-@property (nonatomic, strong) HomeThemeButton *homeThemeBtn;
-
 
 // 用来存放需要滚动的图片
 @property (nonatomic, strong) UIImageView *imgView;
@@ -40,6 +38,9 @@
 
 // 按钮标题数组
 @property (nonatomic, strong) NSArray *btnTitleArray;
+
+// 按钮图片
+@property (nonatomic, strong) NSArray *btnImageArray;
 
 @end
 
@@ -52,6 +53,16 @@
     }
     return _btnTitleArray;
 }
+
+- (NSArray *)btnImageArray
+{
+    if (!_btnImageArray) {
+        _btnImageArray =  @[@"shipin-0",@"yinyue",@"guanzhu",@"huace",@"kepu",@"lvyou",@"meishi-0",@"chuangyi"];
+    }
+    return _btnImageArray;
+
+}
+
 
 #pragma mark - awakeFromNib
 - (void)awakeFromNib
@@ -93,7 +104,7 @@
     
     // 设置themeView相对于HomeHeaderView底部的间距
     self.themeMarginBottom.constant = self.frame.size.height * 0.0267;
-
+    
     
     // -----------计算按钮的frame-------------------
     int columns = 4;
@@ -131,9 +142,9 @@
         CGFloat homeThemeBtnY = marginTop + rowIndex * (marginTop + homeThemeBtnH);
         self.homeThemeBtn = self.themeView.subviews[i];
         self.homeThemeBtn.frame = CGRectMake(homeThemeBtnX, homeThemeBtnY, homeThemeBtnW, homeThemeBtnH);
-
+        
     }
-
+    
 }
 
 #pragma mark - 创建主题按钮
@@ -141,21 +152,41 @@
 {
     for (int i = 0; i < self.btnTitleArray.count; i++)
     {
-        HomeThemeButton *homeThemeBtn = [[HomeThemeButton alloc] init];
         
-        homeThemeBtn.tag = i;
+        HomeThemeButton *homeThemeBtn = [[HomeThemeButton alloc] init];
         
         [homeThemeBtn setTitle:self.btnTitleArray[i] forState:UIControlStateNormal];
         [homeThemeBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
-        [homeThemeBtn setImage:[UIImage imageNamed:@"btn"] forState:(UIControlStateNormal)];
+        [homeThemeBtn setImage:[UIImage imageNamed:self.btnImageArray[i]] forState:(UIControlStateNormal)];
         
         homeThemeBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         
-        [self.themeView addSubview:homeThemeBtn];
+        homeThemeBtn.tag = i;
         
+        
+        [homeThemeBtn addTarget:self action:@selector(homeThemeBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
+        
+        [self.themeView addSubview:homeThemeBtn];
         self.homeThemeBtn = homeThemeBtn;
     }
+}
 
+#pragma mark - 按钮的单击事件
+- (IBAction)homeThemeBtnClick:(HomeThemeButton *)sender
+{
+    self.homeThemeBtn.tag = sender.tag;
+    
+    switch (self.homeThemeBtn.tag) {
+        case VideoBtn:
+            if (self.homeThemeBtn.delegate &&[self.homeThemeBtn.delegate respondsToSelector:@selector(videoBtnClickPushIntoViewController:)]) {
+                [self.homeThemeBtn.delegate videoBtnClickPushIntoViewController:self.homeThemeBtn];
+                break;
+                
+            default:
+                break;
+            }
+            
+    }
 }
 
 
@@ -204,7 +235,7 @@
 {
     //重新启动计时器
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(scrollImg) userInfo:nil repeats:YES];
-
+    
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     [runLoop addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
@@ -228,13 +259,12 @@
     
     [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
 }
-    
-    
+
+
 #pragma mark - 创建homeHeaderView
 + (instancetype)homeHeaderView
 {
-        HomeHeaderView *homeHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"HomeHeaderView" owner:nil options:nil] lastObject];
-        return homeHeaderView;
+    HomeHeaderView *homeHeaderView = [[[NSBundle mainBundle] loadNibNamed:@"HomeHeaderView" owner:nil options:nil] lastObject];
+    return homeHeaderView;
 }
-    
 @end

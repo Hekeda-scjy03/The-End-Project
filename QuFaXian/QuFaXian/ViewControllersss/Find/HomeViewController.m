@@ -8,11 +8,12 @@
 
 #import "HomeViewController.h"
 #import "HomeHeaderView.h"
+#import "HomeThemeButton.h"
+#import "QFXVideoViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,HomeThemeButtonDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
-
-
 @property (nonatomic, strong) HomeHeaderView *homeHeaderView;
 
 @end
@@ -25,7 +26,11 @@
     
     HomeHeaderView *homeHeaderView = [HomeHeaderView homeHeaderView];
     self.homeTableView.tableHeaderView = homeHeaderView;
+    homeHeaderView.homeThemeBtn.delegate = self;
     self.homeHeaderView = homeHeaderView;
+    
+    self.homeTableView.dataSource = self;
+    self.homeTableView.delegate = self;
 }
 
 
@@ -34,6 +39,37 @@
 {
     [super viewDidAppear:animated];
     self.homeHeaderView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width);
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    return cell;
+}
+#pragma mark - UITableViewDelegate
+
+// 按钮的代理方法
+#pragma mark - HomeThemeButtonDelegate
+// 视频按钮的代理方法
+- (void)videoBtnClickPushIntoViewController:(HomeThemeButton *)sender
+{
+    QFXVideoViewController *videoViewController = [[QFXVideoViewController alloc] init];
+    
+    switch (sender.tag) {
+        case VideoBtn:
+            [self.navigationController pushViewController:videoViewController animated:YES];
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 

@@ -7,6 +7,8 @@
 //
 
 #import "QFXCustomViewController.h"
+@class HomeHeaderView;
+@class HomeThemeButton;
 
 @interface HomeViewController : QFXCustomViewController
 
