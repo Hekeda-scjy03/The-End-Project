@@ -179,9 +179,7 @@
         [_array removeAllObjects];
         [mySelf getData];
     }];
-   
-//    self.collectionView.mj_header = []
-    
+       
 }
 
 #pragma mark - collection delegate
