@@ -14,11 +14,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="201" height="193"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sP2-RK-PCP">
-                        <rect key="frame" x="66" y="35" width="70" height="70"/>
+                        <rect key="frame" x="61" y="35" width="80" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="70" id="Wny-aq-JKo"/>
-                            <constraint firstAttribute="height" constant="70" id="lSc-eV-E4f"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="MUc-1E-hYz"/>
+                            <constraint firstAttribute="width" constant="80" id="Wny-aq-JKo"/>
+                            <constraint firstAttribute="height" constant="80" id="lSc-eV-E4f"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="nrZ-JI-u67"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MUc-1E-hYz"/>
+                                <exclude reference="nrZ-JI-u67"/>
+                            </mask>
+                        </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="电影/造物主" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYa-k6-us8">
                         <rect key="frame" x="69" y="10" width="65" height="15"/>
@@ -26,33 +34,64 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="影教现场" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-xc-rqq">
-                        <rect key="frame" x="67" y="115" width="68" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="影教现场" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-xc-rqq">
+                        <rect key="frame" x="10" y="125" width="181" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="NrJ-bf-JtV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="腾讯网非虚构平台，致力于耕耘中国故事" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-s8-Tyb">
-                        <rect key="frame" x="10" y="151" width="181" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="10" y="156" width="181" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="M4T-DC-cxE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-cK-nM3">
+                        <rect key="frame" x="60" y="35" width="80" height="80"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="61" id="USY-W0-7lk"/>
+                            <constraint firstAttribute="width" constant="79" id="w6X-Vh-uy2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="USY-W0-7lk"/>
+                                <exclude reference="w6X-Vh-uy2"/>
+                            </mask>
+                        </variation>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
+                <constraint firstItem="XEu-cK-nM3" firstAttribute="centerX" secondItem="sP2-RK-PCP" secondAttribute="centerX" id="2wA-EC-Pq5"/>
                 <constraint firstItem="RYa-k6-us8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="7x9-0j-Xw0"/>
                 <constraint firstItem="QAU-xc-rqq" firstAttribute="top" secondItem="sP2-RK-PCP" secondAttribute="bottom" constant="10" id="BoK-Wt-qJ9"/>
+                <constraint firstItem="XEu-cK-nM3" firstAttribute="height" secondItem="sP2-RK-PCP" secondAttribute="height" id="Hbg-hH-1o4"/>
+                <constraint firstItem="XEu-cK-nM3" firstAttribute="width" secondItem="sP2-RK-PCP" secondAttribute="width" id="K2D-OT-sPK"/>
                 <constraint firstItem="QAU-xc-rqq" firstAttribute="centerX" secondItem="RYa-k6-us8" secondAttribute="centerX" id="R4F-J1-Wjg"/>
                 <constraint firstItem="sP2-RK-PCP" firstAttribute="top" secondItem="RYa-k6-us8" secondAttribute="bottom" constant="10" id="Vs7-z3-dsw"/>
                 <constraint firstItem="RYa-k6-us8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XbH-cn-5uM"/>
                 <constraint firstItem="WFx-s8-Tyb" firstAttribute="centerX" secondItem="RYa-k6-us8" secondAttribute="centerX" id="aGQ-hj-MWk"/>
                 <constraint firstItem="sP2-RK-PCP" firstAttribute="centerX" secondItem="RYa-k6-us8" secondAttribute="centerX" id="bCe-JQ-yr0"/>
+                <constraint firstAttribute="bottom" secondItem="WFx-s8-Tyb" secondAttribute="bottom" constant="10" id="ch3-wi-lE7"/>
+                <constraint firstItem="XEu-cK-nM3" firstAttribute="centerY" secondItem="sP2-RK-PCP" secondAttribute="centerY" id="mgd-cs-CPC"/>
                 <constraint firstItem="WFx-s8-Tyb" firstAttribute="top" secondItem="QAU-xc-rqq" secondAttribute="bottom" constant="15" id="qEj-UK-A10"/>
                 <constraint firstItem="WFx-s8-Tyb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xz6-ue-n5V"/>
+                <constraint firstItem="QAU-xc-rqq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="yeq-eM-8Gr"/>
             </constraints>
             <size key="customSize" width="201" height="193"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="qEj-UK-A10"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="cubeImg" destination="sP2-RK-PCP" id="k2r-VA-dUM"/>
                 <outlet property="cubeIntroduce" destination="WFx-s8-Tyb" id="fXZ-9e-Lu0"/>

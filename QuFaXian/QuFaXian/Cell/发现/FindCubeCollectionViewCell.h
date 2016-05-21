@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CubeModel;
 
 @interface FindCubeCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) CubeModel *cubeModel;
 
 @end

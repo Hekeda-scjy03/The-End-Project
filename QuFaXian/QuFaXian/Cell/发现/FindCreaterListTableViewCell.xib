@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漫画的未知之域 你说离开的骄傲了解到；爱上家里附近老实交代" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1U-UG-ncL">
-                        <rect key="frame" x="89" y="51" width="267" height="27"/>
+                        <rect key="frame" x="89" y="51" width="267" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -48,6 +48,7 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="s1U-UG-ncL" secondAttribute="bottom" constant="-5" id="9Wz-qg-cvz"/>
                     <constraint firstItem="XKx-dY-7IU" firstAttribute="leading" secondItem="9Lq-Nu-FRR" secondAttribute="trailing" constant="15" id="BTa-eb-Qsd"/>
                     <constraint firstItem="9Lq-Nu-FRR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XhY-O1-2gP"/>
                     <constraint firstItem="iKt-Fd-j05" firstAttribute="leading" secondItem="ZWA-eK-RmB" secondAttribute="trailing" constant="5" id="YnF-5T-hgC"/>

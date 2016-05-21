@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ActivityModel;
 
 @interface FooterCollectionReusableView : UICollectionReusableView
+
+@property (nonatomic, strong) ActivityModel *activityModel;
 
 @end

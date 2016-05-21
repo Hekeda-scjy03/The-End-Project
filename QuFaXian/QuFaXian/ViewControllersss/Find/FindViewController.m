@@ -16,14 +16,22 @@
 #import "CreatorListViewController.h"
 #import "DirectoryListViewController.h"
 #import "HTTPRequest.h"
+#import "CubeModel.h"
+#import "SpecialModel.h"
+#import "ActivityModel.h"
+#import <MJRefresh.h>
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface FindViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>{
-    UICollectionView *_collectionView;
     
     ListBtn *_right,*_left;
+    
+    NSMutableArray *_array;
 }
+
+@property (strong, nonatomic) UICollectionView *collectionView;
+
 
 @end
 
@@ -33,22 +41,80 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    _array = [[NSMutableArray alloc]init];
+    
     [self initButton];
     [self initCollectionView];
+    [self getData];
 }
 
 #pragma mark - 获取网络数据
 - (void)getData{
-    NSDictionary *parameterDic = @{@"HTTP-AUTHORIZATION":@"0c596a400bb611e6b2805254006fe942"};
-    
+    NSString *urlStr = @"";
+    switch (_array.count) {
+        case 0:
+            urlStr = @"http://mmmono.com/api/v3/new_explore/?";
+            
+            break;
+        case 4:
+            urlStr = @"http://mmmono.com/api/v3/new_explore/?start=2%3B8%3B2%3B1";
+            break;
+        case 8:
+            urlStr = @"http://mmmono.com/api/v3/new_explore/?start=3%3B16%3B4%3B2";
+            break;
+        case 12:
+            urlStr = @"http://mmmono.com/api/v3/new_explore/?start=4%3B24%3B6%3B3";
+            break;
+        case 16:
+            urlStr = @"http://mmmono.com/api/v3/new_explore/?start=5%3B32%3B8%3B4";
+            break;
+            
+            
+        default:
+            break;
+    }
+    NSString *header = @"0c596a400bb611e6b2805254006fe942";
     HTTPRequest *request = [HTTPRequest shareInstance];
-    [request getURL:@"http://mmmono.com/api/v3/new_explore/?" parameterDic:parameterDic success:^(id responsObj) {
-        NSLog(@"111 + %@",responsObj);
+    [request getURL:urlStr parameterDic:nil headerValue:header success:^(id responsObj) {
+        
+        NSArray *modlist = [responsObj objectForKey:@"mod_list"];
+        
+        for (int i=0; i<modlist.count; i++) {
+            NSDictionary *tempDic = modlist[i];
+            NSArray *entitylist = [tempDic objectForKey:@"entity_list"];
+            if (i % 2 == 0) {
+                NSMutableArray *cellArray = [[NSMutableArray alloc]init];
+                for (NSDictionary *dic in entitylist) {
+                    
+                    CubeModel *cube = [[CubeModel alloc]initWithDic:dic];
+                    [cellArray addObject:cube];
+                }
+                [_array addObject:cellArray];
+            }else if (i % 4 == 1){
+                NSDictionary *dataDict = entitylist [0];
+                NSDictionary *initDcit = nil;
+                if (_array.count == 1) {
+                    NSDictionary *tempDic1 = [dataDict objectForKey:@"meow"];
+                    initDcit = [tempDic1 objectForKey:@"ref_campaign"];
+                }else{
+                    initDcit = [dataDict objectForKey:@"campaign"];
+                }
+                ActivityModel *activity = [[ActivityModel alloc]initWithDic:initDcit];
+                [_array addObject:activity];
+                
+            }else{
+                SpecialModel *special = [[SpecialModel alloc]initWithDic:entitylist[0]];
+                [_array addObject:special];
+            }
+        }
+        [_collectionView.mj_footer endRefreshing];
+        [_collectionView reloadData];
     } fail:^(NSError *error) {
         NSLog(@"222 + %@",error);
     }];
     
 }
+
 
 #pragma mark - 初始化两个button
 - (void)initButton{
@@ -99,12 +165,29 @@
     [_collectionView registerNib:[UINib nibWithNibName:@"FooterCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footerCell"];
     
     [_collectionView registerNib:[UINib nibWithNibName:@"TopicsFooterCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"topicFooter"];
+    
+    
+    __weak typeof(self) mySelf = self;
+   
+    if (_array.count != 20) {
+        self.collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            
+            [mySelf getData];
+        }];
+    }
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [_array removeAllObjects];
+        [mySelf getData];
+    }];
+   
+//    self.collectionView.mj_header = []
+    
 }
 
 #pragma mark - collection delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 10;
+    return _array.count / 2;
 }
 //item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -115,9 +198,9 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    
     FindCubeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cubeCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor grayColor];
+    NSArray *tempArray = _array[indexPath.section * 2];
+    cell.cubeModel = tempArray[indexPath.row];
     return cell;
  
 }
@@ -129,11 +212,13 @@
 
 #pragma mark - 设置footer
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section % 2 ==0) {
+    if (indexPath.section % 2 !=0) {
         TopicsFooterCollectionReusableView *topicFooter = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"topicFooter" forIndexPath:indexPath];
+            topicFooter.specialModel = _array[indexPath.section * 2 + 1];
         return topicFooter;
     }else{
         FooterCollectionReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"footerCell" forIndexPath:indexPath];
+            footer.activityModel = _array[indexPath.section * 2 + 1];
         return footer;
     }
 }

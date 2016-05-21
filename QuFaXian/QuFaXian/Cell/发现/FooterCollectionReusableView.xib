@@ -11,6 +11,9 @@
             <rect key="frame" x="0.0" y="0.0" width="369" height="121"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y0k-sk-k5c">
+                    <rect key="frame" x="0.0" y="0.0" width="369" height="121"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-balloon-red" translatesAutoresizingMaskIntoConstraints="NO" id="jZJ-Vq-hch">
                     <rect key="frame" x="175" y="8" width="20" height="20"/>
                     <constraints>
@@ -18,59 +21,80 @@
                         <constraint firstAttribute="height" constant="20" id="gIQ-YV-ewj"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BTp-W6-iHL">
-                    <rect key="frame" x="175" y="38" width="20" height="20"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONO勃艮第  说" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75O-yu-HAM">
-                    <rect key="frame" x="146" y="61" width="78" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活久见|你人生最想看的演唱会TOP3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75O-yu-HAM">
+                    <rect key="frame" x="15" y="50" width="340" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="1ha-EV-kKh"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1ha-EV-kKh"/>
+                        </mask>
+                    </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在这个万物复苏的春天，少女心也泛滥了有木有！哪部少女漫让你欲罢不能无法满足与......." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da6-19-SL8">
-                    <rect key="frame" x="10" y="91" width="350" height="30"/>
+                    <rect key="frame" x="10" y="86" width="350" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="6wl-vz-rQn"/>
                         <constraint firstAttribute="height" constant="30" id="PSj-QE-i6t"/>
+                        <constraint firstAttribute="height" constant="20" id="w5G-Z4-c9O"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="6wl-vz-rQn"/>
+                            <exclude reference="PSj-QE-i6t"/>
                         </mask>
                     </variation>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0k-sk-k5c">
-                    <rect key="frame" x="0.0" y="0.0" width="369" height="143"/>
-                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6666人参加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyF-N6-34l">
+                    <rect key="frame" x="299" y="8" width="62" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <constraints>
-                <constraint firstItem="BTp-W6-iHL" firstAttribute="width" secondItem="jZJ-Vq-hch" secondAttribute="width" id="0fx-YA-DnR"/>
-                <constraint firstItem="75O-yu-HAM" firstAttribute="top" secondItem="BTp-W6-iHL" secondAttribute="bottom" constant="3" id="7DB-Di-gTs"/>
+                <constraint firstItem="Da6-19-SL8" firstAttribute="top" secondItem="75O-yu-HAM" secondAttribute="bottom" constant="15" id="1r5-ud-VNz"/>
+                <constraint firstItem="75O-yu-HAM" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="4wZ-TI-cfb"/>
                 <constraint firstItem="y0k-sk-k5c" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="9wM-ac-Ygl"/>
+                <constraint firstItem="75O-yu-HAM" firstAttribute="top" secondItem="jZJ-Vq-hch" secondAttribute="bottom" constant="15" id="DV2-ep-RO6"/>
+                <constraint firstAttribute="trailing" secondItem="nyF-N6-34l" secondAttribute="trailing" constant="8" id="Dma-ey-APZ"/>
+                <constraint firstItem="Da6-19-SL8" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="GzS-XG-pIn"/>
                 <constraint firstItem="jZJ-Vq-hch" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="J5I-xH-m6m"/>
-                <constraint firstItem="BTp-W6-iHL" firstAttribute="height" secondItem="jZJ-Vq-hch" secondAttribute="height" id="LGA-P3-mlm"/>
-                <constraint firstItem="BTp-W6-iHL" firstAttribute="centerX" secondItem="Da6-19-SL8" secondAttribute="centerX" id="NBd-fd-6cn"/>
+                <constraint firstItem="75O-yu-HAM" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="JGO-ox-Dwc"/>
                 <constraint firstItem="Da6-19-SL8" firstAttribute="top" secondItem="75O-yu-HAM" secondAttribute="bottom" constant="10" id="SDk-Nd-3pB"/>
-                <constraint firstItem="BTp-W6-iHL" firstAttribute="top" secondItem="jZJ-Vq-hch" secondAttribute="bottom" constant="10" id="VmR-Gi-3FU"/>
                 <constraint firstItem="75O-yu-HAM" firstAttribute="centerX" secondItem="Da6-19-SL8" secondAttribute="centerX" id="WP3-Az-q1e"/>
+                <constraint firstItem="75O-yu-HAM" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Yd9-7y-ziT"/>
+                <constraint firstItem="nyF-N6-34l" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="Z8M-gv-nl8"/>
                 <constraint firstAttribute="trailing" secondItem="y0k-sk-k5c" secondAttribute="trailing" id="ekT-ec-vaG"/>
                 <constraint firstItem="y0k-sk-k5c" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="gUO-kv-D13"/>
                 <constraint firstItem="Da6-19-SL8" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="o6X-G8-Ato"/>
+                <constraint firstAttribute="bottom" secondItem="Da6-19-SL8" secondAttribute="bottom" constant="10" id="pI0-n4-47x"/>
                 <constraint firstItem="jZJ-Vq-hch" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="sxM-31-0Fg"/>
                 <constraint firstItem="jZJ-Vq-hch" firstAttribute="centerX" secondItem="Da6-19-SL8" secondAttribute="centerX" id="uE4-i5-shk"/>
                 <constraint firstAttribute="bottom" secondItem="y0k-sk-k5c" secondAttribute="bottom" id="wmt-TF-pF1"/>
+                <constraint firstItem="75O-yu-HAM" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="zcH-uY-8LM"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="DV2-ep-RO6"/>
+                    <exclude reference="JGO-ox-Dwc"/>
+                    <exclude reference="WP3-Az-q1e"/>
+                    <exclude reference="SDk-Nd-3pB"/>
+                    <exclude reference="pI0-n4-47x"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="footerBackImage" destination="y0k-sk-k5c" id="Ncl-J3-ZvN"/>
-                <outlet property="footerHeadImg" destination="BTp-W6-iHL" id="r3j-Cx-tf0"/>
                 <outlet property="footerIntroduce" destination="Da6-19-SL8" id="o76-fG-W7N"/>
                 <outlet property="footerName" destination="75O-yu-HAM" id="hFy-wi-xNJ"/>
+                <outlet property="participantNum" destination="nyF-N6-34l" id="9SL-a7-9Og"/>
             </connections>
             <point key="canvasLocation" x="383.5" y="325.5"/>
         </collectionReusableView>

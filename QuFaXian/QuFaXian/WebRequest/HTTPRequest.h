@@ -12,7 +12,7 @@
 
 + (HTTPRequest *)shareInstance;
 
-- (void)getURL:(NSString *)url parameterDic:(NSDictionary *)dic success:(void(^)(id responsObj))success fail:(void(^)(NSError *error))fail;
+- (void)getURL:(NSString *)url parameterDic:(NSDictionary *)dic headerValue:(NSString *)headerValue success:(void(^)(id responsObj))success fail:(void(^)(NSError *error))fail;
 
 - (void)postURL:(NSString *)url parameterDic:(NSDictionary *)dic success:(void(^)(id responsObj))success fail:(void(^)(NSError *error))fail;
 

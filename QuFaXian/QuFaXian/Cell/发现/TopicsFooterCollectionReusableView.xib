@@ -8,39 +8,69 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="TopicsFooterCollectionReusableView">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
+            <rect key="frame" x="0.0" y="0.0" width="374" height="181"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-h4-wNG">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-h4-wNG">
                     <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音乐门诊部 是时候给你们跑步歌单了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfR-IA-PNU">
-                    <rect key="frame" x="81" y="64" width="212" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共10篇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-iQ-okV">
-                    <rect key="frame" x="331" y="8" width="35" height="14"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-hj-2uT">
+                    <rect key="frame" x="0.0" y="141" width="374" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音乐门诊部 是时候给你们跑步歌单了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfR-IA-PNU">
+                            <rect key="frame" x="10" y="12" width="212" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共10篇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-iQ-okV">
+                            <rect key="frame" x="329" y="13" width="35" height="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OZw-iQ-okV" secondAttribute="trailing" constant="10" id="2al-LE-Bzd"/>
+                        <constraint firstItem="RfR-IA-PNU" firstAttribute="leading" secondItem="nz6-hj-2uT" secondAttribute="leading" constant="10" id="AFc-fd-b87"/>
+                        <constraint firstAttribute="height" constant="40" id="GjA-VD-3sF"/>
+                        <constraint firstItem="OZw-iQ-okV" firstAttribute="centerY" secondItem="RfR-IA-PNU" secondAttribute="centerY" id="ImL-c3-Q1n"/>
+                        <constraint firstItem="RfR-IA-PNU" firstAttribute="centerY" secondItem="nz6-hj-2uT" secondAttribute="centerY" id="L6v-NV-ZTe"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-E2-AaZ">
+                    <rect key="frame" x="147" y="31" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="0vn-sO-x96"/>
+                        <constraint firstAttribute="height" constant="80" id="SdW-Ua-QHU"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="OZw-iQ-okV" secondAttribute="trailing" constant="8" id="6jl-oe-HFI"/>
-                <constraint firstItem="OZw-iQ-okV" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="7yA-Xb-JQJ"/>
+                <constraint firstItem="Vmf-E2-AaZ" firstAttribute="centerY" secondItem="KFs-h4-wNG" secondAttribute="centerY" id="5Be-lf-wv3"/>
+                <constraint firstAttribute="trailing" secondItem="nz6-hj-2uT" secondAttribute="trailing" id="CaZ-g3-AQC"/>
+                <constraint firstItem="nz6-hj-2uT" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Gc0-WM-yEK"/>
+                <constraint firstAttribute="bottom" secondItem="nz6-hj-2uT" secondAttribute="bottom" id="HiE-WY-Ita"/>
                 <constraint firstAttribute="trailing" secondItem="KFs-h4-wNG" secondAttribute="trailing" id="KvD-m4-ssK"/>
-                <constraint firstItem="RfR-IA-PNU" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="Mjj-zV-aUM"/>
                 <constraint firstItem="KFs-h4-wNG" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Yki-kb-3id"/>
+                <constraint firstItem="nz6-hj-2uT" firstAttribute="top" secondItem="KFs-h4-wNG" secondAttribute="bottom" id="jFP-d0-uFH"/>
                 <constraint firstAttribute="bottom" secondItem="KFs-h4-wNG" secondAttribute="bottom" id="jy8-RV-STJ"/>
-                <constraint firstItem="RfR-IA-PNU" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="mWa-YA-5Xt"/>
                 <constraint firstItem="KFs-h4-wNG" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="nQS-89-Vhq"/>
+                <constraint firstItem="Vmf-E2-AaZ" firstAttribute="centerX" secondItem="KFs-h4-wNG" secondAttribute="centerX" id="obB-oK-KUQ"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="jy8-RV-STJ"/>
+                </mask>
+            </variation>
             <connections>
+                <outlet property="contentNum" destination="OZw-iQ-okV" id="bJG-aP-FQV"/>
+                <outlet property="specialNameImage" destination="Vmf-E2-AaZ" id="PZa-tw-r8e"/>
+                <outlet property="specialTitle" destination="RfR-IA-PNU" id="mMP-L3-YHi"/>
                 <outlet property="topicImage" destination="KFs-h4-wNG" id="4IR-OH-txl"/>
             </connections>
-            <point key="canvasLocation" x="436" y="345"/>
+            <point key="canvasLocation" x="436" y="363.5"/>
         </collectionReusableView>
     </objects>
 </document>
