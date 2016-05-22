@@ -20,6 +20,8 @@
 #import "SpecialModel.h"
 #import "ActivityModel.h"
 #import <MJRefresh.h>
+#import "HeaderCollectionReusableView.h"
+#import "BannerModel.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -27,11 +29,9 @@
     
     ListBtn *_right,*_left;
     
-    NSMutableArray *_array;
+    NSMutableArray *_array, *_bannerArray;
 }
-
 @property (strong, nonatomic) UICollectionView *collectionView;
-
 
 @end
 
@@ -42,8 +42,8 @@
     // Do any additional setup after loading the view from its nib.
     
     _array = [[NSMutableArray alloc]init];
+    _bannerArray = [[NSMutableArray alloc]init];
     
-    [self initButton];
     [self initCollectionView];
     [self getData];
 }
@@ -51,6 +51,7 @@
 #pragma mark - 获取网络数据
 - (void)getData{
     NSString *urlStr = @"";
+    //获取一次数据 4个（cell 线上活动footer cell 专题footer）
     switch (_array.count) {
         case 0:
             urlStr = @"http://mmmono.com/api/v3/new_explore/?";
@@ -76,12 +77,28 @@
     NSString *header = @"0c596a400bb611e6b2805254006fe942";
     HTTPRequest *request = [HTTPRequest shareInstance];
     [request getURL:urlStr parameterDic:nil headerValue:header success:^(id responsObj) {
+     
+        /**
+         *  只有第一次获取的数据里有top bannner
+         */
+        if (_array.count == 0) {
+            NSDictionary *topbannerDic = [responsObj objectForKey:@"top_banner"];
+            NSArray *entitylist = [topbannerDic objectForKey:@"entity_list"];
+                for (NSDictionary *dict in entitylist) {
+                    NSString *image = [dict objectForKey:@"banner_img_url"];
+                    [_bannerArray addObject:image];
+                }
+        }
         
+        //先解析最外层的字典
         NSArray *modlist = [responsObj objectForKey:@"mod_list"];
-        
         for (int i=0; i<modlist.count; i++) {
             NSDictionary *tempDic = modlist[i];
+            
+            //解析entity_list字典 因为每一小块都有这个属性
             NSArray *entitylist = [tempDic objectForKey:@"entity_list"];
+            
+            //cube cell的数据 每一组的第一个和第3个
             if (i % 2 == 0) {
                 NSMutableArray *cellArray = [[NSMutableArray alloc]init];
                 for (NSDictionary *dic in entitylist) {
@@ -90,9 +107,13 @@
                     [cellArray addObject:cube];
                 }
                 [_array addObject:cellArray];
-            }else if (i % 4 == 1){
+            }
+            //线上活动footer 返回数据每组的第2个 依次类推就是 1，5，9...
+                else if (i % 4 == 1){
                 NSDictionary *dataDict = entitylist [0];
                 NSDictionary *initDcit = nil;
+                    
+                //因为第一组和其他的数据优点不一样 所以解析的不一样
                 if (_array.count == 1) {
                     NSDictionary *tempDic1 = [dataDict objectForKey:@"meow"];
                     initDcit = [tempDic1 objectForKey:@"ref_campaign"];
@@ -102,7 +123,10 @@
                 ActivityModel *activity = [[ActivityModel alloc]initWithDic:initDcit];
                 [_array addObject:activity];
                 
-            }else{
+            }
+            
+            //专题footer 返回数据每组的最后一个 也就是第4个
+                else{
                 SpecialModel *special = [[SpecialModel alloc]initWithDic:entitylist[0]];
                 [_array addObject:special];
             }
@@ -110,29 +134,12 @@
         [_collectionView.mj_footer endRefreshing];
         [_collectionView reloadData];
     } fail:^(NSError *error) {
-        NSLog(@"222 + %@",error);
+//        NSLog(@"222 + %@",error);
     }];
     
 }
 
-
-#pragma mark - 初始化两个button
-- (void)initButton{
-    CGFloat height = 64.f;
-    CGFloat width = screenWidth / 2;
-    _left = [[[NSBundle mainBundle] loadNibNamed:@"ListBtn" owner:nil options:nil] firstObject];
-    _left.frame = CGRectMake(0, 64, width, height);
-    [_left addTarget:self action:@selector(getDirectoryList) backgroundColor:[UIColor colorWithHexString:@"EFE326"] buttonTitle:@"趣发现目录" titleColor:[UIColor blackColor]  arrowImage:@"browser-forward-black"];
-    [self.view addSubview:_left];
-    
-    CGFloat y = CGRectGetMinY(_left.frame);
-    _right = _left = [[[NSBundle mainBundle] loadNibNamed:@"ListBtn" owner:nil options:nil] firstObject];
-    _right.frame = CGRectMake(width, y, width, height);
-    [_right addTarget:self action:@selector(getCreatorList) backgroundColor:[UIColor blackColor] buttonTitle:@"趣发现造物主" titleColor:[UIColor whiteColor] arrowImage:@"icon-arrow-right-white"];
-    [self.view addSubview:_right];
-}
-
-#pragma mark - btn 点击事件
+#pragma mark - btn 点击事件 （目录 造物主列表）
 - (void)getDirectoryList{
     [self getData];
     DirectoryListViewController *listVC = [[DirectoryListViewController alloc] init];
@@ -166,6 +173,7 @@
     
     [_collectionView registerNib:[UINib nibWithNibName:@"TopicsFooterCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"topicFooter"];
     
+    [_collectionView registerNib:[UINib nibWithNibName:@"HeaderCollectionReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     
     __weak typeof(self) mySelf = self;
    
@@ -177,9 +185,11 @@
     }
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [_array removeAllObjects];
+        [_collectionView.mj_header endRefreshing];
+
         [mySelf getData];
     }];
-       
+    
 }
 
 #pragma mark - collection delegate
@@ -208,8 +218,17 @@
     return CGSizeMake(screenWidth / 2, screenHeight / 3);
 }
 
+
+
 #pragma mark - 设置footer
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if (kind == UICollectionElementKindSectionHeader && indexPath.section == 0) {
+            HeaderCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
+        header.bannerList = _bannerArray;
+            return header;
+
+    }else{
+    
     if (indexPath.section % 2 !=0) {
         TopicsFooterCollectionReusableView *topicFooter = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"topicFooter" forIndexPath:indexPath];
             topicFooter.specialModel = _array[indexPath.section * 2 + 1];
@@ -219,10 +238,24 @@
             footer.activityModel = _array[indexPath.section * 2 + 1];
         return footer;
     }
+    }
 }
+
+//设置header大小 只有第一组返回header
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return CGSizeMake(screenWidth, 220);
+
+    }
+    return CGSizeMake(0, 0);
+}
+
 //设置footer大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
-    return CGSizeMake(screenWidth, 120);
+    if (section % 2 !=0){
+        return CGSizeMake(screenWidth, 200);
+    }
+    return CGSizeMake(screenWidth, 160);
 }
 
 #pragma mark - 点击collectionview

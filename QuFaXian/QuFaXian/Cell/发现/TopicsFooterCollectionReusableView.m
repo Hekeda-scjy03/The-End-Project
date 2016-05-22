@@ -14,7 +14,7 @@
 -(void)setSpecialModel:(SpecialModel *)specialModel{
     _specialModel = specialModel;
     [self.topicImage sd_setImageWithURL:[NSURL URLWithString:specialModel.backImg]];
-    NSLog(@"%@",specialModel.backImg);
+
     self.specialTitle.text = specialModel.title;
     self.contentNum.text = [NSString stringWithFormat:@"共%@篇",specialModel.contentNum];
     [self.specialNameImage sd_setImageWithURL:[NSURL URLWithString:specialModel.nameImg]];

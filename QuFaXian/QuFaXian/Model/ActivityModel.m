@@ -16,7 +16,6 @@
     if (self) {
        
         self.title = [dic objectForKey:@"title"];
-        NSLog(@"%@",self.title);
 
         self.des = [dic objectForKey:@"description"];
         self.participationNum = [dic objectForKey:@"participant_num"];

@@ -25,7 +25,6 @@
 
 - (void)setCubeModel:(CubeModel *)cubeModel{
     _cubeModel = cubeModel;
-    NSLog(@"%@",cubeModel.name);
     self.cubeType.text = cubeModel.category;
     [self.cubeImg sd_setImageWithURL:[NSURL URLWithString:cubeModel.cubeImage]];
     

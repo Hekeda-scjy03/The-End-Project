@@ -92,15 +92,12 @@
     
     switch (button.tag) {
         case 0:
-            NSLog(@"1");
             break;
             
         case 1:
-            NSLog(@"1");
             break;
             
         case 2:
-            NSLog(@"1");
             break;
             
         case 3:

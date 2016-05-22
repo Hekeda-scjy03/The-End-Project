@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phJ-uT-8rr">
+                    <rect key="frame" x="0.0" y="156" width="180" height="64"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.8901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="wo1-va-XTc"/>
+                    </constraints>
+                    <state key="normal" title="趣发现目录">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzp-1d-vVf">
+                    <rect key="frame" x="180" y="156" width="180" height="64"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="趣发现造物主">
+                        <color key="titleColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon-arrow-right-white" translatesAutoresizingMaskIntoConstraints="NO" id="fVw-O7-4Ol">
+                    <rect key="frame" x="334" y="199" width="6" height="11"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="browser-forward-black" translatesAutoresizingMaskIntoConstraints="NO" id="1BE-vp-W8Y">
+                    <rect key="frame" x="150" y="196" width="10" height="17"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beY-TV-LhR" customClass="LCViewPagerView">
+                    <rect key="frame" x="0.0" y="0.0" width="360" height="156"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Uzp-1d-vVf" firstAttribute="leading" secondItem="1BE-vp-W8Y" secondAttribute="trailing" constant="20" id="4Yz-Ue-p9A"/>
+                <constraint firstItem="beY-TV-LhR" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="7g4-RI-fga"/>
+                <constraint firstAttribute="trailing" secondItem="fVw-O7-4Ol" secondAttribute="trailing" constant="20" id="BsB-2y-nyI"/>
+                <constraint firstItem="fVw-O7-4Ol" firstAttribute="centerY" secondItem="1BE-vp-W8Y" secondAttribute="centerY" id="DzI-wp-ue4"/>
+                <constraint firstItem="Uzp-1d-vVf" firstAttribute="leading" secondItem="phJ-uT-8rr" secondAttribute="trailing" id="QBg-Uj-Kpc"/>
+                <constraint firstAttribute="bottom" secondItem="phJ-uT-8rr" secondAttribute="bottom" id="TFl-E8-XOk"/>
+                <constraint firstAttribute="trailing" secondItem="Uzp-1d-vVf" secondAttribute="trailing" id="UEL-Sx-PcU"/>
+                <constraint firstItem="Uzp-1d-vVf" firstAttribute="centerY" secondItem="1BE-vp-W8Y" secondAttribute="centerY" id="V7I-P5-HJL"/>
+                <constraint firstAttribute="trailing" secondItem="beY-TV-LhR" secondAttribute="trailing" id="cOw-6h-kvk"/>
+                <constraint firstAttribute="bottom" secondItem="Uzp-1d-vVf" secondAttribute="bottom" id="dS8-xN-9wh"/>
+                <constraint firstItem="Uzp-1d-vVf" firstAttribute="width" secondItem="phJ-uT-8rr" secondAttribute="width" id="fG1-uR-Ow9"/>
+                <constraint firstItem="beY-TV-LhR" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="k5x-cH-6Qz"/>
+                <constraint firstItem="Uzp-1d-vVf" firstAttribute="top" secondItem="beY-TV-LhR" secondAttribute="bottom" id="kQH-od-zoN"/>
+                <constraint firstItem="Uzp-1d-vVf" firstAttribute="height" secondItem="phJ-uT-8rr" secondAttribute="height" id="kko-4f-bHt"/>
+                <constraint firstItem="Uzp-1d-vVf" firstAttribute="leading" secondItem="1BE-vp-W8Y" secondAttribute="trailing" constant="20" id="pc4-nv-5eC"/>
+                <constraint firstItem="phJ-uT-8rr" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="x23-TS-ouu"/>
+            </constraints>
+            <connections>
+                <outlet property="creatorBtn" destination="Uzp-1d-vVf" id="AY2-mP-Mos"/>
+                <outlet property="directoryBtn" destination="1BE-vp-W8Y" id="0uH-Yq-H0B"/>
+                <outlet property="viewPager" destination="beY-TV-LhR" id="56t-Jy-N6g"/>
+            </connections>
+            <point key="canvasLocation" x="269" y="303"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="browser-forward-black" width="10" height="17"/>
+        <image name="icon-arrow-right-white" width="6" height="11"/>
+    </resources>
+</document>

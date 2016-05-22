@@ -14,6 +14,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y0k-sk-k5c">
                     <rect key="frame" x="0.0" y="0.0" width="369" height="121"/>
                 </imageView>
+                <view alpha="0.14999999999999999" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJe-5x-OAJ">
+                    <rect key="frame" x="-1" y="1" width="370" height="121"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-balloon-red" translatesAutoresizingMaskIntoConstraints="NO" id="jZJ-Vq-hch">
                     <rect key="frame" x="175" y="8" width="20" height="20"/>
                     <constraints>
@@ -42,7 +46,7 @@
                         <constraint firstAttribute="height" constant="30" id="PSj-QE-i6t"/>
                         <constraint firstAttribute="height" constant="20" id="w5G-Z4-c9O"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -60,6 +64,8 @@
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="iJe-5x-OAJ" firstAttribute="centerY" secondItem="y0k-sk-k5c" secondAttribute="centerY" id="0lX-oX-5Z8"/>
+                <constraint firstItem="iJe-5x-OAJ" firstAttribute="height" secondItem="y0k-sk-k5c" secondAttribute="height" id="19z-31-Mn9"/>
                 <constraint firstItem="Da6-19-SL8" firstAttribute="top" secondItem="75O-yu-HAM" secondAttribute="bottom" constant="15" id="1r5-ud-VNz"/>
                 <constraint firstItem="75O-yu-HAM" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="4wZ-TI-cfb"/>
                 <constraint firstItem="y0k-sk-k5c" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="9wM-ac-Ygl"/>
@@ -68,6 +74,8 @@
                 <constraint firstItem="Da6-19-SL8" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="GzS-XG-pIn"/>
                 <constraint firstItem="jZJ-Vq-hch" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="J5I-xH-m6m"/>
                 <constraint firstItem="75O-yu-HAM" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="JGO-ox-Dwc"/>
+                <constraint firstItem="iJe-5x-OAJ" firstAttribute="centerX" secondItem="y0k-sk-k5c" secondAttribute="centerX" id="Jz7-l9-4GT"/>
+                <constraint firstItem="iJe-5x-OAJ" firstAttribute="width" secondItem="y0k-sk-k5c" secondAttribute="width" id="NCn-Pl-Z6Z"/>
                 <constraint firstItem="Da6-19-SL8" firstAttribute="top" secondItem="75O-yu-HAM" secondAttribute="bottom" constant="10" id="SDk-Nd-3pB"/>
                 <constraint firstItem="75O-yu-HAM" firstAttribute="centerX" secondItem="Da6-19-SL8" secondAttribute="centerX" id="WP3-Az-q1e"/>
                 <constraint firstItem="75O-yu-HAM" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Yd9-7y-ziT"/>

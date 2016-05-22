@@ -11,20 +11,24 @@
             <rect key="frame" x="0.0" y="0.0" width="374" height="181"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-h4-wNG">
-                    <rect key="frame" x="0.0" y="0.0" width="374" height="144"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-h4-wNG">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="146"/>
                 </imageView>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-Mh-Bbc">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="146"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-hj-2uT">
-                    <rect key="frame" x="0.0" y="141" width="374" height="40"/>
+                    <rect key="frame" x="0.0" y="146" width="374" height="35"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音乐门诊部 是时候给你们跑步歌单了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfR-IA-PNU">
-                            <rect key="frame" x="10" y="12" width="212" height="16"/>
+                            <rect key="frame" x="10" y="10" width="212" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共10篇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-iQ-okV">
-                            <rect key="frame" x="329" y="13" width="35" height="14"/>
+                            <rect key="frame" x="329" y="11" width="35" height="14"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -34,13 +38,13 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="OZw-iQ-okV" secondAttribute="trailing" constant="10" id="2al-LE-Bzd"/>
                         <constraint firstItem="RfR-IA-PNU" firstAttribute="leading" secondItem="nz6-hj-2uT" secondAttribute="leading" constant="10" id="AFc-fd-b87"/>
-                        <constraint firstAttribute="height" constant="40" id="GjA-VD-3sF"/>
+                        <constraint firstAttribute="height" constant="35" id="GjA-VD-3sF"/>
                         <constraint firstItem="OZw-iQ-okV" firstAttribute="centerY" secondItem="RfR-IA-PNU" secondAttribute="centerY" id="ImL-c3-Q1n"/>
                         <constraint firstItem="RfR-IA-PNU" firstAttribute="centerY" secondItem="nz6-hj-2uT" secondAttribute="centerY" id="L6v-NV-ZTe"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-E2-AaZ">
-                    <rect key="frame" x="147" y="31" width="80" height="80"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-E2-AaZ">
+                    <rect key="frame" x="147" y="34" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="0vn-sO-x96"/>
                         <constraint firstAttribute="height" constant="80" id="SdW-Ua-QHU"/>
@@ -53,10 +57,14 @@
                 <constraint firstItem="nz6-hj-2uT" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Gc0-WM-yEK"/>
                 <constraint firstAttribute="bottom" secondItem="nz6-hj-2uT" secondAttribute="bottom" id="HiE-WY-Ita"/>
                 <constraint firstAttribute="trailing" secondItem="KFs-h4-wNG" secondAttribute="trailing" id="KvD-m4-ssK"/>
+                <constraint firstItem="Bge-Mh-Bbc" firstAttribute="width" secondItem="KFs-h4-wNG" secondAttribute="width" id="MA1-76-LUf"/>
+                <constraint firstItem="Bge-Mh-Bbc" firstAttribute="centerX" secondItem="KFs-h4-wNG" secondAttribute="centerX" id="RVA-nv-Kbc"/>
                 <constraint firstItem="KFs-h4-wNG" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Yki-kb-3id"/>
                 <constraint firstItem="nz6-hj-2uT" firstAttribute="top" secondItem="KFs-h4-wNG" secondAttribute="bottom" id="jFP-d0-uFH"/>
                 <constraint firstAttribute="bottom" secondItem="KFs-h4-wNG" secondAttribute="bottom" id="jy8-RV-STJ"/>
+                <constraint firstItem="Bge-Mh-Bbc" firstAttribute="centerY" secondItem="KFs-h4-wNG" secondAttribute="centerY" id="lB0-A3-Byf"/>
                 <constraint firstItem="KFs-h4-wNG" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="nQS-89-Vhq"/>
+                <constraint firstItem="Bge-Mh-Bbc" firstAttribute="height" secondItem="KFs-h4-wNG" secondAttribute="height" id="oWX-4E-DNe"/>
                 <constraint firstItem="Vmf-E2-AaZ" firstAttribute="centerX" secondItem="KFs-h4-wNG" secondAttribute="centerX" id="obB-oK-KUQ"/>
             </constraints>
             <variation key="default">

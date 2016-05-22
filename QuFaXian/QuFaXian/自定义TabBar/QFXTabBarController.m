@@ -28,18 +28,18 @@
     /**
      *  设置item默认状态下和被选中时的文字颜色
      */
-    NSDictionary *selectedAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:20.f], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"45AE8B"]};//被选中时的文字大小和颜色
+    NSDictionary *selectedAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:22.f], NSForegroundColorAttributeName:[UIColor colorWithHexString:@"45AE8B"]};//被选中时的文字大小和颜色
     NSDictionary *normalAttributes = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"616161"]};//默认的颜色
     UITabBarItem *item = [UITabBarItem appearance];
     
     [item setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
     [item setTitleTextAttributes:normalAttributes forState:UIControlStateNormal];
     
-    [self tabbarInitWithVC:[[HomeViewController alloc] initVCwithItemType:nil withNavTitle:TitleRecommendValue] image:@"" highlightedImageName:@"" title:@"推荐"];
+    [self tabbarInitWithVC:[[HomeViewController alloc] initVCwithItemType:nil withNavTitle:TitleRecommendValue] image:@"tabbar-recommend-normal" highlightedImageName:@"tabbar-recommend-selected" title:@"推荐"];
     
-    [self tabbarInitWithVC:[[FindViewController alloc] initVCwithItemType:VCItemTypeSearch withNavTitle:TitleFindValue] image:@"" highlightedImageName:@"" title:@"发现"];
-    [self tabbarInitWithVC:[[DynamicViewController alloc] initVCwithItemType:nil withNavTitle:TitleDynamicValue] image:@"" highlightedImageName:@"" title:@"动态"];
-    [self tabbarInitWithVC:[[MineViewController alloc] initVCwithItemType:nil withNavTitle:nil] image:@"" highlightedImageName:@"" title:@"我的"];
+    [self tabbarInitWithVC:[[FindViewController alloc] initVCwithItemType:VCItemTypeSearch | VCItemTypeLeftAdd withNavTitle:TitleFindValue] image:@"tabbar-find-normal" highlightedImageName:@"tabbar-find-selected" title:@"发现"];
+    [self tabbarInitWithVC:[[DynamicViewController alloc] initVCwithItemType:nil withNavTitle:TitleDynamicValue] image:@"tabbar-dynamic-normal" highlightedImageName:@"tabbar-dynamic-selected" title:@"动态"];
+    [self tabbarInitWithVC:[[MineViewController alloc] initVCwithItemType:nil withNavTitle:nil] image:@"tabbar-mine-normal" highlightedImageName:@"tabbar-mine-selected" title:@"我的"];
     
     [self setValue:[[QFXTabBar alloc] init] forKey:@"tabBar"];
     
@@ -47,10 +47,13 @@
 
 #pragma mark - 添加tabbar上的vc
 - (void)tabbarInitWithVC:(UIViewController *)vc image:(NSString *)imageName highlightedImageName:(NSString *)highlightedName title:(NSString *)title{
+    
     vc.title = title;
     
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:highlightedName];
+    UIImage *selected = [UIImage imageNamed:highlightedName];
+    selected =  [selected imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.tabBarItem.selectedImage = selected;
     
     QFXNavgationController *nav = [[QFXNavgationController alloc]initWithRootViewController:vc];
     
