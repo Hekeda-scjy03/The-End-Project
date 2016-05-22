@@ -54,11 +54,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell ;
+    
+    QFXHomeTableViewCell *cell = [QFXHomeTableViewCell homeTableViewCellWithTable:tableView];
+    self.cell = cell;
     return cell;
-//    QFXHomeTableViewCell *cell = [QFXHomeTableViewCell homeTableViewCellWithTable:tableView];
-//    self.cell = cell;
-//    return cell;
 }
 #pragma mark - UITableViewDelegate
 
