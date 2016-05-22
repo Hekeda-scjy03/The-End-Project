@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44272B061CF1AD14005AF883 /* QFXHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44272B041CF1AD14005AF883 /* QFXHomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		44272B071CF1AD14005AF883 /* QFXHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44272B051CF1AD14005AF883 /* QFXHomeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		4462097A1CEB49E300BF7F57 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 446209761CEB49E300BF7F57 /* HomeHeaderView.m */; };
 		4462097B1CEB49E300BF7F57 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446209771CEB49E300BF7F57 /* HomeHeaderView.xib */; };
 		4462097C1CEB49E300BF7F57 /* HomeThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 446209791CEB49E300BF7F57 /* HomeThemeButton.m */; };
@@ -98,6 +100,9 @@
 /* Begin PBXFileReference section */
 		25330BC64C74FC8276B42F12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		406DE60B564A7A8F61973FAE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		44272B031CF1AD14005AF883 /* QFXHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXHomeTableViewCell.h; sourceTree = "<group>"; };
+		44272B041CF1AD14005AF883 /* QFXHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXHomeTableViewCell.m; sourceTree = "<group>"; };
+		44272B051CF1AD14005AF883 /* QFXHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QFXHomeTableViewCell.xib; sourceTree = "<group>"; };
 		446209751CEB49E300BF7F57 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		446209761CEB49E300BF7F57 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		446209771CEB49E300BF7F57 /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -265,6 +270,9 @@
 		446209731CEB498A00BF7F57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44272B031CF1AD14005AF883 /* QFXHomeTableViewCell.h */,
+				44272B041CF1AD14005AF883 /* QFXHomeTableViewCell.m */,
+				44272B051CF1AD14005AF883 /* QFXHomeTableViewCell.xib */,
 				446209751CEB49E300BF7F57 /* HomeHeaderView.h */,
 				446209761CEB49E300BF7F57 /* HomeHeaderView.m */,
 				446209771CEB49E300BF7F57 /* HomeHeaderView.xib */,
@@ -1106,6 +1114,7 @@
 				D9CCA3031CEB4B2C0024C2A9 /* JoinIn.xib in Resources */,
 				D9524DF81CF198D4000A15E2 /* TopTableViewCell.xib in Resources */,
 				D90B2FEF1CDC771900B762CF /* HomeViewController.xib in Resources */,
+				44272B071CF1AD14005AF883 /* QFXHomeTableViewCell.xib in Resources */,
 				D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */,
 				4462097B1CEB49E300BF7F57 /* HomeHeaderView.xib in Resources */,
 				D93A42D61CE34D7E000B359B /* FindCubeCollectionViewCell.xib in Resources */,
@@ -1182,6 +1191,7 @@
 				D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */,
 				D9B63B2B1CECA14D00C5F3A1 /* DirectoryListViewController.m in Sources */,
 				D9424BF81CE814CF00DC3B76 /* GroupContentTableViewCell.m in Sources */,
+				44272B061CF1AD14005AF883 /* QFXHomeTableViewCell.m in Sources */,
 				D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */,
 				D9A553471CEFF67100BE44A5 /* CubeModel.m in Sources */,
 				D9A553501CF0901000BE44A5 /* HeaderCollectionReusableView.m in Sources */,

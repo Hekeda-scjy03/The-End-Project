@@ -10,11 +10,14 @@
 #import "HomeHeaderView.h"
 #import "HomeThemeButton.h"
 #import "QFXVideoViewController.h"
+#import "QFXHomeTableViewCell.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,HomeThemeButtonDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 @property (nonatomic, strong) HomeHeaderView *homeHeaderView;
+@property (nonatomic, strong) QFXHomeTableViewCell *cell;
+
 
 @end
 
@@ -31,6 +34,8 @@
     
     self.homeTableView.dataSource = self;
     self.homeTableView.delegate = self;
+    
+    self.homeTableView.rowHeight = 400;
 }
 
 
@@ -44,12 +49,14 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
+    
+    QFXHomeTableViewCell *cell = [QFXHomeTableViewCell homeTableViewCellWithTable:tableView];
+    self.cell = cell;
     return cell;
 }
 #pragma mark - UITableViewDelegate
@@ -79,13 +86,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
