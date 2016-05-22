@@ -16,6 +16,8 @@
 
 @end
 
+@class CubeDetailModel;
+
 @interface CreaterContentHeader : UITableViewHeaderFooterView
 
 @property (nonatomic, assign) id<ClickBtnToRefreshListDelegate> delegate;
@@ -43,5 +45,6 @@
 //header类型为内容站的时候显示该view
 @property (weak, nonatomic) IBOutlet UIView *contentsStateView;
 
+@property (nonatomic, strong) CubeDetailModel *cubeDetail;
 
 @end

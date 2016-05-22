@@ -7,8 +7,28 @@
 //
 
 #import "CreaterContentTableViewCell.h"
-
+#import "CubeDetailModel.h"
+#import <UIImageView+WebCache.h>
 @implementation CreaterContentTableViewCell
+
+- (void)setCubeDetail:(CubeDetailModel *)cubeDetail{
+    _cubeDetail = cubeDetail;
+    
+    self.timeLabel.text = cubeDetail.time;
+    
+    self.typeLabel.text = cubeDetail.category;
+    
+    [self.backImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backgroundImg]];
+    
+    self.subTitle.text = cubeDetail.intro;
+    self.title.text = cubeDetail.title;
+    self.descriptonOfContents.text = cubeDetail.des;
+    self.likeNum.text = cubeDetail.cellZanNum;
+    self.commentNum.text = cubeDetail.cellCommentNum;
+    
+    
+}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -54,13 +54,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o18-6C-2cP" userLabel="BottomView">
                         <rect key="frame" x="8" y="166" width="413" height="50"/>
                         <subviews>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgK-1h-Bgn">
-                                <rect key="frame" x="120" y="0.0" width="42" height="50"/>
-                                <state key="normal" image="item-btn-comment-white"/>
-                                <connections>
-                                    <action selector="clickBtnMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gcA-26-vS5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqP-kF-bAO">
                                 <rect key="frame" x="60" y="0.0" width="50" height="50"/>
                                 <state key="normal" image="item-btn-thumb-white"/>
@@ -82,6 +75,25 @@
                                     <action selector="clickBtnMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dax-Qv-OFJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJv-aD-4Gz">
+                                <rect key="frame" x="110" y="17" width="24" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltB-il-cPa">
+                                <rect key="frame" x="176" y="17" width="24" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgK-1h-Bgn">
+                                <rect key="frame" x="134" y="0.0" width="42" height="50"/>
+                                <state key="normal" image="item-btn-comment-white"/>
+                                <connections>
+                                    <action selector="clickBtnMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gcA-26-vS5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -89,23 +101,29 @@
                             <constraint firstItem="qub-GT-aVq" firstAttribute="height" secondItem="DXu-Lb-bNQ" secondAttribute="height" id="3xg-c6-bCq"/>
                             <constraint firstItem="qub-GT-aVq" firstAttribute="centerY" secondItem="DXu-Lb-bNQ" secondAttribute="centerY" id="5yL-7s-cGs"/>
                             <constraint firstAttribute="bottom" secondItem="DXu-Lb-bNQ" secondAttribute="bottom" constant="-4" id="6Vi-C6-SYf"/>
+                            <constraint firstItem="lJv-aD-4Gz" firstAttribute="leading" secondItem="xqP-kF-bAO" secondAttribute="trailing" id="Bog-m2-Sms"/>
                             <constraint firstItem="xqP-kF-bAO" firstAttribute="centerY" secondItem="DXu-Lb-bNQ" secondAttribute="centerY" id="FaM-Rg-UNx"/>
                             <constraint firstItem="DXu-Lb-bNQ" firstAttribute="leading" secondItem="o18-6C-2cP" secondAttribute="leading" id="GTL-C7-agh"/>
                             <constraint firstItem="DXu-Lb-bNQ" firstAttribute="top" secondItem="o18-6C-2cP" secondAttribute="top" id="Mfi-eV-SMM"/>
+                            <constraint firstItem="ltB-il-cPa" firstAttribute="leading" secondItem="zgK-1h-Bgn" secondAttribute="trailing" id="N6e-oh-07j"/>
                             <constraint firstItem="xqP-kF-bAO" firstAttribute="leading" secondItem="DXu-Lb-bNQ" secondAttribute="trailing" constant="10" id="OmP-mt-DhP"/>
                             <constraint firstItem="xqP-kF-bAO" firstAttribute="height" secondItem="DXu-Lb-bNQ" secondAttribute="height" id="Ub2-pg-2h7"/>
                             <constraint firstItem="zgK-1h-Bgn" firstAttribute="centerY" secondItem="DXu-Lb-bNQ" secondAttribute="centerY" id="ZGw-nT-b9E"/>
                             <constraint firstItem="qub-GT-aVq" firstAttribute="width" secondItem="DXu-Lb-bNQ" secondAttribute="width" id="c8g-uL-fnp"/>
                             <constraint firstItem="zgK-1h-Bgn" firstAttribute="leading" secondItem="xqP-kF-bAO" secondAttribute="trailing" constant="10" id="fW1-K2-3gU"/>
+                            <constraint firstItem="zgK-1h-Bgn" firstAttribute="centerY" secondItem="lJv-aD-4Gz" secondAttribute="centerY" id="hPV-iH-G5M"/>
                             <constraint firstAttribute="bottom" secondItem="DXu-Lb-bNQ" secondAttribute="bottom" id="qBh-1e-ViC"/>
                             <constraint firstItem="DXu-Lb-bNQ" firstAttribute="top" secondItem="o18-6C-2cP" secondAttribute="top" constant="-4" id="qS6-qM-kbQ"/>
+                            <constraint firstItem="ltB-il-cPa" firstAttribute="centerY" secondItem="lJv-aD-4Gz" secondAttribute="centerY" id="tqO-iV-cxT"/>
                             <constraint firstAttribute="trailing" secondItem="qub-GT-aVq" secondAttribute="trailing" id="vDX-1M-T5T"/>
                             <constraint firstItem="DXu-Lb-bNQ" firstAttribute="centerY" secondItem="o18-6C-2cP" secondAttribute="centerY" id="whw-Jh-R2s"/>
+                            <constraint firstItem="zgK-1h-Bgn" firstAttribute="leading" secondItem="lJv-aD-4Gz" secondAttribute="trailing" id="woD-dh-aqK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="6Vi-C6-SYf"/>
                                 <exclude reference="qS6-qM-kbQ"/>
+                                <exclude reference="fW1-K2-3gU"/>
                             </mask>
                         </variation>
                     </view>
@@ -192,18 +210,15 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="commentNum" destination="ltB-il-cPa" id="gMi-2R-ucJ"/>
                 <outlet property="contentStateSubTitle" destination="1Zw-4P-d3g" id="bhb-hu-O4P"/>
                 <outlet property="contentStateTitle" destination="g9O-NT-bUV" id="2k8-4M-zNk"/>
                 <outlet property="contentStateType" destination="0qS-My-mVt" id="V8F-WF-w3h"/>
+                <outlet property="likeNum" destination="lJv-aD-4Gz" id="7U6-kV-e8S"/>
                 <outlet property="timeLabel" destination="mVC-1A-34I" id="PFY-nq-hED"/>
             </connections>
             <point key="canvasLocation" x="464.5" y="333.5"/>
         </tableViewCell>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6No-Wd-gn1">
-            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <state key="normal" title="Button"/>
-        </button>
     </objects>
     <resources>
         <image name="btn-top-more" width="50" height="50"/>

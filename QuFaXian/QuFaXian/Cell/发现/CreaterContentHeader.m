@@ -8,21 +8,32 @@
 
 #import "CreaterContentHeader.h"
 #import <UIImageView+WebCache.h>
-
+#import "CubeDetailModel.h"
 @implementation CreaterContentHeader
+
+- (void)setCubeDetail:(CubeDetailModel *)cubeDetail{
+    [self.headerBackImg sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backgroundImg]];
+    [self.headerBigHeadImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.directorHead]];
+    
+    self.stateName.text = cubeDetail.stateName;
+    self.focusNum.text = [NSString stringWithFormat:@"%@人关注",cubeDetail.joinNum];
+    self.stateDescription.text = cubeDetail.des;
+    self.stateCreateName.text = cubeDetail.directorName;
+    [self.stateCreateHeadImg sd_setImageWithURL:[NSURL URLWithString:cubeDetail.directorHead]];
+    self.stateCreateIntroduction.text = cubeDetail.directorDes;
+    self.contentsBtn.titleLabel.text = [NSString stringWithFormat:@"    内容 %@",cubeDetail.stateContentNum];
+    self.discussBtn.titleLabel.text = [NSString stringWithFormat:@"    讨论 %@",cubeDetail.stateDiscussNum];
+}
 
 - (void)awakeFromNib{
     [super awakeFromNib];
     
     self.headerBigHeadImage.layer.cornerRadius = self.headerBigHeadImage.frame.size.width / 2;
     self.headerBigHeadImage.layer.masksToBounds = YES;
-//    [self.headerBigHeadImage.image sd_setImageWithURL:];
     
     
     self.stateCreateHeadImg.layer.cornerRadius = self.headerBigHeadImage.frame.size.width / 2;
-    self.stateCreateHeadImg.layer.masksToBounds = YES;
-//    [self.stateCreateHeadImg.image sd_setImageWithURL:];
-    
+    self.stateCreateHeadImg.layer.masksToBounds = YES;    
 
     [self.discussBtn setImage:[UIImage imageNamed:@"icon-discussion-black"] forState:UIControlStateSelected];
     [self.discussBtn setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];

@@ -14,10 +14,14 @@
 #import "ContentsStateTableViewCell.h"
 #import "GroupHeader.h"
 #import "CreaterContentHeader.h"
+#import "CubeDetailModel.h"
+#import "HTTPRequest.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface CubeDetailViewController ()<ClickBtnToRefreshListDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface CubeDetailViewController ()<ClickBtnToRefreshListDelegate, UITableViewDelegate, UITableViewDataSource>{
+    NSMutableArray *_detailArray;
+}
 
 @property (strong, nonatomic) UITableView *tableView;
 
@@ -32,7 +36,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"YOHO";
+    self.navigationItem.title = @"";
+    
+    _detailArray = [[NSMutableArray alloc]init];
     
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor blackColor];
@@ -55,6 +61,26 @@
     
     self.tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(focusMethod)];
     [self.joinView addGestureRecognizer:self.tap];
+    
+    [self getData];
+    
+}
+
+#pragma mark - 获取数据
+- (void)getData{
+    NSString *header = @"0c596a400bb611e6b2805254006fe942";
+    HTTPRequest *request = [HTTPRequest shareInstance];
+    [request getURL:[NSString stringWithFormat:@"http://mmmono.com/api/v3/group/%@/content/kind/%@/?",self.id,self.kind] parameterDic:nil headerValue:header success:^(id responsObj) {
+        NSArray *meowlist = [responsObj objectForKey:@"meow_list"];
+        for (int i=0; i<meowlist.count; i++) {
+            for (NSDictionary *dic in meowlist) {
+                CubeDetailModel *detailModel = [[CubeDetailModel alloc]initWithDic:dic];
+                [_detailArray addObject:detailModel];
+            }
+        }
+    }fail:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark - 加入小组 关注内容站等

@@ -10,4 +10,8 @@
 
 @interface CubeDetailViewController : QFXCustomViewController
 
+@property (nonatomic, strong) NSString *id;
+
+@property (nonatomic, strong) NSString *kind;
+
 @end

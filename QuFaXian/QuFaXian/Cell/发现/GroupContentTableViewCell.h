@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface GroupContentTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIButton *groupHeadImage;
@@ -27,6 +26,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *likeNum;
 
 @property (weak, nonatomic) IBOutlet UILabel *cotentNum;
-
 
 @end

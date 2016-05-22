@@ -7,8 +7,9 @@
 //
 
 #import "GroupContentTableViewCell.h"
-
+#import "CubeDetailModel.h"
 @implementation GroupContentTableViewCell
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

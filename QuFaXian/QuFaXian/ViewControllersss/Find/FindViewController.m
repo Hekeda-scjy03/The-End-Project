@@ -11,7 +11,6 @@
 #import "FooterCollectionReusableView.h"
 #import "CubeDetailViewController.h"
 #import "TopicsFooterCollectionReusableView.h"
-#import "ListBtn.h"
 #import "UIColor+HexColor.h"
 #import "CreatorListViewController.h"
 #import "DirectoryListViewController.h"
@@ -22,14 +21,13 @@
 #import <MJRefresh.h>
 #import "HeaderCollectionReusableView.h"
 #import "BannerModel.h"
+#import "CubeDetailModel.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface FindViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>{
     
-    ListBtn *_right,*_left;
-    
-    NSMutableArray *_array, *_bannerArray;
+    NSMutableArray *_array, *_bannerArray, *_cubeDetailArray;
 }
 @property (strong, nonatomic) UICollectionView *collectionView;
 
@@ -43,6 +41,7 @@
     
     _array = [[NSMutableArray alloc]init];
     _bannerArray = [[NSMutableArray alloc]init];
+    _cubeDetailArray = [[NSMutableArray alloc]init];
     
     [self initCollectionView];
     [self getData];
@@ -157,8 +156,7 @@
     layout.minimumLineSpacing = 0.0f;
     layout.minimumInteritemSpacing = 0.0f;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    CGFloat y = CGRectGetMaxY(_left.frame);
-    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, y, screenWidth, screenHeight - y - 49) collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight - 49) collectionViewLayout:layout];
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     _collectionView.delegate = self;
@@ -260,7 +258,9 @@
 
 #pragma mark - 点击collectionview
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    CubeDetailViewController *cubeDetail = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:NULL];
+    CubeDetailViewController *cubeDetail = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:nil];
+    CubeDetailModel *detailModel = [[CubeDetailModel alloc]init];
+    cubeDetail.id = detailModel.id;
     
     [self.navigationController pushViewController:cubeDetail animated:YES];
     
