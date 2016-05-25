@@ -9,12 +9,13 @@
 #import "CreaterContentTableViewCell.h"
 #import "CubeDetailModel.h"
 #import <UIImageView+WebCache.h>
+#import "QFXTools.h"
 @implementation CreaterContentTableViewCell
 
 - (void)setCubeDetail:(CubeDetailModel *)cubeDetail{
     _cubeDetail = cubeDetail;
     
-    self.timeLabel.text = cubeDetail.time;
+    self.timeLabel.text = [QFXTools dateStringToTimeString:[cubeDetail.time stringValue]];
     
     self.typeLabel.text = cubeDetail.category;
     
@@ -23,8 +24,8 @@
     self.subTitle.text = cubeDetail.intro;
     self.title.text = cubeDetail.title;
     self.descriptonOfContents.text = cubeDetail.des;
-    self.likeNum.text = cubeDetail.cellZanNum;
-    self.commentNum.text = cubeDetail.cellCommentNum;
+    self.likeNum.text = [cubeDetail.cellZanNum stringValue];
+    self.commentNum.text = [cubeDetail.cellCommentNum stringValue];
     
     
 }

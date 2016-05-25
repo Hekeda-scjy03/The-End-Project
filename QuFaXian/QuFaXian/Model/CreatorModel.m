@@ -7,14 +7,24 @@
 //
 
 #import "CreatorModel.h"
-#import <MJExtension.h>
+
 @implementation CreatorModel
 
-//替换属性名
-+ (NSDictionary *)mj_replacedKeyFromPropertyName{
-    return @{@"creatorDescription":@"description"};
+- (instancetype)initWithDic:(NSDictionary *)dic
+{
+    self = [super init];
+    if (self) {
+        NSDictionary *groupDic = [dic objectForKey:@"group"];
+        
+        self.name = [groupDic objectForKey:@"name"];
+        self.id = [groupDic objectForKey:@"id"];
+        self.des = [groupDic objectForKey:@"description"];
+        self.topicsNum = [groupDic objectForKey:@"topic_content_num"];
+        self.kind = [groupDic objectForKey:@"kind"];
+        self.headImg = [groupDic objectForKey:@"logo_url"];
+        self.membersNum = [groupDic objectForKey:@"member_num"];
+    }
+    return self;
 }
-
-MJExtensionCodingImplementation;
 
 @end

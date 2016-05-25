@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="FindCreaterListTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="FindCreatorListTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -16,40 +16,52 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZWA-eK-RmB">
-                        <rect key="frame" x="18" y="7" width="66" height="66"/>
+                        <rect key="frame" x="18" y="10" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="66" id="GEK-xs-IHl"/>
-                            <constraint firstAttribute="width" constant="66" id="yjV-KD-25Y"/>
+                            <constraint firstAttribute="height" constant="60" id="GEK-xs-IHl"/>
+                            <constraint firstAttribute="width" constant="60" id="yjV-KD-25Y"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="异常漫画研究中心" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKt-Fd-j05">
-                        <rect key="frame" x="89" y="7" width="136" height="21"/>
+                        <rect key="frame" x="83" y="10" width="136" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漫画的未知之域 你说离开的骄傲了解到；爱上家里附近老实交代" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1U-UG-ncL">
-                        <rect key="frame" x="89" y="51" width="267" height="25"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33333成员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lq-Nu-FRR">
-                        <rect key="frame" x="89" y="34" width="52" height="12"/>
+                        <rect key="frame" x="83" y="34" width="52" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2222内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKx-dY-7IU">
-                        <rect key="frame" x="156" y="34" width="45" height="12"/>
+                        <rect key="frame" x="150" y="34" width="45" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="漫画的未知之域 你说离开的骄傲了解到；爱上家里附近老实交代" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1U-UG-ncL">
+                        <rect key="frame" x="87" y="59" width="259" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ZMe-1M-11O"/>
+                            <constraint firstAttribute="height" constant="12" id="cqA-hc-LHa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZMe-1M-11O"/>
+                            </mask>
+                        </variation>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="s1U-UG-ncL" secondAttribute="bottom" constant="-5" id="9Wz-qg-cvz"/>
+                    <constraint firstItem="s1U-UG-ncL" firstAttribute="leading" secondItem="9Lq-Nu-FRR" secondAttribute="leading" id="Axc-9a-OoQ"/>
                     <constraint firstItem="XKx-dY-7IU" firstAttribute="leading" secondItem="9Lq-Nu-FRR" secondAttribute="trailing" constant="15" id="BTa-eb-Qsd"/>
+                    <constraint firstItem="s1U-UG-ncL" firstAttribute="bottom" secondItem="ZWA-eK-RmB" secondAttribute="bottom" id="GFS-Wj-pXi"/>
+                    <constraint firstItem="s1U-UG-ncL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="HGO-h8-VFO"/>
                     <constraint firstItem="9Lq-Nu-FRR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XhY-O1-2gP"/>
                     <constraint firstItem="iKt-Fd-j05" firstAttribute="leading" secondItem="ZWA-eK-RmB" secondAttribute="trailing" constant="5" id="YnF-5T-hgC"/>
                     <constraint firstItem="ZWA-eK-RmB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Zzk-op-wW3"/>
@@ -61,7 +73,22 @@
                     <constraint firstItem="ZWA-eK-RmB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vFQ-fA-g3i"/>
                     <constraint firstItem="s1U-UG-ncL" firstAttribute="leading" secondItem="iKt-Fd-j05" secondAttribute="leading" id="xAa-z0-PXI"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="9Wz-qg-cvz"/>
+                        <exclude reference="meB-oW-OWZ"/>
+                        <exclude reference="oMx-VS-VC1"/>
+                        <exclude reference="xAa-z0-PXI"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="header" destination="ZWA-eK-RmB" id="HtN-cQ-QM8"/>
+                <outlet property="memberNum" destination="9Lq-Nu-FRR" id="k2A-Wd-2qP"/>
+                <outlet property="stateDes" destination="s1U-UG-ncL" id="DGn-lu-7vP"/>
+                <outlet property="stateName" destination="iKt-Fd-j05" id="QAb-f4-jro"/>
+                <outlet property="topicNum" destination="XKx-dY-7IU" id="9Jt-6V-rhA"/>
+            </connections>
             <point key="canvasLocation" x="246" y="410"/>
         </tableViewCell>
     </objects>

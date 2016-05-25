@@ -8,15 +8,19 @@
 
 #import "ContentsStateTableViewCell.h"
 #import "CubeDetailModel.h"
+#import "QFXTools.h"
+#import <UIImageView+WebCache.h>
 @implementation ContentsStateTableViewCell
 
 - (void)setCubeDetail:(CubeDetailModel *)cubeDetail{
-    self.timeLabel.text = cubeDetail.time;
+    self.timeLabel.text = [QFXTools dateStringToTimeString:[cubeDetail.time stringValue]];
     self.contentStateSubTitle.text = [NSString stringWithFormat:@"%d张图",24]; //image_count
     self.contentStateType.text = cubeDetail.des;
     self.contentStateTitle.text = cubeDetail.title;
-    self.commentNum.text = cubeDetail.cellCommentNum;
-    self.likeNum.text = cubeDetail.cellZanNum;
+    self.commentNum.text = [cubeDetail.cellCommentNum stringValue];
+    self.likeNum.text = [cubeDetail.cellZanNum stringValue];
+    NSLog(@" cubeDetail.backgroundImg %@",cubeDetail.backgroundImg);
+    [self.backImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backgroundImg]];
 }
 
 - (void)awakeFromNib {

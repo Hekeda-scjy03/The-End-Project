@@ -21,8 +21,8 @@
     self.stateCreateName.text = cubeDetail.directorName;
     [self.stateCreateHeadImg sd_setImageWithURL:[NSURL URLWithString:cubeDetail.directorHead]];
     self.stateCreateIntroduction.text = cubeDetail.directorDes;
-    self.contentsBtn.titleLabel.text = [NSString stringWithFormat:@"    内容 %@",cubeDetail.stateContentNum];
-    self.discussBtn.titleLabel.text = [NSString stringWithFormat:@"    讨论 %@",cubeDetail.stateDiscussNum];
+    self.contentsBtn.titleLabel.text = [NSString stringWithFormat:@"    内容 %@",[cubeDetail.stateContentNum stringValue]];
+    self.discussBtn.titleLabel.text = [NSString stringWithFormat:@"    讨论 %@",[cubeDetail.stateDiscussNum stringValue]];
 }
 
 - (void)awakeFromNib{

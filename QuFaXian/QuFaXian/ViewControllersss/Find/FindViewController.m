@@ -22,6 +22,8 @@
 #import "HeaderCollectionReusableView.h"
 #import "BannerModel.h"
 #import "CubeDetailModel.h"
+#import "CreatorListViewController.h"
+#import "DirectoryListViewController.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -30,6 +32,10 @@
     NSMutableArray *_array, *_bannerArray, *_cubeDetailArray;
 }
 @property (strong, nonatomic) UICollectionView *collectionView;
+
+@property (strong, nonatomic) CubeDetailViewController *cubeDetailVC;
+
+@property (strong, nonatomic) CubeModel *cubeModel;
 
 @end
 
@@ -102,8 +108,9 @@
                 NSMutableArray *cellArray = [[NSMutableArray alloc]init];
                 for (NSDictionary *dic in entitylist) {
                     
-                    CubeModel *cube = [[CubeModel alloc]initWithDic:dic];
-                    [cellArray addObject:cube];
+                    _cubeModel = [[CubeModel alloc]initWithDic:dic];
+                    [cellArray addObject:_cubeModel];
+                    
                 }
                 [_array addObject:cellArray];
             }
@@ -130,6 +137,8 @@
                 [_array addObject:special];
             }
         }
+        
+        
         [_collectionView.mj_footer endRefreshing];
         [_collectionView reloadData];
     } fail:^(NSError *error) {
@@ -222,6 +231,30 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     if (kind == UICollectionElementKindSectionHeader && indexPath.section == 0) {
             HeaderCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
+        __weak typeof(self) myself = self;
+        header.headerBtnClickBlock = ^(NSInteger tag){
+            
+            
+            
+            switch (tag) {
+                case 0:
+                {
+                    DirectoryListViewController *directoryVC = [[DirectoryListViewController alloc]init];
+                    [myself.navigationController pushViewController:directoryVC animated:YES];
+                }
+                    break;
+                    
+                case 1:
+                {
+                    CreatorListViewController *creatoVC = [[CreatorListViewController alloc] init];
+                    [myself.navigationController pushViewController:creatoVC animated:YES];
+                }
+                    break;
+                default:
+                    break;
+            }
+
+        };
         header.bannerList = _bannerArray;
             return header;
 
@@ -258,11 +291,16 @@
 
 #pragma mark - 点击collectionview
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    CubeDetailViewController *cubeDetail = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:nil];
-    CubeDetailModel *detailModel = [[CubeDetailModel alloc]init];
-    cubeDetail.id = detailModel.id;
+    _cubeDetailVC = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:nil];
+
+    NSArray *tempArray = _array[indexPath.section * 2];
+    _cubeModel = tempArray[indexPath.row];
+    _cubeDetailVC.id = _cubeModel.id;
+    _cubeDetailVC.kind = _cubeModel.kind;
+    _cubeDetailVC.navigationItem.title = _cubeModel.name;
     
-    [self.navigationController pushViewController:cubeDetail animated:YES];
+    
+    [self.navigationController pushViewController:_cubeDetailVC animated:YES];
     
 }
 

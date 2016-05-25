@@ -10,8 +10,12 @@
 
 @implementation JoinIn
 
+- (void)addTarget:(id)target action:(SEL)action{
+    [self.joinBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
+
 - (void)setTitle:(NSString *)title{
-    [self.titleType setText:title];
+    [self.joinBtn setTitle:title forState:UIControlStateNormal];
 }
 
 @end

@@ -10,8 +10,10 @@
 
 @interface JoinIn : UIView
 
-@property (weak, nonatomic) IBOutlet UILabel *titleType;
+@property (weak, nonatomic) IBOutlet UIButton *joinBtn;
 
-- (void)setTitle:(NSString *)title;
+- (void)addTarget:(id)target action:(SEL)action;
+
+- (void) setTitle:(NSString *)title;
 
 @end

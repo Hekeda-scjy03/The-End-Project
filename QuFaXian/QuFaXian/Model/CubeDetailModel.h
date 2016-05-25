@@ -12,11 +12,11 @@
 
 @property (nonatomic, strong) NSString *category;
 
-@property (nonatomic, strong) NSString *stateContentNum;//站的内容数
+@property (nonatomic, strong) NSNumber *stateContentNum;//站的内容数
 
-@property (nonatomic, strong) NSString *stateDiscussNum;//站的讨论数
+@property (nonatomic, strong) NSNumber *stateDiscussNum;//站的讨论数
 
-@property (nonatomic, strong) NSString *cellZanNum;//cell内容的赞
+@property (nonatomic, strong) NSNumber *cellZanNum;//cell内容的赞
 
 @property (nonatomic, strong) NSString *title;
 
@@ -28,9 +28,9 @@
 
 @property (nonatomic, strong) NSString *id;
 
-@property (nonatomic, strong) NSString *cellCommentNum;//cell内容的评论数
+@property (nonatomic, strong) NSNumber *cellCommentNum;//cell内容的评论数
 
-@property (nonatomic, strong) NSString *time;
+@property (nonatomic, strong) NSNumber *time;
 
 @property (nonatomic, strong) NSString *kind;
 

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		44272B061CF1AD14005AF883 /* QFXHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44272B041CF1AD14005AF883 /* QFXHomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		44272B071CF1AD14005AF883 /* QFXHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44272B051CF1AD14005AF883 /* QFXHomeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		44272B061CF1AD14005AF883 /* QFXHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44272B041CF1AD14005AF883 /* QFXHomeTableViewCell.m */; };
+		44272B071CF1AD14005AF883 /* QFXHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44272B051CF1AD14005AF883 /* QFXHomeTableViewCell.xib */; };
 		4462097A1CEB49E300BF7F57 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 446209761CEB49E300BF7F57 /* HomeHeaderView.m */; };
 		4462097B1CEB49E300BF7F57 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446209771CEB49E300BF7F57 /* HomeHeaderView.xib */; };
 		4462097C1CEB49E300BF7F57 /* HomeThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 446209791CEB49E300BF7F57 /* HomeThemeButton.m */; };
@@ -70,8 +70,9 @@
 		D9524E021CF1A561000A15E2 /* TypeTwoCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9524E001CF1A561000A15E2 /* TypeTwoCollectionReusableView.xib */; };
 		D9524E081CF1AE5A000A15E2 /* CubeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9524E071CF1AE5A000A15E2 /* CubeDetailModel.m */; };
 		D9610C881CEDF3CA00917597 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9610C871CEDF3CA00917597 /* HTTPRequest.m */; };
-		D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */; };
-		D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */; };
+		D9730B5E1CF339F800C8978E /* QFXTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D9730B5D1CF339F800C8978E /* QFXTools.m */; };
+		D9871BAF1CE3608500953D54 /* FindCreatorListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BAD1CE3608500953D54 /* FindCreatorListTableViewCell.m */; };
+		D9871BB01CE3608500953D54 /* FindCreatorListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BAE1CE3608500953D54 /* FindCreatorListTableViewCell.xib */; };
 		D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BB31CE5FF8400953D54 /* ShareButton.m */; };
 		D9871BB61CE5FFA200953D54 /* ShareButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9871BB51CE5FFA200953D54 /* ShareButton.xib */; };
 		D9871BBB1CE6137600953D54 /* CubeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9871BB91CE6137600953D54 /* CubeDetailViewController.m */; };
@@ -83,8 +84,6 @@
 		D9A553511CF0901000BE44A5 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A5534F1CF0901000BE44A5 /* HeaderCollectionReusableView.xib */; };
 		D9A553581CF095C200BE44A5 /* LCViewPagerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A553551CF095C200BE44A5 /* LCViewPagerImageView.m */; };
 		D9A553591CF095C200BE44A5 /* LCViewPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A553571CF095C200BE44A5 /* LCViewPagerView.m */; };
-		D9B63B121CEC8AF800C5F3A1 /* CreaterListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B101CEC8AF800C5F3A1 /* CreaterListCell.m */; };
-		D9B63B131CEC8AF800C5F3A1 /* CreaterListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B63B111CEC8AF800C5F3A1 /* CreaterListCell.xib */; };
 		D9B63B171CEC8B1D00C5F3A1 /* DirectoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B151CEC8B1D00C5F3A1 /* DirectoryListCell.m */; };
 		D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */; };
 		D9B63B1C1CEC946E00C5F3A1 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B1B1CEC946E00C5F3A1 /* MyScrollView.m */; };
@@ -202,9 +201,11 @@
 		D9524E071CF1AE5A000A15E2 /* CubeDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeDetailModel.m; sourceTree = "<group>"; };
 		D9610C861CEDF3CA00917597 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
 		D9610C871CEDF3CA00917597 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
-		D9871BAC1CE3608500953D54 /* FindCreaterListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCreaterListTableViewCell.h; sourceTree = "<group>"; };
-		D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCreaterListTableViewCell.m; sourceTree = "<group>"; };
-		D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCreaterListTableViewCell.xib; sourceTree = "<group>"; };
+		D9730B5C1CF339F800C8978E /* QFXTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXTools.h; sourceTree = "<group>"; };
+		D9730B5D1CF339F800C8978E /* QFXTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXTools.m; sourceTree = "<group>"; };
+		D9871BAC1CE3608500953D54 /* FindCreatorListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCreatorListTableViewCell.h; sourceTree = "<group>"; };
+		D9871BAD1CE3608500953D54 /* FindCreatorListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCreatorListTableViewCell.m; sourceTree = "<group>"; };
+		D9871BAE1CE3608500953D54 /* FindCreatorListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindCreatorListTableViewCell.xib; sourceTree = "<group>"; };
 		D9871BB21CE5FF8400953D54 /* ShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareButton.h; sourceTree = "<group>"; };
 		D9871BB31CE5FF8400953D54 /* ShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareButton.m; sourceTree = "<group>"; };
 		D9871BB51CE5FFA200953D54 /* ShareButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareButton.xib; sourceTree = "<group>"; };
@@ -225,9 +226,6 @@
 		D9A553551CF095C200BE44A5 /* LCViewPagerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCViewPagerImageView.m; sourceTree = "<group>"; };
 		D9A553561CF095C200BE44A5 /* LCViewPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCViewPagerView.h; sourceTree = "<group>"; };
 		D9A553571CF095C200BE44A5 /* LCViewPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCViewPagerView.m; sourceTree = "<group>"; };
-		D9B63B0F1CEC8AF800C5F3A1 /* CreaterListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreaterListCell.h; sourceTree = "<group>"; };
-		D9B63B101CEC8AF800C5F3A1 /* CreaterListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreaterListCell.m; sourceTree = "<group>"; };
-		D9B63B111CEC8AF800C5F3A1 /* CreaterListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreaterListCell.xib; sourceTree = "<group>"; };
 		D9B63B141CEC8B1D00C5F3A1 /* DirectoryListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryListCell.h; sourceTree = "<group>"; };
 		D9B63B151CEC8B1D00C5F3A1 /* DirectoryListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryListCell.m; sourceTree = "<group>"; };
 		D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectoryListCell.xib; sourceTree = "<group>"; };
@@ -481,6 +479,8 @@
 		D90B2FA91CDB4F0100B762CF /* 工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				D9730B5C1CF339F800C8978E /* QFXTools.h */,
+				D9730B5D1CF339F800C8978E /* QFXTools.m */,
 			);
 			name = "工具类";
 			path = "QuFaXian/工具类";
@@ -510,7 +510,6 @@
 		D90B2FBC1CDC3A8100B762CF /* ViewControllersss */ = {
 			isa = PBXGroup;
 			children = (
-				D9424BCD1CE8059D00DC3B76 /* share弹出的buttonVC */,
 				D90B2FDF1CDC730700B762CF /* 我的 */,
 				D90B2FDE1CDC72FF00B762CF /* 动态 */,
 				D90B2FDD1CDC72FA00B762CF /* 发现 */,
@@ -577,6 +576,7 @@
 		D90B2FDD1CDC72FA00B762CF /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
+				D9424BCD1CE8059D00DC3B76 /* share弹出的buttonVC */,
 				D9B63B231CECA10300C5F3A1 /* 造物主&目录list */,
 				D9B63B191CEC945B00C5F3A1 /* MyScrollView */,
 				D9871BB71CE6132B00953D54 /* Cube点进去的vc */,
@@ -656,7 +656,6 @@
 			isa = PBXGroup;
 			children = (
 				D9424BD31CE8118E00DC3B76 /* Cube点进去的详情Header */,
-				D9B63B0E1CEC8AC100C5F3A1 /* 造物主列表cell */,
 				D9B63B0D1CEC8AAC00C5F3A1 /* 目录列表cell */,
 				D9A5534C1CF08FAF00BE44A5 /* 发现header */,
 				D9871BAB1CE3602C00953D54 /* 造物主列表cell */,
@@ -712,7 +711,7 @@
 				D9424BCF1CE8060900DC3B76 /* ShareButtonViewController.m */,
 			);
 			name = "share弹出的buttonVC";
-			path = ../Cell;
+			path = ../../Cell;
 			sourceTree = "<group>";
 		};
 		D9424BD31CE8118E00DC3B76 /* Cube点进去的详情Header */ = {
@@ -843,9 +842,9 @@
 		D9871BAB1CE3602C00953D54 /* 造物主列表cell */ = {
 			isa = PBXGroup;
 			children = (
-				D9871BAC1CE3608500953D54 /* FindCreaterListTableViewCell.h */,
-				D9871BAD1CE3608500953D54 /* FindCreaterListTableViewCell.m */,
-				D9871BAE1CE3608500953D54 /* FindCreaterListTableViewCell.xib */,
+				D9871BAC1CE3608500953D54 /* FindCreatorListTableViewCell.h */,
+				D9871BAD1CE3608500953D54 /* FindCreatorListTableViewCell.m */,
+				D9871BAE1CE3608500953D54 /* FindCreatorListTableViewCell.xib */,
 			);
 			name = "造物主列表cell";
 			sourceTree = "<group>";
@@ -949,17 +948,6 @@
 				D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */,
 			);
 			name = "目录列表cell";
-			path = ..;
-			sourceTree = "<group>";
-		};
-		D9B63B0E1CEC8AC100C5F3A1 /* 造物主列表cell */ = {
-			isa = PBXGroup;
-			children = (
-				D9B63B0F1CEC8AF800C5F3A1 /* CreaterListCell.h */,
-				D9B63B101CEC8AF800C5F3A1 /* CreaterListCell.m */,
-				D9B63B111CEC8AF800C5F3A1 /* CreaterListCell.xib */,
-			);
-			name = "造物主列表cell";
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -1093,12 +1081,11 @@
 				D90B2F9E1CDB4E2C00B762CF /* LaunchScreen.storyboard in Resources */,
 				D90B2F9B1CDB4E2C00B762CF /* Assets.xcassets in Resources */,
 				D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */,
-				D9871BB01CE3608500953D54 /* FindCreaterListTableViewCell.xib in Resources */,
+				D9871BB01CE3608500953D54 /* FindCreatorListTableViewCell.xib in Resources */,
 				D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */,
 				447215B41CF05C430003D460 /* QFXVideoViewController.xib in Resources */,
 				D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */,
 				D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */,
-				D9B63B131CEC8AF800C5F3A1 /* CreaterListCell.xib in Resources */,
 				447215C71CF05FA20003D460 /* QFXMineTableViewCell.xib in Resources */,
 				D9424BFE1CE814E300DC3B76 /* CreaterContentTableViewCell.xib in Resources */,
 				447215B71CF05C430003D460 /* QFXVideoTableViewCell.xib in Resources */,
@@ -1198,14 +1185,14 @@
 				4462097C1CEB49E300BF7F57 /* HomeThemeButton.m in Sources */,
 				D9A553411CEFF01800BE44A5 /* SecondGroupinfo.m in Sources */,
 				447215C31CF05FA20003D460 /* SettingMessage.m in Sources */,
-				D9871BAF1CE3608500953D54 /* FindCreaterListTableViewCell.m in Sources */,
+				D9871BAF1CE3608500953D54 /* FindCreatorListTableViewCell.m in Sources */,
 				D90B2FB01CDB4FAC00B762CF /* QFXCustomViewController.m in Sources */,
 				D9A553591CF095C200BE44A5 /* LCViewPagerView.m in Sources */,
-				D9B63B121CEC8AF800C5F3A1 /* CreaterListCell.m in Sources */,
 				D90B2FBB1CDB51E400B762CF /* UIBarButtonItem+InitType.m in Sources */,
 				D9356B431CF15E9F0001D79C /* BannerModel.m in Sources */,
 				D9BCC9221CE20A080094CECB /* UIColor+HexColor.m in Sources */,
 				D90B2FE81CDC76FF00B762CF /* DynamicViewController.m in Sources */,
+				D9730B5E1CF339F800C8978E /* QFXTools.m in Sources */,
 				D9871BBB1CE6137600953D54 /* CubeDetailViewController.m in Sources */,
 				D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */,
 				447215B31CF05C430003D460 /* QFXVideoViewController.m in Sources */,

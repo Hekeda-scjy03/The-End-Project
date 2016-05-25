@@ -21,4 +21,12 @@
     [self.viewPager setImageAry:bannerList];
 }
 
+- (IBAction)btnClick:(id)sender {
+    
+    UIButton *btn = (UIButton *)sender;
+    self.headerBtnClickBlock(btn.tag);
+    
+}
+
+
 @end

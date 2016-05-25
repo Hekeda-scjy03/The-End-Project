@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSString *name; //名字
 
+@property (nonatomic, strong) NSString *kind; //传过来的kind 和接口地址有关
+
 @property (nonatomic, strong) NSString *cubeImage;//cell显示的图片
 
 @property (nonatomic, strong) NSString *topicNum;//点进去之后返回的cell数 也就是内容数量
@@ -23,10 +25,6 @@
 @property (nonatomic, strong) NSString *id; //id
 
 @property (nonatomic, strong) NSString *discussNum; //讨论数
-
-@property (nonatomic, strong) NSString *topBacjImg; //点击进去之后的背景图
-
-@property (nonatomic, strong) NSString *cert_kind_id; //
 
 - (instancetype)initWithDic:(NSDictionary *)dic;
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @class CubeDetailModel;
 @interface ContentsStateTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *backImage;
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 

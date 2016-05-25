@@ -20,19 +20,25 @@
                     <state key="normal" title="趣发现目录">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="btnClick:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="CUS-KK-FHX"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzp-1d-vVf">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzp-1d-vVf">
                     <rect key="frame" x="180" y="156" width="180" height="64"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="趣发现造物主">
                         <color key="titleColor" red="0.99597537879999998" green="0.99597537879999998" blue="0.99597537879999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="btnClick:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="2FW-Il-1Pr"/>
+                    </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon-arrow-right-white" translatesAutoresizingMaskIntoConstraints="NO" id="fVw-O7-4Ol">
-                    <rect key="frame" x="334" y="199" width="6" height="11"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right-white" translatesAutoresizingMaskIntoConstraints="NO" id="fVw-O7-4Ol">
+                    <rect key="frame" x="334" y="183" width="6" height="11"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="browser-forward-black" translatesAutoresizingMaskIntoConstraints="NO" id="1BE-vp-W8Y">
-                    <rect key="frame" x="150" y="196" width="10" height="17"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="browser-forward-black" translatesAutoresizingMaskIntoConstraints="NO" id="1BE-vp-W8Y">
+                    <rect key="frame" x="150" y="180" width="10" height="17"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beY-TV-LhR" customClass="LCViewPagerView">
                     <rect key="frame" x="0.0" y="0.0" width="360" height="156"/>
@@ -58,7 +64,6 @@
                 <constraint firstItem="phJ-uT-8rr" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="x23-TS-ouu"/>
             </constraints>
             <connections>
-                <outlet property="creatorBtn" destination="Uzp-1d-vVf" id="AY2-mP-Mos"/>
                 <outlet property="directoryBtn" destination="1BE-vp-W8Y" id="0uH-Yq-H0B"/>
                 <outlet property="viewPager" destination="beY-TV-LhR" id="56t-Jy-N6g"/>
             </connections>

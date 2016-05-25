@@ -17,10 +17,10 @@
         NSDictionary *tempDic = [dic objectForKey:@"group"];
         self.name = [tempDic objectForKey:@"name"];
         self.id = [tempDic objectForKey:@"id"];
+        self.kind = [tempDic objectForKey:@"kind"];
         self.des = [tempDic objectForKey:@"description"];
         self.category = [tempDic objectForKey:@"category"];
         self.cubeImage = [tempDic objectForKey:@"logo_url"];
-//        self.topBacjImg = [dic objectForKey:@"dsfs"];
         self.discussNum = [tempDic objectForKey:@"discuss_content_num"];
         self.topicNum = [tempDic objectForKey:@"topic_content_num"];
     }
