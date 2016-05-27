@@ -15,8 +15,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="321" height="134"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="所谓的传统是如何形成的 哈哈哈哈哈" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-Dk-z0n">
-                        <rect key="frame" x="149" y="14" width="152" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所谓的传统是如何形成的 哈哈哈哈哈" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-Dk-z0n">
+                        <rect key="frame" x="179" y="10" width="124" height="36"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="2mO-8J-7zt"/>
                             <constraint firstAttribute="height" constant="36" id="TMd-GL-1eP"/>
@@ -30,43 +30,48 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="所谓的传统是如何形成的 哈哈哈哈哈哈哈哈和哈哈哈哈哈哈" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3u-w6-02n">
-                        <rect key="frame" x="149" y="55" width="158" height="43"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所谓的传统是如何形成的 哈哈哈哈哈哈哈哈和哈哈哈哈哈哈 哈哈哈哈哈哈哈哈和哈哈哈哈哈哈" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3u-w6-02n">
+                        <rect key="frame" x="179" y="48" width="124" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="79Y-ym-pAV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V6X-Cc-wYo">
-                        <rect key="frame" x="14" y="14" width="120" height="106"/>
+                        <rect key="frame" x="14" y="10" width="150" height="114"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="Jf1-gP-0UP"/>
+                            <constraint firstAttribute="width" constant="150" id="Jf1-gP-0UP"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ART_OF_JEWEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeg-u4-Ici">
-                        <rect key="frame" x="149" y="116" width="158" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ART_OF_JEWEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeg-u4-Ici">
+                        <rect key="frame" x="179" y="112" width="124" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="V6X-Cc-wYo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="3sv-Gv-dbD"/>
+                    <constraint firstItem="V6X-Cc-wYo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="3sv-Gv-dbD"/>
                     <constraint firstItem="NGA-Dk-z0n" firstAttribute="top" secondItem="V6X-Cc-wYo" secondAttribute="top" id="A78-bo-fVS"/>
                     <constraint firstItem="V6X-Cc-wYo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IdR-Hw-OrC"/>
                     <constraint firstItem="E3u-w6-02n" firstAttribute="trailing" secondItem="NGA-Dk-z0n" secondAttribute="trailing" id="JWb-qE-ASe"/>
-                    <constraint firstItem="E3u-w6-02n" firstAttribute="top" secondItem="NGA-Dk-z0n" secondAttribute="bottom" constant="5" id="U2H-L8-Rw7"/>
+                    <constraint firstItem="E3u-w6-02n" firstAttribute="top" secondItem="NGA-Dk-z0n" secondAttribute="bottom" constant="2" id="U2H-L8-Rw7"/>
                     <constraint firstItem="Aeg-u4-Ici" firstAttribute="trailing" secondItem="NGA-Dk-z0n" secondAttribute="trailing" id="XHb-VS-Jvs"/>
+                    <constraint firstItem="Aeg-u4-Ici" firstAttribute="bottom" secondItem="V6X-Cc-wYo" secondAttribute="bottom" id="Y6g-gJ-bh5"/>
                     <constraint firstItem="Aeg-u4-Ici" firstAttribute="bottom" secondItem="V6X-Cc-wYo" secondAttribute="bottom" id="fD4-Zb-gQX"/>
                     <constraint firstItem="V6X-Cc-wYo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="grW-dW-LTU"/>
                     <constraint firstItem="E3u-w6-02n" firstAttribute="leading" secondItem="NGA-Dk-z0n" secondAttribute="leading" id="gtl-Ck-nNA"/>
                     <constraint firstItem="Aeg-u4-Ici" firstAttribute="leading" secondItem="NGA-Dk-z0n" secondAttribute="leading" id="huz-VJ-jVH"/>
-                    <constraint firstItem="Aeg-u4-Ici" firstAttribute="top" secondItem="E3u-w6-02n" secondAttribute="bottom" constant="18" id="sux-sp-Mg1"/>
+                    <constraint firstItem="Aeg-u4-Ici" firstAttribute="top" secondItem="E3u-w6-02n" secondAttribute="bottom" constant="5" id="sux-sp-Mg1"/>
                     <constraint firstAttribute="trailingMargin" secondItem="NGA-Dk-z0n" secondAttribute="trailing" constant="10" id="tIM-lP-Krv"/>
                     <constraint firstItem="NGA-Dk-z0n" firstAttribute="leading" secondItem="V6X-Cc-wYo" secondAttribute="trailing" constant="15" id="tIW-U8-Tb7"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="fD4-Zb-gQX"/>
+                        <exclude reference="sux-sp-Mg1"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>

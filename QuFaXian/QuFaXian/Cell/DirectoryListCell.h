@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class DirectoryModel;
 @interface DirectoryListCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
@@ -16,7 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *subTitle;
 
-
 @property (weak, nonatomic) IBOutlet UILabel *authorName;
+
+@property (nonatomic, strong) DirectoryModel *directoryModel;
 
 @end

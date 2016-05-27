@@ -86,7 +86,6 @@
 		D9A553591CF095C200BE44A5 /* LCViewPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A553571CF095C200BE44A5 /* LCViewPagerView.m */; };
 		D9B63B171CEC8B1D00C5F3A1 /* DirectoryListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B151CEC8B1D00C5F3A1 /* DirectoryListCell.m */; };
 		D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */; };
-		D9B63B1C1CEC946E00C5F3A1 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B1B1CEC946E00C5F3A1 /* MyScrollView.m */; };
 		D9B63B271CECA12D00C5F3A1 /* CreatorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B251CECA12D00C5F3A1 /* CreatorListViewController.m */; };
 		D9B63B2B1CECA14D00C5F3A1 /* DirectoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B2A1CECA14D00C5F3A1 /* DirectoryListViewController.m */; };
 		D9B63B301CECABCB00C5F3A1 /* CreatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B63B2F1CECABCB00C5F3A1 /* CreatorModel.m */; };
@@ -94,6 +93,9 @@
 		D9CCA3011CEB4B0D0024C2A9 /* JoinIn.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CCA3001CEB4B0D0024C2A9 /* JoinIn.m */; };
 		D9CCA3031CEB4B2C0024C2A9 /* JoinIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CCA3021CEB4B2C0024C2A9 /* JoinIn.xib */; };
 		D9CFBED21CE21F4B00DD775B /* QFXNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFBED11CE21F4B00DD775B /* QFXNavgationController.m */; };
+		D9CFE3A21CF728EE0043FB35 /* MySegement.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFE3A11CF728EE0043FB35 /* MySegement.m */; };
+		D9CFE3A61CF843740043FB35 /* MyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFE3A51CF843740043FB35 /* MyTableView.m */; };
+		D9CFE3AA1CF8475C0043FB35 /* DirectoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CFE3A91CF8475C0043FB35 /* DirectoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,8 +231,6 @@
 		D9B63B141CEC8B1D00C5F3A1 /* DirectoryListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryListCell.h; sourceTree = "<group>"; };
 		D9B63B151CEC8B1D00C5F3A1 /* DirectoryListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryListCell.m; sourceTree = "<group>"; };
 		D9B63B161CEC8B1D00C5F3A1 /* DirectoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectoryListCell.xib; sourceTree = "<group>"; };
-		D9B63B1A1CEC946E00C5F3A1 /* MyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollView.h; sourceTree = "<group>"; };
-		D9B63B1B1CEC946E00C5F3A1 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 		D9B63B241CECA12D00C5F3A1 /* CreatorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatorListViewController.h; sourceTree = "<group>"; };
 		D9B63B251CECA12D00C5F3A1 /* CreatorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatorListViewController.m; sourceTree = "<group>"; };
 		D9B63B291CECA14D00C5F3A1 /* DirectoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryListViewController.h; sourceTree = "<group>"; };
@@ -244,6 +244,12 @@
 		D9CCA3021CEB4B2C0024C2A9 /* JoinIn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JoinIn.xib; sourceTree = "<group>"; };
 		D9CFBED01CE21F4B00DD775B /* QFXNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXNavgationController.h; sourceTree = "<group>"; };
 		D9CFBED11CE21F4B00DD775B /* QFXNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXNavgationController.m; sourceTree = "<group>"; };
+		D9CFE3A01CF728EE0043FB35 /* MySegement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySegement.h; sourceTree = "<group>"; };
+		D9CFE3A11CF728EE0043FB35 /* MySegement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegement.m; sourceTree = "<group>"; };
+		D9CFE3A41CF843740043FB35 /* MyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableView.h; sourceTree = "<group>"; };
+		D9CFE3A51CF843740043FB35 /* MyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableView.m; sourceTree = "<group>"; };
+		D9CFE3A81CF8475C0043FB35 /* DirectoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryModel.h; sourceTree = "<group>"; };
+		D9CFE3A91CF8475C0043FB35 /* DirectoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,7 +584,6 @@
 			children = (
 				D9424BCD1CE8059D00DC3B76 /* share弹出的buttonVC */,
 				D9B63B231CECA10300C5F3A1 /* 造物主&目录list */,
-				D9B63B191CEC945B00C5F3A1 /* MyScrollView */,
 				D9871BB71CE6132B00953D54 /* Cube点进去的vc */,
 				D90B2FF71CDC7AA200B762CF /* FindViewController.h */,
 				D90B2FF81CDC7AA200B762CF /* FindViewController.m */,
@@ -624,7 +629,6 @@
 		D90B2FF61CDC774300B762CF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D9524DF91CF1A38C000A15E2 /* MeowTypeCell */,
 				D93A42D01CE34D14000B359B /* 发现 */,
 			);
 			name = Cell;
@@ -655,6 +659,7 @@
 		D93A42D01CE34D14000B359B /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
+				D9524DF91CF1A38C000A15E2 /* MeowTypeCell */,
 				D9424BD31CE8118E00DC3B76 /* Cube点进去的详情Header */,
 				D9B63B0D1CEC8AAC00C5F3A1 /* 目录列表cell */,
 				D9A5534C1CF08FAF00BE44A5 /* 发现header */,
@@ -798,6 +803,7 @@
 				D9424BDD1CE8137D00DC3B76 /* 9 */,
 			);
 			name = MeowTypeCell;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D9524DFC1CF1A4B6000A15E2 /* 4 */ = {
@@ -921,6 +927,8 @@
 		D9A553521CF0957800BE44A5 /* 自定义view */ = {
 			isa = PBXGroup;
 			children = (
+				D9CFE3A31CF8432E0043FB35 /* MyTableView */,
+				D9CFE39F1CF728BB0043FB35 /* MySegment */,
 				D9CCA2FE1CEB4AE00024C2A9 /* 加入view */,
 				D9871BB11CE5FEDB00953D54 /* 分享 */,
 				D9A553531CF095C200BE44A5 /* LCViewPager */,
@@ -951,15 +959,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		D9B63B191CEC945B00C5F3A1 /* MyScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				D9B63B1A1CEC946E00C5F3A1 /* MyScrollView.h */,
-				D9B63B1B1CEC946E00C5F3A1 /* MyScrollView.m */,
-			);
-			name = MyScrollView;
-			sourceTree = "<group>";
-		};
 		D9B63B231CECA10300C5F3A1 /* 造物主&目录list */ = {
 			isa = PBXGroup;
 			children = (
@@ -983,6 +982,8 @@
 		D9B63B2D1CECAB7600C5F3A1 /* 目录 */ = {
 			isa = PBXGroup;
 			children = (
+				D9CFE3A81CF8475C0043FB35 /* DirectoryModel.h */,
+				D9CFE3A91CF8475C0043FB35 /* DirectoryModel.m */,
 			);
 			name = "目录";
 			sourceTree = "<group>";
@@ -1014,6 +1015,24 @@
 			);
 			name = "加入view";
 			path = ../Cell;
+			sourceTree = "<group>";
+		};
+		D9CFE39F1CF728BB0043FB35 /* MySegment */ = {
+			isa = PBXGroup;
+			children = (
+				D9CFE3A01CF728EE0043FB35 /* MySegement.h */,
+				D9CFE3A11CF728EE0043FB35 /* MySegement.m */,
+			);
+			path = MySegment;
+			sourceTree = "<group>";
+		};
+		D9CFE3A31CF8432E0043FB35 /* MyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D9CFE3A41CF843740043FB35 /* MyTableView.h */,
+				D9CFE3A51CF843740043FB35 /* MyTableView.m */,
+			);
+			name = MyTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1176,6 +1195,7 @@
 				D90B2FCD1CDC463300B762CF /* QFXTabBar.m in Sources */,
 				D9871BB41CE5FF8400953D54 /* ShareButton.m in Sources */,
 				D90B2FC71CDC430200B762CF /* UINavigationController+Pop.m in Sources */,
+				D9CFE3AA1CF8475C0043FB35 /* DirectoryModel.m in Sources */,
 				D9B63B2B1CECA14D00C5F3A1 /* DirectoryListViewController.m in Sources */,
 				D9424BF81CE814CF00DC3B76 /* GroupContentTableViewCell.m in Sources */,
 				44272B061CF1AD14005AF883 /* QFXHomeTableViewCell.m in Sources */,
@@ -1195,6 +1215,7 @@
 				D9730B5E1CF339F800C8978E /* QFXTools.m in Sources */,
 				D9871BBB1CE6137600953D54 /* CubeDetailViewController.m in Sources */,
 				D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */,
+				D9CFE3A61CF843740043FB35 /* MyTableView.m in Sources */,
 				447215B31CF05C430003D460 /* QFXVideoViewController.m in Sources */,
 				D9424BD01CE8060900DC3B76 /* ShareButtonViewController.m in Sources */,
 				447215C61CF05FA20003D460 /* QFXMineTableViewCell.m in Sources */,
@@ -1205,12 +1226,12 @@
 				D9524E011CF1A561000A15E2 /* TypeTwoCollectionReusableView.m in Sources */,
 				D9B63B301CECABCB00C5F3A1 /* CreatorModel.m in Sources */,
 				D93A42DB1CE35248000B359B /* FooterCollectionReusableView.m in Sources */,
+				D9CFE3A21CF728EE0043FB35 /* MySegement.m in Sources */,
 				D90B2F901CDB4E2C00B762CF /* main.m in Sources */,
 				447215B61CF05C430003D460 /* QFXVideoTableViewCell.m in Sources */,
 				D9B63B271CECA12D00C5F3A1 /* CreatorListViewController.m in Sources */,
 				D90B2FCA1CDC461900B762CF /* QFXTabBarController.m in Sources */,
 				D9CFBED21CE21F4B00DD775B /* QFXNavgationController.m in Sources */,
-				D9B63B1C1CEC946E00C5F3A1 /* MyScrollView.m in Sources */,
 				D9CCA3011CEB4B0D0024C2A9 /* JoinIn.m in Sources */,
 				D9524E081CF1AE5A000A15E2 /* CubeDetailModel.m in Sources */,
 				D9B63B171CEC8B1D00C5F3A1 /* DirectoryListCell.m in Sources */,

@@ -7,8 +7,27 @@
 //
 
 #import "DirectoryListCell.h"
-
+#import "DirectoryModel.h"
+#import <UIImageView+WebCache.h>
+#import <MJRefresh.h>
 @implementation DirectoryListCell
+
+-(void)setDirectoryModel:(DirectoryModel *)directoryModel{
+
+    _directoryModel = directoryModel;
+    
+    [self.image sd_setImageWithURL:[NSURL URLWithString:directoryModel.leftImg]];
+    
+    self.title.text = directoryModel.title;
+    
+    if ([directoryModel.introduce isEqualToString:@""]) {
+        self.subTitle.text = directoryModel.title;
+    }else{
+        self.subTitle.text = directoryModel.introduce;
+    }
+    
+    self.authorName.text = directoryModel.author;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

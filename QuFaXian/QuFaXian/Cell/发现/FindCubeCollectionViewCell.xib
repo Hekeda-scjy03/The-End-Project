@@ -43,7 +43,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="腾讯网非虚构平台，致力于耕耘中国故事" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-s8-Tyb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="腾讯网非虚构平台，致力于耕耘中国故事" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-s8-Tyb">
                         <rect key="frame" x="10" y="156" width="181" height="27"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="M4T-DC-cxE"/>
@@ -96,6 +96,7 @@
                 <constraint firstItem="V5j-id-aiL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tGY-cH-DDw"/>
                 <constraint firstItem="WFx-s8-Tyb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xz6-ue-n5V"/>
                 <constraint firstItem="QAU-xc-rqq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="yeq-eM-8Gr"/>
+                <constraint firstItem="WFx-s8-Tyb" firstAttribute="top" secondItem="QAU-xc-rqq" secondAttribute="bottom" constant="12" id="zdK-2j-SI1"/>
             </constraints>
             <size key="customSize" width="201" height="193"/>
             <variation key="default">
@@ -104,6 +105,7 @@
                     <exclude reference="7Dm-ul-Vpl"/>
                     <exclude reference="J5U-TN-yyh"/>
                     <exclude reference="qYO-s7-kZa"/>
+                    <exclude reference="ch3-wi-lE7"/>
                     <exclude reference="qEj-UK-A10"/>
                 </mask>
             </variation>

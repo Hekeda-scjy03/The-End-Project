@@ -79,7 +79,7 @@
 
 #pragma mark - 点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CubeDetailViewController *detailVC = [[CubeDetailViewController alloc]initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:nil];
+    CubeDetailViewController *detailVC = [[CubeDetailViewController alloc]initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:NULL];
     
     CreatorModel *creatorModel = [[CreatorModel alloc]init];
     creatorModel = _creatorListArray[indexPath.row];
