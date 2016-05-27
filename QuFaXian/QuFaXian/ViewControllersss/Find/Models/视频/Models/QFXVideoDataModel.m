@@ -22,7 +22,7 @@
 + (NSDictionary *)mj_objectClassInArray
 {
     return @{
-             @"meows" : @"QFXMeowsModel",
+             @"meows" : @"QFXVideoMeowsModel",
              };
 }
 

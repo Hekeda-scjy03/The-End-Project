@@ -7,17 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QFXMeowsModel.h"
+#import "QFXVideoMeowsModel.h"
 
 @interface QFXVideoTableViewCell : UITableViewCell
 
 // 数据模型
-@property (nonatomic, strong) QFXMeowsModel *videoData;
-
-
-
-// 播放按钮
-@property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (nonatomic, strong) QFXVideoMeowsModel *videoData;
 
 // 创建cell的方法
 + (instancetype)videoTableViewCell:(UITableView *)tableView;

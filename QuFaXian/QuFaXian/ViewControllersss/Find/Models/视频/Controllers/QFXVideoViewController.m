@@ -10,16 +10,26 @@
 #import "QFXVideoTableViewCell.h"
 #import "HTTPRequest.h"
 #import "QFXVideoDataModel.h"
+#import "QFXVideoDetailsViewController.h"
 
 @interface QFXVideoViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *videoTableView;
 @property (nonatomic, strong) NSMutableArray *videoDataListArray;
+@property (nonatomic, strong) NSMutableArray *dataID;
 
 
 @end
 
 @implementation QFXVideoViewController
+- (NSMutableArray *)dataID
+{
+    if (!_dataID) {
+        _dataID = [NSMutableArray array];
+    }
+    return _dataID;
+}
+
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +40,6 @@
     
     // 请求数据
     [self httpRequest];
-    
     
     self.navigationItem.title = @"视频";
     
@@ -67,11 +76,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    QFXMeowsModel *model = self.videoDataListArray[indexPath.row];
+    QFXVideoMeowsModel *model = self.videoDataListArray[indexPath.row];
     
     QFXVideoTableViewCell *cell = [QFXVideoTableViewCell videoTableViewCell:tableView];
     
     cell.videoData = model;
+    [self.dataID addObject:model.ID];
+//    NSLog(@"====%@",self.dataID);
+   
     
     tableView.rowHeight = cell.height;
     
@@ -81,6 +93,21 @@
 }
 
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QFXVideoDetailsViewController *videoDetailsVC = [[QFXVideoDetailsViewController alloc] init];
+    
+    videoDetailsVC.dataID = self.dataID[indexPath.row];
+//    NSLog(@"====%@",videoDetailsVC.dataID);
+    
+    [self.navigationController pushViewController:videoDetailsVC animated:YES];
+}
+
+- (void)intoVideoDetailsVC
+{
+//    [self tableView:<#(nonnull UITableView *)#> didSelectRowAtIndexPath:<#(nonnull NSIndexPath *)#>]
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

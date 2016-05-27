@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Sugar. All rights reserved.
 //
 
-#import "QFXCategory.h"
+#import "QFXVideoCategory.h"
 
-@implementation QFXCategory
+@implementation QFXVideoCategory
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QFXMeowsModel.h"
+#import "QFXVideoMeowsModel.h"
 #import <MJExtension.h>
 
 @interface QFXVideoDataModel : NSObject

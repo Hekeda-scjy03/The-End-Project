@@ -10,4 +10,6 @@
 
 @interface QFXVideoViewController : UIViewController
 
+- (void)intoVideoDetailsVC;
+
 @end

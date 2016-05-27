@@ -1,5 +1,5 @@
 //
-//  QFXGroupModel.h
+//  QFXCategory.h
 //  QuFaXian
 //
 //  Created by hzy on 16/5/26.
@@ -8,15 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface QFXGroupModel : NSObject
+@interface QFXVideoCategory : NSObject
 
-// 用户头像
-@property (nonatomic, copy) NSString *logo_url;
-
-// 用户名
+// 视频的类型名称
 @property (nonatomic, copy) NSString *name;
-
-
 
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Sugar. All rights reserved.
 //
 
-#import "QFXMeowsModel.h"
+#import "QFXVideoMeowsModel.h"
 
-@implementation QFXMeowsModel
+@implementation QFXVideoMeowsModel
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {

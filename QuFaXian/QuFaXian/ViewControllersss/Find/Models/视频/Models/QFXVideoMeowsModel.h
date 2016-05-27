@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "QFXGroupModel.h"
-#import "QFXThumbModel.h"
-#import "QFXCategory.h"
+#import "QFXVideoGroupModel.h"
+#import "QFXVideoThumbModel.h"
+#import "QFXVideoCategory.h"
 
-@interface QFXMeowsModel : NSObject
+@interface QFXVideoMeowsModel : NSObject
 
 
 
@@ -21,9 +21,9 @@
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *desc;
 
-@property (nonatomic, strong) QFXGroupModel *group;
-@property (nonatomic, strong) QFXThumbModel *thumb;
-@property (nonatomic, strong) QFXCategory *category;
+@property (nonatomic, strong) QFXVideoGroupModel *group;
+@property (nonatomic, strong) QFXVideoThumbModel *thumb;
+@property (nonatomic, strong) QFXVideoCategory *category;
 
 
 @end

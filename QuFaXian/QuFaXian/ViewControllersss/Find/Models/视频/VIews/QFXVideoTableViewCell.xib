@@ -41,7 +41,7 @@
                                 <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" image="dianshitai"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa4-91-Sc5" userLabel="PlayButton">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa4-91-Sc5" userLabel="PlayButton">
                                 <rect key="frame" x="158" y="30" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="070-I0-S0i"/>
@@ -120,7 +120,6 @@
                 <outlet property="iconBtnHeight" destination="ZNU-Xz-zcn" id="hoi-EA-92f"/>
                 <outlet property="iconBtnMarginTopValue" destination="2Yj-Rb-Gs4" id="2SS-gU-4E4"/>
                 <outlet property="iconBtnWidth" destination="txo-9X-MKF" id="vD9-Ja-bdc"/>
-                <outlet property="playBtn" destination="Oa4-91-Sc5" id="FwQ-iI-2Ua"/>
                 <outlet property="playBtnHeight" destination="xZn-5r-48l" id="7K1-jH-6ng"/>
                 <outlet property="playBtnMarginTopValue" destination="2Ru-tE-VLw" id="irc-kE-abb"/>
                 <outlet property="playBtnWidth" destination="070-I0-S0i" id="aXe-ry-w5M"/>

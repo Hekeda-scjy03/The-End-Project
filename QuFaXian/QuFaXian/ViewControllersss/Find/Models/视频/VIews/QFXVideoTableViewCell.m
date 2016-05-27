@@ -66,7 +66,7 @@
 }
 
 #pragma mark - 设置数据
-- (void)setVideoData:(QFXMeowsModel *)videoData
+- (void)setVideoData:(QFXVideoMeowsModel *)videoData
 {
     _videoData = videoData;
     self.titleLabel.text = videoData.title;
@@ -116,8 +116,6 @@
 //    [self setNeedsLayout];
 
 }
-
-
 
 - (void)awakeFromNib {
     

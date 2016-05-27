@@ -10,17 +10,38 @@
 #import "HomeHeaderView.h"
 #import "QFXVideoViewController.h"
 #import "QFXHomeTableViewCell.h"
+#import "HTTPRequest.h"
+#import "QFXHomeDataModel.h"
+
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 @property (nonatomic, strong) HomeHeaderView *homeHeaderView;
-@property (nonatomic, strong) QFXHomeTableViewCell *cell;
 
+@property (nonatomic, strong) NSMutableArray *hoemDataListArray;
 
 @end
 
 @implementation HomeViewController
+#pragma mark - 网络请求
+- (void)httpRequest
+{
+    HTTPRequest *httpRequest = [[HTTPRequest alloc] init];
+    NSString *urlStr = @"http://mmmono.com/api/v3/tea/0/";
+    
+    
+    [httpRequest getURL:urlStr parameterDic:nil headerValue:nil success:^(id responsObj) {
+        
+        self.hoemDataListArray = [QFXHomeDataModel homeDataModelWithDict:responsObj];
+        
+        // 刷新表格
+        [self.homeTableView reloadData];
+    
+    } fail:^(NSError *error) {
+        NSLog(@"error = %@",error);
+    }];
+}
 
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
@@ -34,6 +55,9 @@
     self.homeTableView.delegate = self;
     
     self.homeTableView.rowHeight = 400;
+    
+    // 请求数据
+    [self httpRequest];
 }
 
 
@@ -47,14 +71,13 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.hoemDataListArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     QFXHomeTableViewCell *cell = [QFXHomeTableViewCell homeTableViewCellWithTable:tableView];
-    self.cell = cell;
     return cell;
 }
 #pragma mark - UITableViewDelegate
