@@ -15,7 +15,7 @@
     _cubeDetail = cubeDetail;
     [self.headImage.imageView sd_setImageWithURL:[NSURL URLWithString:cubeDetail.headImg]];
     
-    self.time.text = cubeDetail.time;
+    self.time.text = [cubeDetail.time stringValue];
     
 //    self.texts = cubeDetail.
     

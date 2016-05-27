@@ -9,10 +9,8 @@
 #import "QFXCustomViewController.h"
 #import "UIBarButtonItem+InitType.h"
 #import "UIStoryboard+NavPopToVC.h"
-#import "UINavigationController+Pop.h"
-#import "SearchViewController.h"
 #import "ShareButtonViewController.h"
-
+#import "DirectoryListViewController.h"
 
 @interface QFXCustomViewController ()
 
@@ -83,11 +81,8 @@
 #pragma mark - 跳转到搜索界面
 - (void)jumpToSearchVC{
     
-    SearchViewController *search = [[SearchViewController alloc]init];
-    [self.navigationController pushViewController:search animated:YES];
-    
-    NSLog(@"搜索");
-    
+    DirectoryListViewController *directoryVC = [[DirectoryListViewController alloc]init];
+    [self.navigationController pushViewController:directoryVC animated:YES];
 }
 
 #pragma mark - 加号button点击方法

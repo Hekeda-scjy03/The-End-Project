@@ -222,7 +222,7 @@
 
 //设置Item的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(screenWidth / 2, screenHeight / 3);
+    return CGSizeMake(screenWidth / 2, screenHeight / 3 - 30);
 }
 
 
@@ -291,7 +291,7 @@
 
 #pragma mark - 点击collectionview
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    _cubeDetailVC = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:nil];
+    _cubeDetailVC = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:0];
 
     NSArray *tempArray = _array[indexPath.section * 2];
     _cubeModel = tempArray[indexPath.row];
