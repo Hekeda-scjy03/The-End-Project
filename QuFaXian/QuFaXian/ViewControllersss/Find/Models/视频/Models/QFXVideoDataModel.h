@@ -2,17 +2,18 @@
 //  QFXVideoDataModel.h
 //  QuFaXian
 //
-//  Created by hzy on 16/5/20.
+//  Created by hzy on 16/5/26.
 //  Copyright © 2016年 Sugar. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "QFXMeowsModel.h"
+#import <MJExtension.h>
 
 @interface QFXVideoDataModel : NSObject
-// cell的高度
-@property (nonatomic, assign) CGFloat cellHeight;
 
-- (instancetype)initWithDict:(NSDictionary *)dict;
-+ (instancetype)videoDataModelWithDict:(NSDictionary *)dict;
+@property (nonatomic, strong) NSMutableArray *meows;
+
++ (NSMutableArray *)videoDataModelWithDict:(NSDictionary *)dict;
 
 @end

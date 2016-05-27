@@ -8,6 +8,9 @@
 
 #import "HomeHeaderView.h"
 #import "HomeThemeButton.h"
+#import "QFXVideoViewController.h"
+
+
 
 @interface HomeHeaderView () <UIScrollViewDelegate>
 
@@ -150,6 +153,7 @@
 #pragma mark - 创建主题按钮
 - (void)createHomeThemeButton
 {
+
     for (int i = 0; i < self.btnTitleArray.count; i++)
     {
         
@@ -167,26 +171,72 @@
         [homeThemeBtn addTarget:self action:@selector(homeThemeBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
         
         [self.themeView addSubview:homeThemeBtn];
-        self.homeThemeBtn = homeThemeBtn;
     }
 }
+#pragma mark - 获取其父控件所在控制器
+- (UIViewController*)getSupVC {
+    for (UIView* next = [self superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
+
+
 
 #pragma mark - 按钮的单击事件
 - (IBAction)homeThemeBtnClick:(HomeThemeButton *)sender
 {
-    self.homeThemeBtn.tag = sender.tag;
     
-    switch (self.homeThemeBtn.tag) {
+    
+    self.homeThemeBtn=sender;
+    UIViewController *targetVC;
+    
+    switch (sender.tag) {
         case VideoBtn:
-            if (self.homeThemeBtn.delegate &&[self.homeThemeBtn.delegate respondsToSelector:@selector(videoBtnClickPushIntoViewController:)]) {
-                [self.homeThemeBtn.delegate videoBtnClickPushIntoViewController:self.homeThemeBtn];
-                break;
-                
-            default:
-                break;
-            }
+
+            targetVC = [[QFXVideoViewController alloc] init];
+            [[self getSupVC].navigationController pushViewController:targetVC animated:YES];
+            break;
             
+        case MusicBtn:
+            NSLog(@"MusicBtn");
+            break;
+            
+        case FollowingBtn:
+            NSLog(@"FollowingBtn");
+            break;
+            
+
+        case GalleryBtn:
+             NSLog(@"GalleryBtn");
+            break;
+            
+
+        case ScienceBtn:
+             NSLog(@"ScienceBtn");
+            break;
+            
+
+        case TourismBtn:
+             NSLog(@"TourismBtn");
+            break;
+            
+
+        case FoodBtn:
+             NSLog(@"FoodBtn");
+            break;
+            
+        case OriginalityBtn:
+             NSLog(@"OriginalityBtn");
+            break;
+            
+        default:
+            break;
     }
+
 }
 
 

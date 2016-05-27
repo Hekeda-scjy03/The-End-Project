@@ -63,9 +63,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhG-rv-wTL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhG-rv-wTL">
                                         <rect key="frame" x="20" y="36" width="364" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <string key="text">要注意if(cell == nil)模块是初始化代码，只在cell创建的时候运行一次。该模块外部代码每次都会执行只要在每次数据更新或者窗口拖拽之后调用了-cellForRowAtIndexPath。
+
+也就是说，每次都需要设置label中文本内容以及设置label外框大小。注意如果label处于未初始化状态，我们需要通过调用[cell viewWithTag:1]来获取UILabel的句柄。这段代码跟前面计算高度的代码基本相同。
+
+总结</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -353,7 +358,7 @@
                 <outlet property="typeViewAboutSudoku" destination="ig0-II-Q8p" id="lVf-Yb-ayk"/>
                 <outlet property="videoPlayBnt" destination="6Bt-YY-poa" id="asT-RC-MH9"/>
             </connections>
-            <point key="canvasLocation" x="180" y="515"/>
+            <point key="canvasLocation" x="265" y="510"/>
         </tableViewCell>
     </objects>
     <resources>

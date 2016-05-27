@@ -8,19 +8,18 @@
 
 #import "QFXVideoViewController.h"
 #import "QFXVideoTableViewCell.h"
+#import "HTTPRequest.h"
 #import "QFXVideoDataModel.h"
 
 @interface QFXVideoViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *videoTableView;
-@property (nonatomic, strong) NSArray *videoDataListArray;
+@property (nonatomic, strong) NSMutableArray *videoDataListArray;
 
 
 @end
 
 @implementation QFXVideoViewController
-
-
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,57 +28,65 @@
     self.videoTableView.delegate = self;
     self.videoTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-//    // 设置行高
-    self.videoTableView.rowHeight = 235;
+    // 请求数据
+    [self httpRequest];
+    
+    
+    self.navigationItem.title = @"视频";
+    
+}
+
+#pragma mark - 网络请求
+- (void)httpRequest
+{
+    HTTPRequest *httpRequest = [[HTTPRequest alloc] init];
+    NSString *urlStr = @"http://mmmono.com/api/v3/meow/pool/";
+    
+    NSDictionary *parameter = @{@"meow_type":@"7"};
+    NSString *headerValue = @"d9c7d21e128711e6a378525400a8f685";
+    
+    [httpRequest getURL:urlStr parameterDic:parameter headerValue:headerValue success:^(id responsObj) {
+        
+        self.videoDataListArray = [QFXVideoDataModel videoDataModelWithDict:responsObj];
+        
+        // 拿到数据后刷新tableView
+        [self.videoTableView reloadData];
+        
+    } fail:^(NSError *error) {
+        NSLog(@"error = %@",error);
+    }];
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.videoDataListArray.count;
+   
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    QFXMeowsModel *model = self.videoDataListArray[indexPath.row];
+    
     QFXVideoTableViewCell *cell = [QFXVideoTableViewCell videoTableViewCell:tableView];
+    
+    cell.videoData = model;
+    
+    tableView.rowHeight = cell.height;
+    
     return cell;
+    
+    
 }
 
 #pragma mark - UITableViewDelegate
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    QFXVideoDataModel *videoDataModel = self.videoDataListArray[indexPath.row];
-//    return videoDataModel.cellHeight;
-//}
-
-
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section
-{
-    // 预估高度
-    return 235.f;
-}
-
-
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

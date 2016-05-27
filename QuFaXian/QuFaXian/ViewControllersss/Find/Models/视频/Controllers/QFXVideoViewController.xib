@@ -28,7 +28,7 @@
                 <constraint firstItem="zGK-Me-l4S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aqS-yD-acU"/>
                 <constraint firstAttribute="bottom" secondItem="zGK-Me-l4S" secondAttribute="bottom" id="scu-dZ-AgD"/>
             </constraints>
-            <point key="canvasLocation" x="295" y="354"/>
+            <point key="canvasLocation" x="319" y="350"/>
         </view>
     </objects>
 </document>

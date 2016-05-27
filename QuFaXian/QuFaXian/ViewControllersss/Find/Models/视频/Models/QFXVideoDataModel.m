@@ -2,25 +2,28 @@
 //  QFXVideoDataModel.m
 //  QuFaXian
 //
-//  Created by hzy on 16/5/20.
+//  Created by hzy on 16/5/26.
 //  Copyright © 2016年 Sugar. All rights reserved.
 //
 
 #import "QFXVideoDataModel.h"
 
+
 @implementation QFXVideoDataModel
 
-- (instancetype)initWithDict:(NSDictionary *)dict
++ (NSMutableArray *)videoDataModelWithDict:(NSDictionary *)dict
 {
-    if (self = [super init]) {
-        
-    }
-    return self;
+    QFXVideoDataModel *videoDataModel = [QFXVideoDataModel mj_objectWithKeyValues:dict];
+    
+    return videoDataModel.meows;
+    
 }
 
-+ (instancetype)videoDataModelWithDict:(NSDictionary *)dict
++ (NSDictionary *)mj_objectClassInArray
 {
-    return [[self alloc] initWithDict:dict];
+    return @{
+             @"meows" : @"QFXMeowsModel",
+             };
 }
 
 
