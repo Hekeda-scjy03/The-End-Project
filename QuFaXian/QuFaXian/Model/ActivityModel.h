@@ -10,13 +10,13 @@
 
 @interface ActivityModel : NSObject
 
-@property (nonatomic, strong) NSString *des; //线上活动的描述
+@property (nonatomic, copy) NSString *des; //线上活动的描述
 
-@property (nonatomic, strong) NSString *title; //线上活动的title
+@property (nonatomic, copy) NSString *title; //线上活动的title
 
-@property (nonatomic, strong) NSString *participationNum;//参加人数
+@property (nonatomic, copy) NSString *participationNum;//参加人数
 
-@property (nonatomic, strong) NSString *backImage;//背景图
+@property (nonatomic, copy) NSString *backImage;//背景图
 
 @property (nonatomic, strong) NSArray *recent_participant_info; //点进去之后下面的参与讨论的
 

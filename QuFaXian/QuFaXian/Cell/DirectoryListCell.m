@@ -8,15 +8,27 @@
 
 #import "DirectoryListCell.h"
 #import "DirectoryModel.h"
+#import "TypeNineModel.h"
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
 @implementation DirectoryListCell
+
+- (void)setTypeNineModel:(TypeNineModel *)typeNineModel{
+    _typeNineModel = typeNineModel;
+
+    if ([_directoryModel.meowtype integerValue] == 9) {
+        [self.image sd_setImageWithURL:[NSURL URLWithString:typeNineModel.leftImgFromArray]];
+    }
+}
 
 -(void)setDirectoryModel:(DirectoryModel *)directoryModel{
 
     _directoryModel = directoryModel;
     
-    [self.image sd_setImageWithURL:[NSURL URLWithString:directoryModel.leftImg]];
+    if ([directoryModel.meowtype integerValue] != 9) {
+        [self.image sd_setImageWithURL:[NSURL URLWithString:directoryModel.leftImg]];
+    }
+    
     
     self.title.text = directoryModel.title;
     

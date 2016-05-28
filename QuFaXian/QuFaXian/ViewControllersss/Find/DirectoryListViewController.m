@@ -13,7 +13,9 @@
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface DirectoryListViewController ()<MyTableViewPanDelegate>
+@interface DirectoryListViewController ()<MyTableViewPanDelegate>{
+    UIButton *_searchBtn;
+}
 
 @property (nonatomic, strong) MySegement *mySegment;
 
@@ -29,6 +31,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    _searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(50, 2, screenWidth - 100, 24)];
+    [_searchBtn setBackgroundImage:[UIImage imageNamed:@"yuanjiaojuxing"] forState:UIControlStateNormal];
+    [_searchBtn setImage:[UIImage imageNamed:@"sousou"] forState:UIControlStateNormal];
+    [_searchBtn setTitle:@"搜索内容，站，专题" forState:UIControlStateNormal];
+    [_searchBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [_searchBtn addTarget:self action:@selector(searchMethod) forControlEvents:UIControlEventTouchUpInside];
+    _searchBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_searchBtn];
+    
     
     _mySegment = [[MySegement alloc] initWithFrame:CGRectMake(0, 64, screenWidth, 30) withTitles:@[@"创意",@"音乐",@"电影",@"生活",@"美食",@"旅游",@"科普"]];
     
@@ -59,6 +71,20 @@
         [mySelf getDataWithType:currentView];
 
     };
+    
+    
+    
+}
+
+#pragma mark - 上面的tag的view
+- (void)initTagView{
+//    [_tagView addTarget:self action:@selector(<#selector#>) withTitle:<#(NSString *)#>]
+//    CGFloat y = CGRectGetMaxY(_mySegment.frame);
+//    _topTagView = [UIView alloc]initWithFrame:CGRectMake(10, y, <#CGFloat width#>, <#CGFloat height#>)
+}
+
+#pragma mark - 搜索方法
+- (void)searchMethod{
     
 }
 
@@ -96,9 +122,12 @@
         currentView = [self.reusableTableViewArray lastObject];
         [self.reusableTableViewArray removeLastObject];
     }else{
+        
         currentView = [[MyTableView alloc]initWithFrame:CGRectMake(0, 64 + 30, screenWidth, screenHeight - 94) style:UITableViewStylePlain];
         
         currentView.panDelegate = self;
+        
+        currentView.selfVC = self;
         
         [self.view addSubview:currentView];
     }
@@ -170,14 +199,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

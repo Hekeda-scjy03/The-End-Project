@@ -10,6 +10,7 @@
 #import "DirectoryListCell.h"
 #import "DirectoryModel.h"
 #import "HTTPRequest.h"
+#import "DirectoryListDeatilViewController.h"
 #import <MJRefresh.h>
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
@@ -42,13 +43,11 @@
             }];
         }
         self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            [_dataArray removeAllObjects];
             
             _urlStart = 0;
             
-            [self.mj_header endRefreshing];
-            
             [mySelf getData];
+            
         }];
 
         
@@ -122,6 +121,8 @@
 #pragma mark - 获取数据
 - (void)getData{
     
+    [self.mj_header endRefreshing];
+
     NSString *_urlStr = @"http://mmmono.com/api/v3/domain_category/";
     switch (self.dataType) {
         case creativity:
@@ -161,12 +162,12 @@
     [request getURL:_urlStr parameterDic:nil headerValue:header success:^(id responsObj) {
         
         NSArray *meows = [responsObj objectForKey:@"meows"];
+        
             for (NSDictionary *dic in meows) {
                 DirectoryModel *directoryModel = [[DirectoryModel alloc]initWithDic:dic];
                 [_dataArray addObject:directoryModel];
+                
             }
-        
-        NSLog(@"%@ url + %@",_urlStr,_dataArray);
         
         [mySelf.mj_footer endRefreshing];
         [mySelf reloadData];
@@ -181,14 +182,16 @@
 
 #pragma mark - 点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    CubeDetailViewController *detailVC = [[CubeDetailViewController alloc]initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:NULL];
-//    
-//    CreatorModel *creatorModel = [[CreatorModel alloc]init];
-//    creatorModel = _creatorListArray[indexPath.row];
-//    detailVC.id = creatorModel.id;
+    DirectoryListDeatilViewController *dirListDetailVC = [[DirectoryListDeatilViewController alloc]init];
+
+    DirectoryModel *directoryModel = [[DirectoryModel alloc]init];
+    directoryModel = _dataArray[indexPath.row];
+    dirListDetailVC.selectedCellId = directoryModel.id;
+    
+
 //    detailVC.kind = creatorModel.kind;
 //    detailVC.navigationItem.title = creatorModel.name;
     
-//    [self.navigationController pushViewController:detailVC animated:YES];
+    [self.selfVC.navigationController pushViewController:dirListDetailVC animated:YES];
 }
 @end

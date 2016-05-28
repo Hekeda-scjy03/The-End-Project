@@ -7,22 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface DirectoryModel : NSObject
 
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, copy) NSString *title;
 
-@property (nonatomic, strong) NSString *leftImg;
+@property (nonatomic, copy) NSString *leftImg;
 
-@property (nonatomic, strong) NSString *introduce;
+@property (nonatomic, copy) NSString *introduce;
 
-@property (nonatomic, strong) NSString *author;
+@property (nonatomic, copy) NSString *author;
 
-@property (nonatomic, strong) NSString *id;
+@property (nonatomic, copy) NSString *id;
 
-@property (nonatomic, strong) NSString *des;
+@property (nonatomic, copy) NSString *des;
 
 @property (nonatomic, strong) NSNumber *meowtype;
+
+@property (nonatomic, strong) NSArray *images;
 
 - (instancetype)initWithDic:(NSDictionary *)dic;
 

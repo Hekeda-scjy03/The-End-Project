@@ -31,6 +31,8 @@ typedef enum : NSUInteger {
 
 @interface MyTableView : UITableView<UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) UIViewController *selfVC;
+
 //当前页数
 @property(nonatomic, assign)int page;
 
