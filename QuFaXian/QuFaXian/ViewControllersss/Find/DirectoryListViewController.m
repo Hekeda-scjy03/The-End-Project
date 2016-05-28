@@ -62,7 +62,7 @@
     
 }
 
-#pragma mark - reuseTableViews 懒加载
+#pragma mark - reusableTableViewArray 懒加载
 - (NSMutableArray *)reusableTableViewArray{
     if (!_reusableTableViewArray) {
         _reusableTableViewArray = [[NSMutableArray alloc] initWithCapacity:0];
@@ -96,7 +96,7 @@
         currentView = [self.reusableTableViewArray lastObject];
         [self.reusableTableViewArray removeLastObject];
     }else{
-        currentView = [[MyTableView alloc]initWithFrame:CGRectMake(0, 64 + 30, screenWidth, screenHeight - 94 - 49) style:UITableViewStylePlain];
+        currentView = [[MyTableView alloc]initWithFrame:CGRectMake(0, 64 + 30, screenWidth, screenHeight - 94) style:UITableViewStylePlain];
         
         currentView.panDelegate = self;
         
@@ -108,6 +108,7 @@
 
 #pragma mark - tableview切换动画
 - (void)animateTableViewWithCurrentIndex:(MyTableView *)currentTableView leftDirection:(BOOL)isLeft{
+    
     CGFloat currentViewWidth = isLeft?screenWidth:-screenWidth;
     
     //不可以直接赋值给currentTableview.origin.x 因为.和=操作的话会调用set方法
@@ -119,11 +120,11 @@
     __weak typeof(self) mySelf = self;
     [UIView animateWithDuration:0.2 animations:^{
         CGRect weakCurrentTableViewFrame = weakCurrentTableView.frame;
-        weakCurrentTableViewFrame.origin.x = currentViewWidth;
+        weakCurrentTableViewFrame.origin.x -= currentViewWidth;
         weakCurrentTableView.frame = weakCurrentTableViewFrame;
         
         CGRect myTableViewFrame = mySelf.myTableView.frame;
-        myTableViewFrame.origin.x = currentViewWidth;
+        myTableViewFrame.origin.x -= currentViewWidth;
         mySelf.myTableView.frame = myTableViewFrame;
         
     } completion:^(BOOL finished) {
@@ -154,7 +155,7 @@
     }
     
     //防止点中已选中的index时还会滑动
-    _mySegment.lastIndex = _mySegment.selectedIndex;
+    _mySegment.lastIndex = self.mySegment.selectedIndex;
     MyTableView *currentView = [self createMyTableview];
     
     [self animateTableViewWithCurrentIndex:currentView leftDirection:direction == panToLeft?YES:NO];

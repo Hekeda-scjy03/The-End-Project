@@ -20,6 +20,10 @@
 
 @property (nonatomic, strong) NSString *id;
 
+@property (nonatomic, strong) NSString *des;
+
+@property (nonatomic, strong) NSNumber *meowtype;
+
 - (instancetype)initWithDic:(NSDictionary *)dic;
 
 @end

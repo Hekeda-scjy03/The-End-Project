@@ -20,11 +20,20 @@
     
     self.title.text = directoryModel.title;
     
-    if ([directoryModel.introduce isEqualToString:@""]) {
-        self.subTitle.text = directoryModel.title;
-    }else{
-        self.subTitle.text = directoryModel.introduce;
+    if ([directoryModel.meowtype integerValue]== 4) {
+        if ([directoryModel.introduce isEqualToString:@""]) {
+            self.subTitle.text = directoryModel.title;
+        }else{
+            self.subTitle.text = directoryModel.introduce;
+        }
+    }else if ([directoryModel.meowtype integerValue]== 7 || [directoryModel.meowtype integerValue]== 8 || [directoryModel.meowtype integerValue]== 9){
+        if ([directoryModel.des isEqualToString:@""]) {
+            self.subTitle.text = directoryModel.title;
+        }else{
+            self.subTitle.text = directoryModel.des;
+        }
     }
+    
     
     self.authorName.text = directoryModel.author;
 }

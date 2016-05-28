@@ -43,4 +43,6 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, weak) id<MyTableViewPanDelegate> panDelegate;
 
+@property (nonatomic, assign) int urlStart;
+
 @end

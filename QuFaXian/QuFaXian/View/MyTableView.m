@@ -14,6 +14,7 @@
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
+
 @implementation MyTableView
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
@@ -27,19 +28,24 @@
         self.delegate = self;
         self.dataSource = self;
         
-        //设置tableViewCell的自动识别cell高度,通过约束的改变来自动识别
-        //必须要实现estimatedHeightForRowAtIndexPath代理方法
+        //设置tableViewCell的自动识别cell高度,通过约束的改变来自动识别，必须要实现estimatedHeightForRowAtIndexPath代理方法
         self.rowHeight = UITableViewAutomaticDimension;
         
         [self registerNib:[UINib nibWithNibName:@"DirectoryListCell" bundle:nil] forCellReuseIdentifier:@"directoryListCell"];
+        
         __weak typeof(self) mySelf = self;
         if (self.dataArray.count != 10) {
             self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+                
+                
                 [mySelf getData];
             }];
         }
         self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [_dataArray removeAllObjects];
+            
+            _urlStart = 0;
+            
             [self.mj_header endRefreshing];
             
             [mySelf getData];
@@ -55,6 +61,10 @@
     _dataType = dataType;
     
     self.page = 1;
+    
+    [_dataArray removeAllObjects];
+    
+    _urlStart = 0;
     
     [self getData];
 }
@@ -82,7 +92,7 @@
             [_panDelegate pandirection:panToLeft];
         }
     }else{
-        //获取滑动时触屏的店indexpath位置
+        //获取滑动时触屏的点indexpath位置
         NSIndexPath *indexPath = [self indexPathForRowAtPoint:endPoint];
         //设置选择位置的选择状态
         [self selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
@@ -103,7 +113,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     DirectoryListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"directoryListCell" forIndexPath:indexPath];
-    
+
     cell.directoryModel = self.dataArray[indexPath.row];
     
     return cell;
@@ -111,36 +121,44 @@
 
 #pragma mark - 获取数据
 - (void)getData{
-    NSString *urlStr = @"http://mmmono.com/api/v3/domain_category/";
+    
+    NSString *_urlStr = @"http://mmmono.com/api/v3/domain_category/";
     switch (self.dataType) {
         case creativity:
-            urlStr = [NSString stringWithFormat:@"%@%ld/?",urlStr,creativity];
+            _urlStr = [NSString stringWithFormat:@"%@%ld/?",_urlStr,creativity];
             break;
         case music:
-            urlStr = [NSString stringWithFormat:@"%@%ld/?",urlStr,music];;
+            _urlStr = [NSString stringWithFormat:@"%@%ld/?",_urlStr,music];;
             break;
         case film:
-            urlStr = [NSString stringWithFormat:@"%@%ld/?",urlStr,film];;
+            _urlStr = [NSString stringWithFormat:@"%@%ld/?",_urlStr,film];;
             break;
         case life:
-            urlStr = [NSString stringWithFormat:@"%@%ld/?",urlStr,life];;
+            _urlStr = [NSString stringWithFormat:@"%@%ld/?",_urlStr,life];;
             break;
         case delicious:
-            urlStr = [NSString stringWithFormat:@"%@%ld/?",urlStr,delicious];;
+            _urlStr = [NSString stringWithFormat:@"%@%ld/?",_urlStr,delicious];;
             break;
         case travel:
-            urlStr = [NSString stringWithFormat:@"%@%ld/?",urlStr,travel];;
+            _urlStr = [NSString stringWithFormat:@"%@%ld/?",_urlStr,travel];;
             break;
         case science:
-            urlStr = [NSString stringWithFormat:@"%@%ld/?",urlStr,science];;
+            _urlStr = [NSString stringWithFormat:@"%@%ld/?",_urlStr,science];;
             break;
         default:
             break;
             
     }
+    if (_dataArray.count != 0) {
+        _urlStr = [NSString stringWithFormat:@"%@start=%d",_urlStr,_urlStart * 10];
+
+    }
     NSString *header = @"0c596a400bb611e6b2805254006fe942";
     HTTPRequest *request = [HTTPRequest shareInstance];
-    [request getURL:urlStr parameterDic:nil headerValue:header success:^(id responsObj) {
+    
+    typeof(self) mySelf = self;
+
+    [request getURL:_urlStr parameterDic:nil headerValue:header success:^(id responsObj) {
         
         NSArray *meows = [responsObj objectForKey:@"meows"];
             for (NSDictionary *dic in meows) {
@@ -148,12 +166,29 @@
                 [_dataArray addObject:directoryModel];
             }
         
-    
-        [self.mj_footer endRefreshing];
-        [self reloadData];
+        NSLog(@"%@ url + %@",_urlStr,_dataArray);
+        
+        [mySelf.mj_footer endRefreshing];
+        [mySelf reloadData];
         
     } fail:^(NSError *error) {
         NSLog(@"Directory Error: %@",error);
     }];
+    
+    _urlStart++;
+    
+}
+
+#pragma mark - 点击cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    CubeDetailViewController *detailVC = [[CubeDetailViewController alloc]initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:NULL];
+//    
+//    CreatorModel *creatorModel = [[CreatorModel alloc]init];
+//    creatorModel = _creatorListArray[indexPath.row];
+//    detailVC.id = creatorModel.id;
+//    detailVC.kind = creatorModel.kind;
+//    detailVC.navigationItem.title = creatorModel.name;
+    
+//    [self.navigationController pushViewController:detailVC animated:YES];
 }
 @end

@@ -24,9 +24,13 @@
         self.leftImg = [thumbDic objectForKey:@"raw"];
         
         
-        NSDictionary *userDic = [meowDic objectForKey:@"user"];
-        self.author = [userDic objectForKey:@"name"];
+        NSDictionary *groupDic = [meowDic objectForKey:@"group"];
+        self.author = [groupDic objectForKey:@"name"];
         
+        self.des = [meowDic objectForKey:@"description"];
+        
+        self.meowtype = [meowDic objectForKey:@"meow_type"];
+
     }
     return self;
 }
