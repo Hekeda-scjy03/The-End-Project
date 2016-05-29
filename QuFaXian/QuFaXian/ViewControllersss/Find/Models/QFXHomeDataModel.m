@@ -13,19 +13,11 @@
 + (NSMutableArray *)homeDataModelWithDict:(NSDictionary *)dict
 {
     QFXHomeDataModel *homeDataModel = [QFXHomeDataModel mj_objectWithKeyValues:dict];
-    
-    
-    NSLog(@"----%zi",homeDataModel.tea.entity_list.count);
-    
+
     return homeDataModel.tea.entity_list;
     
 }
 
-+ (NSDictionary *)mj_objectClassInArray
-{
-    return @{
-             @"entity_list" : @"QFXEntity_List",
-             };
-}
+
 
 @end

@@ -10,4 +10,11 @@
 
 @implementation QFXHomeTeaModel
 
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{
+             @"entity_list" : @"QFXEntity_List",
+             };
+}
+
 @end

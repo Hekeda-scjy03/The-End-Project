@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dynmaic_cell" rowHeight="148" id="b77-nO-gux" customClass="QFXDynmaicCell">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="148"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b77-nO-gux" id="Sr1-Az-Wv3">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFt-jj-KnO">
+                        <rect key="frame" x="0.0" y="0.0" width="413" height="137"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="04" translatesAutoresizingMaskIntoConstraints="NO" id="j0k-lw-SbU">
+                                <rect key="frame" x="23" y="8" width="70" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="WSu-vJ-NAd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="404发电站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5G-6m-uxx">
+                                <rect key="frame" x="113" y="13" width="260" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvd-ie-5ic">
+                                <rect key="frame" x="375" y="58" width="7" height="22"/>
+                                <state key="normal" image="weidu"/>
+                                <state key="selected" image="weidutubiao"/>
+                                <connections>
+                                    <action selector="weiduBtnClick" destination="b77-nO-gux" eventType="touchUpInside" id="HsE-cN-XLy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="那些被焚烧的文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhO-Qj-pp0">
+                                <rect key="frame" x="113" y="104" width="260" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="j0k-lw-SbU" secondAttribute="bottom" constant="8" id="1L9-GH-3JY"/>
+                            <constraint firstAttribute="trailing" secondItem="mvd-ie-5ic" secondAttribute="trailing" constant="31" id="EF3-hn-yHz"/>
+                            <constraint firstAttribute="bottom" secondItem="OhO-Qj-pp0" secondAttribute="bottom" constant="15" id="HKs-YR-uc2"/>
+                            <constraint firstAttribute="trailing" secondItem="k5G-6m-uxx" secondAttribute="trailing" constant="40" id="JzU-GX-cfA"/>
+                            <constraint firstItem="k5G-6m-uxx" firstAttribute="leading" secondItem="j0k-lw-SbU" secondAttribute="trailing" constant="20" id="NI1-w2-oi7"/>
+                            <constraint firstItem="j0k-lw-SbU" firstAttribute="top" secondItem="KFt-jj-KnO" secondAttribute="top" constant="8" id="Nv4-r2-faz"/>
+                            <constraint firstAttribute="trailing" secondItem="OhO-Qj-pp0" secondAttribute="trailing" constant="40" id="WNY-pQ-64h"/>
+                            <constraint firstItem="OhO-Qj-pp0" firstAttribute="leading" secondItem="j0k-lw-SbU" secondAttribute="trailing" constant="20" id="gUE-q7-otw"/>
+                            <constraint firstItem="mvd-ie-5ic" firstAttribute="centerY" secondItem="KFt-jj-KnO" secondAttribute="centerY" id="k14-wT-Y2N"/>
+                            <constraint firstItem="k5G-6m-uxx" firstAttribute="top" secondItem="KFt-jj-KnO" secondAttribute="top" constant="13" id="rhg-k7-krE"/>
+                            <constraint firstItem="j0k-lw-SbU" firstAttribute="leading" secondItem="KFt-jj-KnO" secondAttribute="leading" constant="23" id="zWz-cP-hrz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="KFt-jj-KnO" secondAttribute="trailing" id="EX2-MI-LWA"/>
+                    <constraint firstAttribute="bottom" secondItem="KFt-jj-KnO" secondAttribute="bottom" constant="10" id="Vg2-N6-4mW"/>
+                    <constraint firstItem="KFt-jj-KnO" firstAttribute="leading" secondItem="Sr1-Az-Wv3" secondAttribute="leading" id="lSc-Os-HLv"/>
+                    <constraint firstItem="KFt-jj-KnO" firstAttribute="top" secondItem="Sr1-Az-Wv3" secondAttribute="top" id="rL7-w9-9hZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="descLabel" destination="OhO-Qj-pp0" id="uO0-0R-faO"/>
+                <outlet property="iconImageVIew" destination="j0k-lw-SbU" id="Erx-Cx-i2P"/>
+                <outlet property="titleLabel" destination="k5G-6m-uxx" id="vZL-kQ-gGp"/>
+                <outlet property="weiduBtn" destination="mvd-ie-5ic" id="yJg-7N-30h"/>
+            </connections>
+            <point key="canvasLocation" x="526.5" y="301"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="04" width="700" height="400"/>
+        <image name="weidu" width="7" height="7"/>
+        <image name="weidutubiao" width="12" height="12"/>
+    </resources>
+</document>

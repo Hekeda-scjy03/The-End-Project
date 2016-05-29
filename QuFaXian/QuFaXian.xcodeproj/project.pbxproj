@@ -14,6 +14,44 @@
 		447215C71CF05FA20003D460 /* QFXMineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447215C21CF05FA20003D460 /* QFXMineTableViewCell.xib */; };
 		447215C91CF0607C0003D460 /* settingMessage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 447215C81CF0607C0003D460 /* settingMessage.plist */; };
 		448756051CEB48EF000BE61D /* QFXStatusCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 448756041CEB48EF000BE61D /* QFXStatusCacheTool.m */; };
+
+		44B92EFE1CF89CF300869201 /* QFXVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92EFC1CF89CF300869201 /* QFXVideoTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		44B92EFF1CF89CF300869201 /* QFXVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B92EFD1CF89CF300869201 /* QFXVideoTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		44B92F0A1CF89D1600869201 /* QFXVideoCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F011CF89D1600869201 /* QFXVideoCategory.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F0B1CF89D1600869201 /* QFXVideoGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F031CF89D1600869201 /* QFXVideoGroupModel.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F0C1CF89D1600869201 /* QFXVideoMeowsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F051CF89D1600869201 /* QFXVideoMeowsModel.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F0D1CF89D1600869201 /* QFXVideoThumbModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F071CF89D1600869201 /* QFXVideoThumbModel.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F0E1CF89D1600869201 /* QFXVideoDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F091CF89D1600869201 /* QFXVideoDataModel.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F121CF89D4200869201 /* QFXVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F101CF89D4200869201 /* QFXVideoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F131CF89D4200869201 /* QFXVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B92F111CF89D4200869201 /* QFXVideoViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		44B92F291CF89DA800869201 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F221CF89DA800869201 /* HomeHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F2A1CF89DA800869201 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B92F231CF89DA800869201 /* HomeHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		44B92F2B1CF89DA800869201 /* HomeThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F251CF89DA800869201 /* HomeThemeButton.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F2C1CF89DA800869201 /* QFXHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F271CF89DA800869201 /* QFXHomeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F2D1CF89DA800869201 /* QFXHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B92F281CF89DA800869201 /* QFXHomeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		44B92F311CF89DFC00869201 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F2F1CF89DFC00869201 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44B92F321CF89DFC00869201 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B92F301CF89DFC00869201 /* HomeViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		44C52D221CF921FF00575A15 /* QFXHomePicsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C52D211CF921FF00575A15 /* QFXHomePicsModel.m */; settings = {ASSET_TAGS = (); }; };
+		44C52D251CF96D6C00575A15 /* QFXHomeImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C52D241CF96D6C00575A15 /* QFXHomeImages.m */; settings = {ASSET_TAGS = (); }; };
+		44C52D2C1CF97E7B00575A15 /* DynamicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C52D2A1CF97E7B00575A15 /* DynamicHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		44C52D2D1CF97E7B00575A15 /* DynamicHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C52D2B1CF97E7B00575A15 /* DynamicHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		44C52D311CF982FC00575A15 /* QFXDynmaicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C52D2F1CF982FC00575A15 /* QFXDynmaicCell.m */; settings = {ASSET_TAGS = (); }; };
+		44C52D321CF982FC00575A15 /* QFXDynmaicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C52D301CF982FC00575A15 /* QFXDynmaicCell.xib */; settings = {ASSET_TAGS = (); }; };
+		44C52D3B1CF993A100575A15 /* QFXPersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C52D391CF993A100575A15 /* QFXPersonalDataViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44C52D3C1CF993A100575A15 /* QFXPersonalDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C52D3A1CF993A100575A15 /* QFXPersonalDataViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		44C52D401CF9B37A00575A15 /* QFXHomeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C52D3E1CF9B37A00575A15 /* QFXHomeDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44C52D411CF9B37A00575A15 /* QFXHomeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C52D3F1CF9B37A00575A15 /* QFXHomeDetailsViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		44E9E2951CF8BDD7005439C1 /* QFXHomeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2941CF8BDD7005439C1 /* QFXHomeDataModel.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E2981CF8BEFA005439C1 /* QFXEntity_List.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2971CF8BEFA005439C1 /* QFXEntity_List.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E29B1CF8C12D005439C1 /* QFXHomeGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E29A1CF8C12D005439C1 /* QFXHomeGroupModel.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E29E1CF8C1C7005439C1 /* QFXHomeThumbModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E29D1CF8C1C7005439C1 /* QFXHomeThumbModel.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E2A11CF8C289005439C1 /* QFXHomeMeowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2A01CF8C289005439C1 /* QFXHomeMeowModel.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E2A41CF8C357005439C1 /* QFXHomeUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2A31CF8C357005439C1 /* QFXHomeUserModel.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E2A71CF8C3CA005439C1 /* QFXHomeCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2A61CF8C3CA005439C1 /* QFXHomeCategoryModel.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E2AA1CF8CCEA005439C1 /* QFXHomeTeaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2A91CF8CCEA005439C1 /* QFXHomeTeaModel.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E2AE1CF8F2E0005439C1 /* QFXVideoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2AC1CF8F2E0005439C1 /* QFXVideoDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44E9E2AF1CF8F2E0005439C1 /* QFXVideoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E9E2AD1CF8F2E0005439C1 /* QFXVideoDetailsViewController.xib */; settings = {ASSET_TAGS = (); }; };
+
 		44B92EFE1CF89CF300869201 /* QFXVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92EFC1CF89CF300869201 /* QFXVideoTableViewCell.m */; };
 		44B92EFF1CF89CF300869201 /* QFXVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B92EFD1CF89CF300869201 /* QFXVideoTableViewCell.xib */; };
 		44B92F0A1CF89D1600869201 /* QFXVideoCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B92F011CF89D1600869201 /* QFXVideoCategory.m */; };
@@ -40,6 +78,7 @@
 		44E9E2AA1CF8CCEA005439C1 /* QFXHomeTeaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2A91CF8CCEA005439C1 /* QFXHomeTeaModel.m */; };
 		44E9E2AE1CF8F2E0005439C1 /* QFXVideoDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9E2AC1CF8F2E0005439C1 /* QFXVideoDetailsViewController.m */; };
 		44E9E2AF1CF8F2E0005439C1 /* QFXVideoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E9E2AD1CF8F2E0005439C1 /* QFXVideoDetailsViewController.xib */; };
+
 		961E53C661D7ACCFB600BA38 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 406DE60B564A7A8F61973FAE /* libPods.a */; };
 		D90B2F901CDB4E2C00B762CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F8F1CDB4E2C00B762CF /* main.m */; };
 		D90B2F931CDB4E2C00B762CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B2F921CDB4E2C00B762CF /* AppDelegate.m */; };
@@ -160,6 +199,22 @@
 		44B92F2E1CF89DFC00869201 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		44B92F2F1CF89DFC00869201 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		44B92F301CF89DFC00869201 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		44C52D201CF921FF00575A15 /* QFXHomePicsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXHomePicsModel.h; sourceTree = "<group>"; };
+		44C52D211CF921FF00575A15 /* QFXHomePicsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXHomePicsModel.m; sourceTree = "<group>"; };
+		44C52D231CF96D6C00575A15 /* QFXHomeImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXHomeImages.h; sourceTree = "<group>"; };
+		44C52D241CF96D6C00575A15 /* QFXHomeImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXHomeImages.m; sourceTree = "<group>"; };
+		44C52D291CF97E7B00575A15 /* DynamicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicHeaderView.h; sourceTree = "<group>"; };
+		44C52D2A1CF97E7B00575A15 /* DynamicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicHeaderView.m; sourceTree = "<group>"; };
+		44C52D2B1CF97E7B00575A15 /* DynamicHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicHeaderView.xib; sourceTree = "<group>"; };
+		44C52D2E1CF982FC00575A15 /* QFXDynmaicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXDynmaicCell.h; sourceTree = "<group>"; };
+		44C52D2F1CF982FC00575A15 /* QFXDynmaicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXDynmaicCell.m; sourceTree = "<group>"; };
+		44C52D301CF982FC00575A15 /* QFXDynmaicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QFXDynmaicCell.xib; sourceTree = "<group>"; };
+		44C52D381CF993A100575A15 /* QFXPersonalDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QFXPersonalDataViewController.h; path = QuFaXian/ViewControllersss/Find/Models/QFXPersonalDataViewController.h; sourceTree = SOURCE_ROOT; };
+		44C52D391CF993A100575A15 /* QFXPersonalDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QFXPersonalDataViewController.m; path = QuFaXian/ViewControllersss/Find/Models/QFXPersonalDataViewController.m; sourceTree = SOURCE_ROOT; };
+		44C52D3A1CF993A100575A15 /* QFXPersonalDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QFXPersonalDataViewController.xib; path = QuFaXian/ViewControllersss/Find/Models/QFXPersonalDataViewController.xib; sourceTree = SOURCE_ROOT; };
+		44C52D3D1CF9B37A00575A15 /* QFXHomeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QFXHomeDetailsViewController.h; path = "QuFaXian/ViewControllersss/Find/Models/视频/QFXHomeDetailsViewController.h"; sourceTree = SOURCE_ROOT; };
+		44C52D3E1CF9B37A00575A15 /* QFXHomeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QFXHomeDetailsViewController.m; path = "QuFaXian/ViewControllersss/Find/Models/视频/QFXHomeDetailsViewController.m"; sourceTree = SOURCE_ROOT; };
+		44C52D3F1CF9B37A00575A15 /* QFXHomeDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QFXHomeDetailsViewController.xib; path = "QuFaXian/ViewControllersss/Find/Models/视频/QFXHomeDetailsViewController.xib"; sourceTree = SOURCE_ROOT; };
 		44E9E2931CF8BDD7005439C1 /* QFXHomeDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXHomeDataModel.h; sourceTree = "<group>"; };
 		44E9E2941CF8BDD7005439C1 /* QFXHomeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXHomeDataModel.m; sourceTree = "<group>"; };
 		44E9E2961CF8BEFA005439C1 /* QFXEntity_List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFXEntity_List.h; sourceTree = "<group>"; };
@@ -335,6 +390,10 @@
 				44E9E2971CF8BEFA005439C1 /* QFXEntity_List.m */,
 				44E9E29F1CF8C289005439C1 /* QFXHomeMeowModel.h */,
 				44E9E2A01CF8C289005439C1 /* QFXHomeMeowModel.m */,
+				44C52D201CF921FF00575A15 /* QFXHomePicsModel.h */,
+				44C52D211CF921FF00575A15 /* QFXHomePicsModel.m */,
+				44C52D231CF96D6C00575A15 /* QFXHomeImages.h */,
+				44C52D241CF96D6C00575A15 /* QFXHomeImages.m */,
 				44E9E2991CF8C12D005439C1 /* QFXHomeGroupModel.h */,
 				44E9E29A1CF8C12D005439C1 /* QFXHomeGroupModel.m */,
 				44E9E29C1CF8C1C7005439C1 /* QFXHomeThumbModel.h */,
@@ -365,6 +424,9 @@
 		446209741CEB499800BF7F57 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				44C52D3D1CF9B37A00575A15 /* QFXHomeDetailsViewController.h */,
+				44C52D3E1CF9B37A00575A15 /* QFXHomeDetailsViewController.m */,
+				44C52D3F1CF9B37A00575A15 /* QFXHomeDetailsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -423,6 +485,9 @@
 		447215B81CF05FA20003D460 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				44C52D381CF993A100575A15 /* QFXPersonalDataViewController.h */,
+				44C52D391CF993A100575A15 /* QFXPersonalDataViewController.m */,
+				44C52D3A1CF993A100575A15 /* QFXPersonalDataViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -456,6 +521,33 @@
 				448756041CEB48EF000BE61D /* QFXStatusCacheTool.m */,
 			);
 			path = "数据库";
+			sourceTree = "<group>";
+		};
+		44C52D261CF97E5200575A15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44C52D271CF97E5B00575A15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44C52D291CF97E7B00575A15 /* DynamicHeaderView.h */,
+				44C52D2A1CF97E7B00575A15 /* DynamicHeaderView.m */,
+				44C52D2B1CF97E7B00575A15 /* DynamicHeaderView.xib */,
+				44C52D2E1CF982FC00575A15 /* QFXDynmaicCell.h */,
+				44C52D2F1CF982FC00575A15 /* QFXDynmaicCell.m */,
+				44C52D301CF982FC00575A15 /* QFXDynmaicCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44C52D281CF97E6800575A15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		822A3F16FD835B35AE24FDB4 /* Frameworks */ = {
@@ -686,6 +778,9 @@
 				D90B2FE51CDC76FF00B762CF /* DynamicViewController.h */,
 				D90B2FE61CDC76FF00B762CF /* DynamicViewController.m */,
 				D90B2FE71CDC76FF00B762CF /* DynamicViewController.xib */,
+				44C52D281CF97E6800575A15 /* Controllers */,
+				44C52D271CF97E5B00575A15 /* Views */,
+				44C52D261CF97E5200575A15 /* Models */,
 			);
 			name = "动态";
 			path = Dynamic;
@@ -1226,7 +1321,12 @@
 				D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */,
 				D94599621CF98A6A00AF0E9E /* DirectoryTagView.xib in Resources */,
 				D9871BB01CE3608500953D54 /* FindCreatorListTableViewCell.xib in Resources */,
+
 				D9424C0B1CE8168300DC3B76 /* CreatorContentHeader.xib in Resources */,
+
+				D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */,
+				44C52D2D1CF97E7B00575A15 /* DynamicHeaderView.xib in Resources */,
+
 				D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */,
 				D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */,
 				D945996D1CF998DF00AF0E9E /* TopView.xib in Resources */,
@@ -1238,14 +1338,17 @@
 				447215C91CF0607C0003D460 /* settingMessage.plist in Resources */,
 				D9424BF91CE814CF00DC3B76 /* GroupContentTableViewCell.xib in Resources */,
 				44B92F2D1CF89DA800869201 /* QFXHomeTableViewCell.xib in Resources */,
+				44C52D411CF9B37A00575A15 /* QFXHomeDetailsViewController.xib in Resources */,
 				44B92EFF1CF89CF300869201 /* QFXVideoTableViewCell.xib in Resources */,
 				D9524E021CF1A561000A15E2 /* TypeTwoCollectionReusableView.xib in Resources */,
 				447215C51CF05FA20003D460 /* MineHeaderView.xib in Resources */,
+				44C52D3C1CF993A100575A15 /* QFXPersonalDataViewController.xib in Resources */,
 				44B92F321CF89DFC00869201 /* HomeViewController.xib in Resources */,
 				D93A42DC1CE35248000B359B /* FooterCollectionReusableView.xib in Resources */,
 				D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */,
 				D9CCA3031CEB4B2C0024C2A9 /* JoinIn.xib in Resources */,
 				D9524DF81CF198D4000A15E2 /* TopTableViewCell.xib in Resources */,
+				44C52D321CF982FC00575A15 /* QFXDynmaicCell.xib in Resources */,
 				44E9E2AF1CF8F2E0005439C1 /* QFXVideoDetailsViewController.xib in Resources */,
 				44B92F2A1CF89DA800869201 /* HomeHeaderView.xib in Resources */,
 				D90B2FF41CDC772800B762CF /* SearchViewController.xib in Resources */,
@@ -1309,7 +1412,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C52D401CF9B37A00575A15 /* QFXHomeDetailsViewController.m in Sources */,
 				44B92F121CF89D4200869201 /* QFXVideoViewController.m in Sources */,
+				44C52D2C1CF97E7B00575A15 /* DynamicHeaderView.m in Sources */,
 				D9A553581CF095C200BE44A5 /* LCViewPagerImageView.m in Sources */,
 				44E9E29E1CF8C1C7005439C1 /* QFXHomeThumbModel.m in Sources */,
 				D94599671CF9907C00AF0E9E /* TagModel.m in Sources */,
@@ -1317,6 +1422,7 @@
 				44E9E29B1CF8C12D005439C1 /* QFXHomeGroupModel.m in Sources */,
 				44B92F0E1CF89D1600869201 /* QFXVideoDataModel.m in Sources */,
 				44B92F0D1CF89D1600869201 /* QFXVideoThumbModel.m in Sources */,
+				44C52D3B1CF993A100575A15 /* QFXPersonalDataViewController.m in Sources */,
 				D9424BF31CE814A700DC3B76 /* ContentsStateTableViewCell.m in Sources */,
 				D945995C1CF97C4B00AF0E9E /* TypeNineModel.m in Sources */,
 				44E9E2A41CF8C357005439C1 /* QFXHomeUserModel.m in Sources */,
@@ -1351,6 +1457,7 @@
 				44B92F2B1CF89DA800869201 /* HomeThemeButton.m in Sources */,
 				44E9E2AA1CF8CCEA005439C1 /* QFXHomeTeaModel.m in Sources */,
 				D9BCC9221CE20A080094CECB /* UIColor+HexColor.m in Sources */,
+				44C52D251CF96D6C00575A15 /* QFXHomeImages.m in Sources */,
 				D90B2FE81CDC76FF00B762CF /* DynamicViewController.m in Sources */,
 				D9730B5E1CF339F800C8978E /* QFXTools.m in Sources */,
 				D9871BBB1CE6137600953D54 /* CubeDetailViewController.m in Sources */,
@@ -1377,8 +1484,13 @@
 				D9CCA3011CEB4B0D0024C2A9 /* JoinIn.m in Sources */,
 				D9524E081CF1AE5A000A15E2 /* CubeDetailModel.m in Sources */,
 				D9B63B171CEC8B1D00C5F3A1 /* DirectoryListCell.m in Sources */,
+
+				44C52D311CF982FC00575A15 /* QFXDynmaicCell.m in Sources */,
+
 				D94599601CF98A5500AF0E9E /* DirectoryTagView.m in Sources */,
+
 				D9424C071CE8161300DC3B76 /* GroupHeader.m in Sources */,
+				44C52D221CF921FF00575A15 /* QFXHomePicsModel.m in Sources */,
 				44E9E2A11CF8C289005439C1 /* QFXHomeMeowModel.m in Sources */,
 				44B92F0A1CF89D1600869201 /* QFXVideoCategory.m in Sources */,
 				D9524DF71CF198D4000A15E2 /* TopTableViewCell.m in Sources */,

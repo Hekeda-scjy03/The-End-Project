@@ -7,6 +7,7 @@
 //
 
 #import "MineHeaderView.h"
+#import "QFXPersonalDataViewController.h"
 
 @interface MineHeaderView ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
@@ -36,6 +37,21 @@
 }
 - (IBAction)loginBtnClick {
 }
+
+// 个人资料按钮单击事件
 - (IBAction)personalBtnClick {
+    QFXPersonalDataViewController *targetVC = [[QFXPersonalDataViewController alloc] init];
+    [[self getSupVC].navigationController pushViewController:targetVC animated:YES];
+    
+}
+#pragma mark - 获取其父控件所在控制器
+- (UIViewController*)getSupVC {
+    for (UIView* next = [self superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
 }
 @end

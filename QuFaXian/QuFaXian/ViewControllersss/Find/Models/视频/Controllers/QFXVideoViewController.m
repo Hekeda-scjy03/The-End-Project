@@ -12,6 +12,7 @@
 #import "QFXVideoDataModel.h"
 #import "QFXVideoDetailsViewController.h"
 
+
 @interface QFXVideoViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *videoTableView;
@@ -103,10 +104,7 @@
     [self.navigationController pushViewController:videoDetailsVC animated:YES];
 }
 
-- (void)intoVideoDetailsVC
-{
-//    [self tableView:<#(nonnull UITableView *)#> didSelectRowAtIndexPath:<#(nonnull NSIndexPath *)#>]
-}
+
 
 
 - (void)didReceiveMemoryWarning {

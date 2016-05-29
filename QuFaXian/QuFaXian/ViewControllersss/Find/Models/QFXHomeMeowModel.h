@@ -11,6 +11,8 @@
 #import "QFXHomeThumbModel.h"
 #import "QFXHomeUserModel.h"
 #import "QFXHomeCategoryModel.h"
+#import "QFXHomePicsModel.h"
+#import "QFXHomeImages.h"
 
 @interface QFXHomeMeowModel : NSObject
 // 作者
@@ -29,6 +31,10 @@
 @property (nonatomic, copy) NSString *ID;
 
 
+
+
+@property (nonatomic, strong) NSMutableArray *pics;
+@property (nonatomic, strong) NSMutableArray *images;
 
 
 @property (nonatomic, strong) QFXHomeGroupModel *group;

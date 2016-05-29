@@ -18,4 +18,5 @@
 + (instancetype)videoTableViewCell:(UITableView *)tableView;
 
 @property (nonatomic, assign) CGFloat height;
+
 @end

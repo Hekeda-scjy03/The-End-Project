@@ -12,6 +12,8 @@
 #import "QFXHomeTableViewCell.h"
 #import "HTTPRequest.h"
 #import "QFXHomeDataModel.h"
+#import "QFXHomeDetailsViewController.h"
+
 
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -20,10 +22,19 @@
 @property (nonatomic, strong) HomeHeaderView *homeHeaderView;
 
 @property (nonatomic, strong) NSMutableArray *hoemDataListArray;
+@property (nonatomic, strong) NSMutableArray *dataID;
 
 @end
 
 @implementation HomeViewController
+- (NSMutableArray *)dataID
+{
+    if (!_dataID) {
+        _dataID = [NSMutableArray array];
+    }
+    return _dataID;
+}
+
 #pragma mark - 网络请求
 - (void)httpRequest
 {
@@ -76,11 +87,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    QFXEntity_List *model = self.hoemDataListArray[indexPath.row];
     
     QFXHomeTableViewCell *cell = [QFXHomeTableViewCell homeTableViewCellWithTable:tableView];
+    
+    cell.homeDataModel = model;
+    [self.dataID addObject:model.meow.ID];
+    
+    tableView.rowHeight = cell.height;
+    
     return cell;
 }
 #pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QFXHomeDetailsViewController *homeDetailsVC = [[QFXHomeDetailsViewController alloc] init];
+    
+    homeDetailsVC.dataID = self.dataID[indexPath.row];
+    
+    [self.navigationController pushViewController:homeDetailsVC animated:YES];
+}
 
 
 
