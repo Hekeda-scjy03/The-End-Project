@@ -7,7 +7,7 @@
 //
 
 #import "DirectoryModel.h"
-
+#import "TypeNineModel.h"
 @implementation DirectoryModel
 
 - (instancetype)initWithDic:(NSDictionary *)dic
@@ -24,9 +24,21 @@
         self.leftImg = [thumbDic objectForKey:@"raw"];
         
         
-        NSDictionary *userDic = [meowDic objectForKey:@"user"];
-        self.author = [userDic objectForKey:@"name"];
+        NSDictionary *groupDic = [meowDic objectForKey:@"group"];
+        self.author = [groupDic objectForKey:@"name"];
         
+        self.des = [meowDic objectForKey:@"description"];
+        
+        self.meowtype = [meowDic objectForKey:@"meow_type"];
+        
+        
+        self.images = [meowDic objectForKey:@"images"];
+        NSMutableArray *imagesArray = [[NSMutableArray alloc]init];
+        for (NSDictionary *dict in self.images) {
+            TypeNineModel *type = [[TypeNineModel alloc]initWithDic:dict];
+            [imagesArray addObject:type];
+        }
+        self.images = imagesArray;
     }
     return self;
 }

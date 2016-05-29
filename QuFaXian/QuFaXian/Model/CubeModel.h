@@ -10,21 +10,21 @@
 
 @interface CubeModel : NSObject
 
-@property (nonatomic, strong) NSString *category; //分类
+@property (nonatomic, copy) NSString *category; //分类
 
-@property (nonatomic, strong) NSString *des; //简介
+@property (nonatomic, copy) NSString *des; //简介
 
-@property (nonatomic, strong) NSString *name; //名字
+@property (nonatomic, copy) NSString *name; //名字
 
-@property (nonatomic, strong) NSString *kind; //传过来的kind 和接口地址有关
+@property (nonatomic, copy) NSString *kind; //传过来的kind 和接口地址有关
 
-@property (nonatomic, strong) NSString *cubeImage;//cell显示的图片
+@property (nonatomic, copy) NSString *cubeImage;//cell显示的图片
 
-@property (nonatomic, strong) NSString *topicNum;//点进去之后返回的cell数 也就是内容数量
+@property (nonatomic, copy) NSString *topicNum;//点进去之后返回的cell数 也就是内容数量
 
-@property (nonatomic, strong) NSString *id; //id
+@property (nonatomic, copy) NSString *id; //id
 
-@property (nonatomic, strong) NSString *discussNum; //讨论数
+@property (nonatomic, copy) NSString *discussNum; //讨论数
 
 - (instancetype)initWithDic:(NSDictionary *)dic;
 

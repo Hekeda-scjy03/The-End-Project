@@ -13,7 +13,9 @@
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
-@interface DirectoryListViewController ()<MyTableViewPanDelegate>
+@interface DirectoryListViewController ()<MyTableViewPanDelegate>{
+    UIButton *_searchBtn;
+}
 
 @property (nonatomic, strong) MySegement *mySegment;
 
@@ -29,6 +31,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    _searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(50, 2, screenWidth - 100, 24)];
+    [_searchBtn setBackgroundImage:[UIImage imageNamed:@"yuanjiaojuxing"] forState:UIControlStateNormal];
+    [_searchBtn setImage:[UIImage imageNamed:@"sousou"] forState:UIControlStateNormal];
+    [_searchBtn setTitle:@"搜索内容，站，专题" forState:UIControlStateNormal];
+    [_searchBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [_searchBtn addTarget:self action:@selector(searchMethod) forControlEvents:UIControlEventTouchUpInside];
+    _searchBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_searchBtn];
+    
     
     _mySegment = [[MySegement alloc] initWithFrame:CGRectMake(0, 64, screenWidth, 30) withTitles:@[@"创意",@"音乐",@"电影",@"生活",@"美食",@"旅游",@"科普"]];
     
@@ -60,9 +72,23 @@
 
     };
     
+    
+    
 }
 
-#pragma mark - reuseTableViews 懒加载
+#pragma mark - 上面的tag的view
+- (void)initTagView{
+//    [_tagView addTarget:self action:@selector(<#selector#>) withTitle:<#(NSString *)#>]
+//    CGFloat y = CGRectGetMaxY(_mySegment.frame);
+//    _topTagView = [UIView alloc]initWithFrame:CGRectMake(10, y, <#CGFloat width#>, <#CGFloat height#>)
+}
+
+#pragma mark - 搜索方法
+- (void)searchMethod{
+    
+}
+
+#pragma mark - reusableTableViewArray 懒加载
 - (NSMutableArray *)reusableTableViewArray{
     if (!_reusableTableViewArray) {
         _reusableTableViewArray = [[NSMutableArray alloc] initWithCapacity:0];
@@ -96,9 +122,12 @@
         currentView = [self.reusableTableViewArray lastObject];
         [self.reusableTableViewArray removeLastObject];
     }else{
-        currentView = [[MyTableView alloc]initWithFrame:CGRectMake(0, 64 + 30, screenWidth, screenHeight - 94 - 49) style:UITableViewStylePlain];
+        
+        currentView = [[MyTableView alloc]initWithFrame:CGRectMake(0, 64 + 30, screenWidth, screenHeight - 94) style:UITableViewStylePlain];
         
         currentView.panDelegate = self;
+        
+        currentView.selfVC = self;
         
         [self.view addSubview:currentView];
     }
@@ -108,6 +137,7 @@
 
 #pragma mark - tableview切换动画
 - (void)animateTableViewWithCurrentIndex:(MyTableView *)currentTableView leftDirection:(BOOL)isLeft{
+    
     CGFloat currentViewWidth = isLeft?screenWidth:-screenWidth;
     
     //不可以直接赋值给currentTableview.origin.x 因为.和=操作的话会调用set方法
@@ -119,11 +149,11 @@
     __weak typeof(self) mySelf = self;
     [UIView animateWithDuration:0.2 animations:^{
         CGRect weakCurrentTableViewFrame = weakCurrentTableView.frame;
-        weakCurrentTableViewFrame.origin.x = currentViewWidth;
+        weakCurrentTableViewFrame.origin.x -= currentViewWidth;
         weakCurrentTableView.frame = weakCurrentTableViewFrame;
         
         CGRect myTableViewFrame = mySelf.myTableView.frame;
-        myTableViewFrame.origin.x = currentViewWidth;
+        myTableViewFrame.origin.x -= currentViewWidth;
         mySelf.myTableView.frame = myTableViewFrame;
         
     } completion:^(BOOL finished) {
@@ -154,7 +184,7 @@
     }
     
     //防止点中已选中的index时还会滑动
-    _mySegment.lastIndex = _mySegment.selectedIndex;
+    _mySegment.lastIndex = self.mySegment.selectedIndex;
     MyTableView *currentView = [self createMyTableview];
     
     [self animateTableViewWithCurrentIndex:currentView leftDirection:direction == panToLeft?YES:NO];
@@ -169,14 +199,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class DirectoryModel;
+@class TypeNineModel;
 @interface DirectoryListCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
@@ -19,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *authorName;
 
 @property (nonatomic, strong) DirectoryModel *directoryModel;
+
+@property (nonatomic, strong) TypeNineModel *typeNineModel;
 
 @end

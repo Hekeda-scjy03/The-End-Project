@@ -10,7 +10,7 @@
 
 @interface CubeDetailModel : NSObject
 
-@property (nonatomic, strong) NSString *category;
+@property (nonatomic, copy) NSString *category;
 
 @property (nonatomic, strong) NSNumber *stateContentNum;//站的内容数
 
@@ -18,35 +18,35 @@
 
 @property (nonatomic, strong) NSNumber *cellZanNum;//cell内容的赞
 
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, copy) NSString *title;
 
-@property (nonatomic, strong) NSString *des;
+@property (nonatomic, copy) NSString *des;
 
-@property (nonatomic, strong) NSString *intro;
+@property (nonatomic, copy) NSString *intro;
 
-@property (nonatomic, strong) NSString *meowtype;
+@property (nonatomic, copy) NSString *meowtype;
 
-@property (nonatomic, strong) NSString *id;
+@property (nonatomic, copy) NSString *id;
 
 @property (nonatomic, strong) NSNumber *cellCommentNum;//cell内容的评论数
 
 @property (nonatomic, strong) NSNumber *time;
 
-@property (nonatomic, strong) NSString *kind;
+@property (nonatomic, copy) NSString *kind;
 
-@property (nonatomic, strong) NSString *headImg; //内容站的头像
+@property (nonatomic, copy) NSString *headImg; //内容站的头像
 
-@property (nonatomic, strong) NSString *backgroundImg; //内容站的背景
+@property (nonatomic, copy) NSString *backgroundImg; //内容站的背景
 
-@property (nonatomic, strong) NSString *stateName; //内容站的名字
+@property (nonatomic, copy) NSString *stateName; //内容站的名字
 
-@property (nonatomic, strong) NSString *directorName;//站长名
+@property (nonatomic, copy) NSString *directorName;//站长名
 
-@property (nonatomic, strong) NSString *directorHead;//站长头像
+@property (nonatomic, copy) NSString *directorHead;//站长头像
 
-@property (nonatomic, strong) NSString *directorDes;//站长说明
+@property (nonatomic, copy) NSString *directorDes;//站长说明
 
-@property (nonatomic, strong) NSString *joinNum;//关注人数
+@property (nonatomic, copy) NSString *joinNum;//关注人数
 
 - (instancetype)initWithDic:(NSDictionary *)dic;
 
