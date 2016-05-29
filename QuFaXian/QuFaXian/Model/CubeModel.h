@@ -20,11 +20,21 @@
 
 @property (nonatomic, copy) NSString *cubeImage;//cell显示的图片
 
-@property (nonatomic, copy) NSString *topicNum;//点进去之后返回的cell数 也就是内容数量
+@property (nonatomic, copy) NSNumber *topicNum;//点进去之后返回的cell数 也就是内容数量
 
-@property (nonatomic, copy) NSString *id; //id
+@property (nonatomic, copy) NSString *stateId; //id
 
-@property (nonatomic, copy) NSString *discussNum; //讨论数
+@property (nonatomic, copy) NSNumber *discussNum; //讨论数
+
+@property (nonatomic, copy) NSString *topBackImg;
+
+@property (nonatomic, strong) NSNumber *memberNum;
+
+@property (nonatomic, copy) NSString *masterName;//站长名
+
+@property (nonatomic, copy) NSString *masterHeadImg;//站长名
+
+@property (nonatomic, copy) NSString *matserDes;//站长名
 
 - (instancetype)initWithDic:(NSDictionary *)dic;
 

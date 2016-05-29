@@ -1,29 +1,32 @@
 //
-//  CreaterContentHeader.m
+//  CreatorContentHeader.m
 //  QuFaXian
 //
 //  Created by licong on 16/5/15.
 //  Copyright © 2016年 Sugar. All rights reserved.
 //
 
-#import "CreaterContentHeader.h"
+#import "CreatorContentHeader.h"
 #import <UIImageView+WebCache.h>
-#import "CubeDetailModel.h"
-@implementation CreaterContentHeader
+#import "CubeModel.h"
+@implementation CreatorContentHeader
 
-- (void)setCubeDetail:(CubeDetailModel *)cubeDetail{
-    [self.headerBackImg sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backgroundImg]];
-    [self.headerBigHeadImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.directorHead]];
+- (void)setCubeModel:(CubeModel *)cubeModel{
+    _cubeModel = cubeModel;
     
-    self.stateName.text = cubeDetail.stateName;
-    self.focusNum.text = [NSString stringWithFormat:@"%@人关注",cubeDetail.joinNum];
-    self.stateDescription.text = cubeDetail.des;
-    self.stateCreateName.text = cubeDetail.directorName;
-    [self.stateCreateHeadImg sd_setImageWithURL:[NSURL URLWithString:cubeDetail.directorHead]];
-    self.stateCreateIntroduction.text = cubeDetail.directorDes;
-    self.contentsBtn.titleLabel.text = [NSString stringWithFormat:@"    内容 %@",[cubeDetail.stateContentNum stringValue]];
-    self.discussBtn.titleLabel.text = [NSString stringWithFormat:@"    讨论 %@",[cubeDetail.stateDiscussNum stringValue]];
+    [self.headerBackImg sd_setImageWithURL:[NSURL URLWithString:cubeModel.topBackImg]];
+    [self.headerBigHeadImage sd_setImageWithURL:[NSURL URLWithString:cubeModel.cubeImage]];
+    
+    self.stateName.text = cubeModel.name;
+    self.focusNum.text = [NSString stringWithFormat:@"%@人关注",cubeModel.memberNum];
+    self.stateDescription.text = cubeModel.des;
+    self.stateCreateName.text = cubeModel.masterName;
+    [self.stateCreateHeadImg sd_setImageWithURL:[NSURL URLWithString:cubeModel.masterHeadImg]];
+    self.stateCreateIntroduction.text = cubeModel.matserDes;
+    self.contentsBtn.titleLabel.text = [NSString stringWithFormat:@" 内容 %@",cubeModel.topicNum];
+    self.discussBtn.titleLabel.text = [NSString stringWithFormat:@" 讨论 %@",cubeModel.discussNum];
 }
+
 
 - (void)awakeFromNib{
     [super awakeFromNib];

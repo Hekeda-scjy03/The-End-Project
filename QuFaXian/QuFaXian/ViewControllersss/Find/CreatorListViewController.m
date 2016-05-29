@@ -10,6 +10,7 @@
 #import "CreatorModel.h"
 #import "FindCreatorListTableViewCell.h"
 #import "HTTPRequest.h"
+#import "CubeModel.h"
 #import "CubeDetailViewController.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
@@ -83,8 +84,8 @@
     
     CreatorModel *creatorModel = [[CreatorModel alloc]init];
     creatorModel = _creatorListArray[indexPath.row];
-    detailVC.id = creatorModel.id;
-    detailVC.kind = creatorModel.kind;
+    detailVC.cubeModel.stateId = creatorModel.id;
+    detailVC.cubeModel.kind = creatorModel.kind;
     detailVC.navigationItem.title = creatorModel.name;
     
     [self.navigationController pushViewController:detailVC animated:YES];

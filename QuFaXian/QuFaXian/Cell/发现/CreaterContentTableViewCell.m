@@ -19,13 +19,13 @@
     
     self.typeLabel.text = cubeDetail.category;
     
-    [self.backImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backgroundImg]];
+    [self.backImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backImg]];
     
     self.subTitle.text = cubeDetail.intro;
     self.title.text = cubeDetail.title;
     self.descriptonOfContents.text = cubeDetail.des;
-    self.likeNum.text = [cubeDetail.cellZanNum stringValue];
-    self.commentNum.text = [cubeDetail.cellCommentNum stringValue];
+    self.likeNum.text = [cubeDetail.likeNum stringValue];
+    self.commentNum.text = [cubeDetail.commentNum stringValue];
     
     
 }

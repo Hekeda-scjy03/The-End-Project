@@ -294,11 +294,8 @@
     _cubeDetailVC = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:0];
 
     NSArray *tempArray = _array[indexPath.section * 2];
-    _cubeModel = tempArray[indexPath.row];
-    _cubeDetailVC.id = _cubeModel.id;
-    _cubeDetailVC.kind = _cubeModel.kind;
-    _cubeDetailVC.navigationItem.title = _cubeModel.name;
     
+    _cubeDetailVC.cubeModel = tempArray[indexPath.row];
     
     [self.navigationController pushViewController:_cubeDetailVC animated:YES];
     
