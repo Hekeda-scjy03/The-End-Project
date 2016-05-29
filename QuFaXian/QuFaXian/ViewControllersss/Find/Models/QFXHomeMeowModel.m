@@ -18,4 +18,12 @@
              };
 }
 
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{
+             @"pics" : @"QFXHomePicsModel",
+             @"images":@"QFXHomeImages"
+             };
+}
+
 @end

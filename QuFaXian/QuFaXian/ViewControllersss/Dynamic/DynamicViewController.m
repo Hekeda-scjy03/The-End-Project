@@ -8,19 +8,49 @@
 //
 
 #import "DynamicViewController.h"
+#import "DynamicHeaderView.h"
+#import "QFXDynmaicCell.h"
 
-@interface DynamicViewController ()
+
+@interface DynamicViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *dymaicTableView;
 
 @end
 
 @implementation DynamicViewController
-
+#pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.navigationItem.title = @"动态";
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    DynamicHeaderView *dynmaicHeader = [DynamicHeaderView dynamicHeaderView];
+    self.dymaicTableView.tableHeaderView = dynmaicHeader;
+    
+    self.dymaicTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.dymaicTableView.rowHeight = 96.f;
+    
+    self.dymaicTableView.delegate = self;
+    self.dymaicTableView.dataSource = self;
 }
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    QFXDynmaicCell *cell = [QFXDynmaicCell dynmaicCellWithTableView:tableView];
+    return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

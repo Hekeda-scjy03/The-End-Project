@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DynamicViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QFXHomeDetailsViewController">
             <connections>
-                <outlet property="dymaicTableView" destination="Esc-8f-PmZ" id="45T-ck-CfN"/>
+                <outlet property="homeDetailsWebView" destination="629-Zg-02O" id="oda-xh-ayX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Esc-8f-PmZ">
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="629-Zg-02O">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Esc-8f-PmZ" secondAttribute="bottom" id="0MG-ag-D3o"/>
-                <constraint firstItem="Esc-8f-PmZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="T4y-r2-XYB"/>
-                <constraint firstItem="Esc-8f-PmZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iAX-KE-5Gf"/>
-                <constraint firstAttribute="trailing" secondItem="Esc-8f-PmZ" secondAttribute="trailing" id="yUm-3i-SXc"/>
+                <constraint firstAttribute="bottom" secondItem="629-Zg-02O" secondAttribute="bottom" id="9Fg-Jy-ZS3"/>
+                <constraint firstItem="629-Zg-02O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a4y-h6-Ih0"/>
+                <constraint firstAttribute="trailing" secondItem="629-Zg-02O" secondAttribute="trailing" id="f2R-lk-Pek"/>
+                <constraint firstItem="629-Zg-02O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rSU-nr-Cr4"/>
             </constraints>
         </view>
     </objects>

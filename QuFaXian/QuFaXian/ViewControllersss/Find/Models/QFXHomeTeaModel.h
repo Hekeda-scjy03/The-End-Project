@@ -13,4 +13,7 @@
 
 @property (nonatomic, strong) NSMutableArray *entity_list;
 
+//@property (nonatomic, strong) QFXEntity_List *entity_list;
+
+
 @end
