@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D90B2F8A1CDB4E2C00B762CF"
-               BuildableName = "QuFaXian.app"
-               BlueprintName = "QuFaXian"
-               ReferencedContainer = "container:QuFaXian.xcodeproj">
+               BuildableName = "&#x8da3;&#x53d1;&#x73b0;.app"
+               BlueprintName = "&#x8da3;&#x53d1;&#x73b0;"
+               ReferencedContainer = "container:&#x8da3;&#x53d1;&#x73b0;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D90B2F8A1CDB4E2C00B762CF"
-            BuildableName = "QuFaXian.app"
-            BlueprintName = "QuFaXian"
-            ReferencedContainer = "container:QuFaXian.xcodeproj">
+            BuildableName = "&#x8da3;&#x53d1;&#x73b0;.app"
+            BlueprintName = "&#x8da3;&#x53d1;&#x73b0;"
+            ReferencedContainer = "container:&#x8da3;&#x53d1;&#x73b0;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D90B2F8A1CDB4E2C00B762CF"
-            BuildableName = "QuFaXian.app"
-            BlueprintName = "QuFaXian"
-            ReferencedContainer = "container:QuFaXian.xcodeproj">
+            BuildableName = "&#x8da3;&#x53d1;&#x73b0;.app"
+            BlueprintName = "&#x8da3;&#x53d1;&#x73b0;"
+            ReferencedContainer = "container:&#x8da3;&#x53d1;&#x73b0;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D90B2F8A1CDB4E2C00B762CF"
-            BuildableName = "QuFaXian.app"
-            BlueprintName = "QuFaXian"
-            ReferencedContainer = "container:QuFaXian.xcodeproj">
+            BuildableName = "&#x8da3;&#x53d1;&#x73b0;.app"
+            BlueprintName = "&#x8da3;&#x53d1;&#x73b0;"
+            ReferencedContainer = "container:&#x8da3;&#x53d1;&#x73b0;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

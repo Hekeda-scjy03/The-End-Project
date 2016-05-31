@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:QuFaXian.xcodeproj">
+      location = "group:/Users/hzy/Desktop/&#x7ed3;&#x8bfe;&#x9879;&#x76ee;/&#x8da3;&#x53d1;&#x73b0;&#x4ee3;&#x7801;/QuFaXian/&#x8da3;&#x53d1;&#x73b0;.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

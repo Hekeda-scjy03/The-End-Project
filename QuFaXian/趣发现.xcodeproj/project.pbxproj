@@ -206,7 +206,7 @@
 		44E9E2AC1CF8F2E0005439C1 /* QFXVideoDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFXVideoDetailsViewController.m; sourceTree = "<group>"; };
 		44E9E2AD1CF8F2E0005439C1 /* QFXVideoDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QFXVideoDetailsViewController.xib; sourceTree = "<group>"; };
 		9F8B2F5898E6E255BB1C5CAA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuFaXian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90B2F8B1CDB4E2C00B762CF /* 趣发现.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "趣发现.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90B2F8F1CDB4E2C00B762CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D90B2F911CDB4E2C00B762CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D90B2F921CDB4E2C00B762CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -562,7 +562,7 @@
 		D90B2F8C1CDB4E2C00B762CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */,
+				D90B2F8B1CDB4E2C00B762CF /* 趣发现.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1227,9 +1227,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D90B2F8A1CDB4E2C00B762CF /* QuFaXian */ = {
+		D90B2F8A1CDB4E2C00B762CF /* 趣发现 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D90B2FA21CDB4E2C00B762CF /* Build configuration list for PBXNativeTarget "QuFaXian" */;
+			buildConfigurationList = D90B2FA21CDB4E2C00B762CF /* Build configuration list for PBXNativeTarget "趣发现" */;
 			buildPhases = (
 				34C4259DC1B5D2B54B6A35EA /* Check Pods Manifest.lock */,
 				D90B2F871CDB4E2C00B762CF /* Sources */,
@@ -1242,9 +1242,9 @@
 			);
 			dependencies = (
 			);
-			name = QuFaXian;
+			name = "趣发现";
 			productName = QuFaXian;
-			productReference = D90B2F8B1CDB4E2C00B762CF /* QuFaXian.app */;
+			productReference = D90B2F8B1CDB4E2C00B762CF /* 趣发现.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1262,7 +1262,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D90B2F861CDB4E2C00B762CF /* Build configuration list for PBXProject "QuFaXian" */;
+			buildConfigurationList = D90B2F861CDB4E2C00B762CF /* Build configuration list for PBXProject "趣发现" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1275,7 +1275,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D90B2F8A1CDB4E2C00B762CF /* QuFaXian */,
+				D90B2F8A1CDB4E2C00B762CF /* 趣发现 */,
 			);
 		};
 /* End PBXProject section */
@@ -1292,12 +1292,9 @@
 				D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */,
 				D94599621CF98A6A00AF0E9E /* DirectoryTagView.xib in Resources */,
 				D9871BB01CE3608500953D54 /* FindCreatorListTableViewCell.xib in Resources */,
-
 				D9424C0B1CE8168300DC3B76 /* CreatorContentHeader.xib in Resources */,
-
-				D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */,
+				D9424C0B1CE8168300DC3B76 /* CreatorContentHeader.xib in Resources */,
 				44C52D2D1CF97E7B00575A15 /* DynamicHeaderView.xib in Resources */,
-
 				D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */,
 				D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */,
 				D945996D1CF998DF00AF0E9E /* TopView.xib in Resources */,
@@ -1586,7 +1583,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sugar.mario.QuFaXian;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "趣发现";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -1602,7 +1599,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sugar.mario.QuFaXian;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "趣发现";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -1610,7 +1607,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D90B2F861CDB4E2C00B762CF /* Build configuration list for PBXProject "QuFaXian" */ = {
+		D90B2F861CDB4E2C00B762CF /* Build configuration list for PBXProject "趣发现" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D90B2FA01CDB4E2C00B762CF /* Debug */,
@@ -1619,7 +1616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D90B2FA21CDB4E2C00B762CF /* Build configuration list for PBXNativeTarget "QuFaXian" */ = {
+		D90B2FA21CDB4E2C00B762CF /* Build configuration list for PBXNativeTarget "趣发现" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D90B2FA31CDB4E2C00B762CF /* Debug */,

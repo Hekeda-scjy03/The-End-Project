@@ -9,7 +9,8 @@
 #import "HomeHeaderView.h"
 #import "HomeThemeButton.h"
 #import "QFXVideoViewController.h"
-
+#import "DirectoryListDeatilViewController.h"
+#import "FindViewController.h"
 
 
 @interface HomeHeaderView () <UIScrollViewDelegate>
@@ -216,27 +217,34 @@
             
 
         case ScienceBtn:
-             NSLog(@"ScienceBtn");
+            
+            [self intoDirectoryListDeatilViewController];
+            
             break;
             
-
         case TourismBtn:
-             NSLog(@"TourismBtn");
+             [self intoDirectoryListDeatilViewController];
             break;
             
 
         case FoodBtn:
-             NSLog(@"FoodBtn");
+             [self intoDirectoryListDeatilViewController];
             break;
             
         case OriginalityBtn:
-             NSLog(@"OriginalityBtn");
+             [self intoDirectoryListDeatilViewController];
             break;
             
         default:
             break;
     }
 
+}
+
+- (void)intoDirectoryListDeatilViewController
+{
+    DirectoryListDeatilViewController *targetVC = [[DirectoryListDeatilViewController alloc] init];
+    [[self getSupVC].navigationController pushViewController:targetVC animated:YES];
 }
 
 
