@@ -22,7 +22,7 @@
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface CubeDetailViewController ()<ClickBtnToRefreshListDelegate, UITableViewDelegate, UITableViewDataSource>{
-    NSMutableArray *_detailArray;
+    NSMutableArray *_detailArray, *_cubeArray;
     
 }
 
@@ -38,6 +38,8 @@
 
 @property (strong, nonatomic) CreatorContentHeader *creatorHeader;
 
+@property (nonatomic, assign) int urlStart;
+
 @end
 
 @implementation CubeDetailViewController
@@ -45,9 +47,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _urlStart = 0;
+
     self.navigationItem.title = _detailModel.title ;
     
     _detailArray = [[NSMutableArray alloc]init];
+    
+    _cubeArray = [[NSMutableArray alloc]init];
     
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
@@ -83,7 +89,6 @@
     [_joinView addTarget:self action:@selector(focusMethod)];
     [self.view addSubview:_joinView];
     
-    NSLog(@"%@",_cubeModel.stateId);
 
     [self getData];
 
@@ -91,13 +96,14 @@
 
 #pragma mark - 获取数据
 - (void)getData{
+    
+    NSString *_urlStr = @"http://mmmono.com/api/v3/group/%@/content/kind/%@/?";
+    
     NSString *header = @"0c596a400bb611e6b2805254006fe942";
     HTTPRequest *request = [HTTPRequest shareInstance];
     
-    NSLog(@"%@",_cubeModel.stateId);
-    [request getURL:[NSString stringWithFormat:@"http://mmmono.com/api/v3/group/%@/content/kind/%@/?",_cubeModel.stateId,_cubeModel.kind] parameterDic:nil headerValue:header success:^(id responsObj) {
+    [request getURL:[NSString stringWithFormat:_urlStr,_cubeModel.stateId,_cubeModel.kind] parameterDic:nil headerValue:header success:^(id responsObj) {
         
-        NSLog(@"%@",responsObj);
         
         if ([[responsObj allKeys]containsObject:@"top_meow"]) {
             NSDictionary *topMeowDic = [responsObj objectForKey:@"top_meow"];
@@ -124,11 +130,17 @@
             _groupHeader.cubeModel = _cubeModel;
             _groupHeader.imageDictArray = [responsObj objectForKey:@"recent_member"];
         }
-
+        
         [self.tableView reloadData];
     }fail:^(NSError *error) {
 
     }];
+    
+    _urlStart ++;
+}
+#pragma mark - 获取cubeModel
+- (void)getCubeModel{
+    
 }
 
 #pragma mark - 加入小组 关注内容站等

@@ -9,7 +9,6 @@
 #import "GroupHeader.h"
 #import <UIImageView+WebCache.h>
 #import "CubeModel.h"
-#import "CubeDetailModel.h"
 @implementation GroupHeader
 
 - (void)setCubeModel:(CubeModel *)cubeModel{

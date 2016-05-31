@@ -24,6 +24,8 @@
 #import "CubeDetailModel.h"
 #import "CreatorListViewController.h"
 #import "DirectoryListViewController.h"
+#import "CampaginViewController.h"
+#import "CollectionViewController.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -37,6 +39,12 @@
 
 @property (strong, nonatomic) CubeModel *cubeModel;
 
+@property (strong, nonatomic) UITapGestureRecognizer *tap;
+
+@property (strong, nonatomic) SpecialModel *specialModel;
+
+@property (strong, nonatomic) ActivityModel *activityModel;
+
 @end
 
 @implementation FindViewController
@@ -48,9 +56,11 @@
     _array = [[NSMutableArray alloc]init];
     _bannerArray = [[NSMutableArray alloc]init];
     _cubeDetailArray = [[NSMutableArray alloc]init];
+   
     
     [self initCollectionView];
     [self getData];
+    
 }
 
 #pragma mark - 获取网络数据
@@ -126,15 +136,15 @@
                 }else{
                     initDcit = [dataDict objectForKey:@"campaign"];
                 }
-                ActivityModel *activity = [[ActivityModel alloc]initWithDic:initDcit];
-                [_array addObject:activity];
+                _activityModel = [[ActivityModel alloc]initWithDic:initDcit];
+                [_array addObject:_activityModel];
                 
             }
             
             //专题footer 返回数据每组的最后一个 也就是第4个
                 else{
-                SpecialModel *special = [[SpecialModel alloc]initWithDic:entitylist[0]];
-                [_array addObject:special];
+                _specialModel = [[SpecialModel alloc]initWithDic:entitylist[0]];
+                [_array addObject:_specialModel];
             }
         }
         
@@ -143,14 +153,14 @@
         [_collectionView.mj_footer endRefreshing];
         [_collectionView reloadData];
     } fail:^(NSError *error) {
-//        NSLog(@"222 + %@",error);
+
     }];
     
 }
 
 #pragma mark - btn 点击事件 （目录 造物主列表）
 - (void)getDirectoryList{
-    [self getData];
+//    [self getData];
     DirectoryListViewController *listVC = [[DirectoryListViewController alloc] init];
     [self.navigationController pushViewController:listVC animated:YES];
 }
@@ -205,6 +215,7 @@
 {
     return _array.count / 2;
 }
+
 //item个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -230,6 +241,7 @@
 
 #pragma mark - 设置footer
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
     if (kind == UICollectionElementKindSectionHeader && indexPath.section == 0) {
             HeaderCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
         __weak typeof(self) myself = self;
@@ -261,19 +273,44 @@
 
     }else{
     
+        
+        
     if (indexPath.section % 2 !=0) {
         TopicsFooterCollectionReusableView *topicFooter = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"topicFooter" forIndexPath:indexPath];
             topicFooter.specialModel = _array[indexPath.section * 2 + 1];
+        _tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(jumpToCollectionVC)];
+        [topicFooter addGestureRecognizer:_tap];
         return topicFooter;
     }else{
         FooterCollectionReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"footerCell" forIndexPath:indexPath];
             footer.activityModel = _array[indexPath.section * 2 + 1];
+        _tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(jumpToCampaginVC)];
+        [footer addGestureRecognizer:_tap];
         return footer;
     }
     }
 }
 
-//设置header大小 只有第一组返回header
+#pragma mark - 活动VC
+- (void)jumpToCampaginVC{
+    
+    CampaginViewController *campaginVC = [[CampaginViewController alloc]init];
+    
+    campaginVC.selectedCellId = _activityModel.activityId;
+    
+    [self.navigationController pushViewController:campaginVC animated:YES];
+}
+
+#pragma mark - 专题VC
+- (void)jumpToCollectionVC{
+    CollectionViewController *collectionVC = [[CollectionViewController alloc]init];
+    
+    collectionVC.selectedCellId = _specialModel.specialId;
+
+    [self.navigationController pushViewController:collectionVC animated:YES];
+}
+
+#pragma mark - 设置header大小 只有第一组返回header
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     if (section == 0) {
         return CGSizeMake(screenWidth, 220);
