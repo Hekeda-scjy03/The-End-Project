@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class CubeModel;
-@class CubeDetailModel;
 @interface GroupHeader : UITableViewHeaderFooterView
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImage;

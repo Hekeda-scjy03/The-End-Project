@@ -10,7 +10,7 @@
 
 @interface SpecialModel : NSObject
 
-@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *specialId;
 
 @property (nonatomic, copy) NSString *contentNum; //讨论数
 

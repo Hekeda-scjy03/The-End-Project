@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
        
+        self.activityId = [dic objectForKey:@"id"];
         self.title = [dic objectForKey:@"title"];
 
         self.des = [dic objectForKey:@"description"];

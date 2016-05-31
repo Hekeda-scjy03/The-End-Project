@@ -10,6 +10,8 @@
 
 @interface ActivityModel : NSObject
 
+@property (nonatomic, copy) NSString *activityId;
+
 @property (nonatomic, copy) NSString *des; //线上活动的描述
 
 @property (nonatomic, copy) NSString *title; //线上活动的title

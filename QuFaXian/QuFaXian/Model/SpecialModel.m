@@ -17,7 +17,7 @@
         NSDictionary *temp = [dic objectForKey:@"collection"];
         self.contentNum = [temp objectForKey:@"content_num"];
         self.title = [temp objectForKey:@"title"];
-        self.id = [temp objectForKey:@"id"];
+        self.specialId = [temp objectForKey:@"id"];
         
         NSDictionary *tempDic = [temp objectForKey:@"thumb"];
         self.backImg = [tempDic objectForKey:@"raw"];

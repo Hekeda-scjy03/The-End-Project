@@ -12,16 +12,19 @@
 #import "HTTPRequest.h"
 #import "CubeModel.h"
 #import "CubeDetailViewController.h"
+#import <MJRefresh.h>
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface CreatorListViewController ()<UITableViewDelegate, UITableViewDataSource>{
     NSMutableArray *_creatorListArray;
+    
+    
 }
 
-@property (strong, nonatomic) UITableView *tableView;
+@property (nonatomic, assign) int urlStart;
 
-@property (strong, nonatomic) CreatorModel *creatorModel;
+@property (strong, nonatomic) UITableView *tableView;
 
 @end
 
@@ -30,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    _urlStart = 0;
+    
     self.navigationItem.title = @"趣发现造物主";
     
     _creatorListArray = [[NSMutableArray alloc]init];
@@ -42,24 +47,56 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"FindCreatorListTableViewCell" bundle:nil] forCellReuseIdentifier:@"creatorList"];
     [self getData];
+    
+    __weak typeof(self) mySelf = self;
+    if (_creatorListArray.count != 20) {
+        self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            
+            
+            [mySelf getData];
+        }];
+    }
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        
+        [mySelf getData];
+        
+    }];
 }
 
 #pragma mark - 获取数据
 - (void)getData{
+    
+    [self.tableView.mj_footer endRefreshing];
+    
+    NSString *_urlStr = @"http://mmmono.com/api/v3/explore/mod/30/shuffled?";
+    if (_creatorListArray.count != 0) {
+        _urlStr = [NSString stringWithFormat:@"%@start=%d",_urlStr,_urlStart * 10];
+
+    }else{
+        _urlStr = _urlStr;
+    }
+    
     NSString *header = @"0c596a400bb611e6b2805254006fe942";
     HTTPRequest *request = [HTTPRequest shareInstance];
-    [request getURL:@"http://mmmono.com/api/v3/explore/mod/30/shuffled?" parameterDic:nil headerValue:header success:^(id responsObj) {
+    [request getURL:_urlStr parameterDic:nil headerValue:header success:^(id responsObj) {
         
         
         NSArray *entityList = [responsObj objectForKey:@"entity_list"];
         for (NSDictionary *dic in entityList) {
-            _creatorModel = [[CreatorModel alloc]initWithDic:dic];
-            [_creatorListArray addObject:_creatorModel];
+            CreatorModel *creatorModel = [[CreatorModel alloc]initWithDic:dic];
+            [_creatorListArray addObject:creatorModel];
         }
+        
+        [self.tableView.mj_header endRefreshing];
+        
         [self.tableView reloadData];
     }fail:^(NSError *error) {
         
     }];
+    
+    _urlStart++;
+
 }
 
 #pragma mark - tableview delegate datasourse
@@ -80,14 +117,15 @@
 
 #pragma mark - 点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CubeDetailViewController *detailVC = [[CubeDetailViewController alloc]initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:NULL];
+    CubeDetailViewController *detailVC = [[CubeDetailViewController alloc] initVCwithItemType:VCItemTypeShare|VCItemTypeMore withNavTitle:0];
     
-    CreatorModel *creatorModel = [[CreatorModel alloc]init];
-    creatorModel = _creatorListArray[indexPath.row];
-    detailVC.cubeModel.stateId = creatorModel.id;
-    detailVC.cubeModel.kind = creatorModel.kind;
-    detailVC.navigationItem.title = creatorModel.name;
+    CreatorModel *creatorModel = _creatorListArray[indexPath.row];
+    CubeModel *cubeModel = [[CubeModel alloc]init];
+    cubeModel.stateId = creatorModel.id;
+    cubeModel.kind = creatorModel.kind;
+    detailVC.cubeModel = cubeModel;
     
+   
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

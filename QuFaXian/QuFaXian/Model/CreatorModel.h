@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) NSString *des; //描述
 
-@property (nonatomic, strong) NSNumber *membersNum; //讨论数
+@property (nonatomic, strong) NSNumber *membersNum; //人数
 
 @property (nonatomic, strong) NSNumber *topicsNum; //内容数
 
