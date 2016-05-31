@@ -35,16 +35,6 @@
                         <action selector="setBtnClick" destination="tfU-Ut-Lqp" eventType="touchUpInside" id="kfL-eF-8wY"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl9-lu-NKM">
-                    <rect key="frame" x="122" y="133" width="34" height="33"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="登录">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="loginBtnClick" destination="tfU-Ut-Lqp" eventType="touchUpInside" id="aGZ-s5-2Jf"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSS-mS-uuT">
                     <rect key="frame" x="185" y="133" width="68" height="33"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -53,6 +43,16 @@
                     </state>
                     <connections>
                         <action selector="personalBtnClick" destination="tfU-Ut-Lqp" eventType="touchUpInside" id="ZA2-8p-cmA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl9-lu-NKM">
+                    <rect key="frame" x="122" y="133" width="34" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginBtnClick" destination="tfU-Ut-Lqp" eventType="touchUpInside" id="aGZ-s5-2Jf"/>
                     </connections>
                 </button>
             </subviews>

@@ -20,6 +20,9 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *desc;
+@property (nonatomic, copy) NSString *meow_type;
+
+
 
 @property (nonatomic, strong) QFXVideoGroupModel *group;
 @property (nonatomic, strong) QFXVideoThumbModel *thumb;

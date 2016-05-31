@@ -28,7 +28,7 @@
 {
     self.scrollView.delegate = self;
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width * 3, 0);
+    self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width * 3, 0);
     
     //隐藏水平滚动指示器
     self.scrollView.showsHorizontalScrollIndicator = NO;
@@ -42,7 +42,7 @@
     
     for (int i = 0; i < 3; i++)
     {
-        CGFloat imgX = self.scrollView.bounds.size.width * (i % 3);
+        CGFloat imgX = [UIScreen mainScreen].bounds.size.width * (i % 3);
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, imgY, imgW, imgH)];
         imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%02d",i + 1]];
         
@@ -73,10 +73,10 @@
     //1.获取滚动的x方向的偏移值
     CGFloat offSetX = scrollView.contentOffset.x;
     //用已经便宜了的值，加上半页的宽度
-    offSetX = offSetX + (scrollView.frame.size.width * 0.5);
+    offSetX = offSetX + ([UIScreen mainScreen].bounds.size.width * 0.5);
     
     //2.用x方向的偏移的值除以一张图片的宽度（每一页的宽度），取商就是当前滚到了第几页（索引）
-    int page = offSetX / scrollView.frame.size.width;
+    int page = offSetX / [UIScreen mainScreen].bounds.size.width;
     
     //3.将页码设置给UIPageControl
     self.pageControl.currentPage = page;
@@ -114,7 +114,7 @@
     }
     
     //用每页的宽度 * （页码 + 1）== 计算除了下一页的contentOffset.x
-    CGFloat offsetX = page * self.scrollView.frame.size.width;
+    CGFloat offsetX = page * [UIScreen mainScreen].bounds.size.width;
     
     //设置scrollView的偏移量等于新的偏移值
     [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];

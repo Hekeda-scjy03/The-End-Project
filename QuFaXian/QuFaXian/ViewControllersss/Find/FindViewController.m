@@ -149,6 +149,7 @@
         }
         
         
+        
         [_collectionView.mj_footer endRefreshing];
         [_collectionView reloadData];
     } fail:^(NSError *error) {

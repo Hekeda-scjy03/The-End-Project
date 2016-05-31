@@ -12,8 +12,10 @@
 
 @interface QFXVideoDataModel : NSObject
 
+@property (nonatomic, copy) NSString *start;
+
 @property (nonatomic, strong) NSMutableArray *meows;
 
-+ (NSMutableArray *)videoDataModelWithDict:(NSDictionary *)dict;
+- (NSMutableArray *)videoDataModelWithDict:(NSDictionary *)dict;
 
 @end

@@ -52,6 +52,8 @@
 
     
     self.view.backgroundColor = [UIColor brownColor];
+    
+    self.navigationItem.title = @"个人中心";
 }
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
