@@ -7,20 +7,23 @@
 //
 
 #import "CubeDetailViewController.h"
-#import "CreaterContentHeader.h"
+#import "CreatorContentHeader.h"
 #import "JoinIn.h"
 #import "CreaterContentTableViewCell.h"
 #import "ContentsStateTableViewCell.h"
 #import "GroupHeader.h"
-#import "CreaterContentHeader.h"
 #import "GroupHeader.h"
 #import "CubeDetailModel.h"
 #import "HTTPRequest.h"
+#import "CubeModel.h"
+#import "GroupContentTableViewCell.h"
+#import "DirectoryListDeatilViewController.h"
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface CubeDetailViewController ()<ClickBtnToRefreshListDelegate, UITableViewDelegate, UITableViewDataSource>{
     NSMutableArray *_detailArray;
+    
 }
 
 @property (strong, nonatomic) UITableView *tableView;
@@ -30,6 +33,10 @@
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
 
 @property (strong, nonatomic) CubeDetailModel *detailModel;
+
+@property (strong, nonatomic) GroupHeader *groupHeader;
+
+@property (strong, nonatomic) CreatorContentHeader *creatorHeader;
 
 @end
 
@@ -50,20 +57,22 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CreaterContentTableViewCell" bundle:nil] forCellReuseIdentifier:@"createrCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ContentsStateTableViewCell" bundle:nil] forCellReuseIdentifier:@"contentsCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"GroupContentTableViewCell" bundle:nil] forCellReuseIdentifier:@"groupCell"];
     
-    if (_detailModel.kind.intValue == 1) {
-        CreaterContentHeader *createrHeader = [[[NSBundle mainBundle]loadNibNamed:@"CreaterContentHeader" owner:nil options:nil]firstObject];
-        self.tableView.tableHeaderView = createrHeader;
+    
+    if ([_cubeModel.kind integerValue] == 1 ) {
+        _creatorHeader = [[[NSBundle mainBundle]loadNibNamed:@"CreatorContentHeader" owner:nil options:nil]firstObject];
+        self.tableView.tableHeaderView = _creatorHeader;
         
-    }else if (_detailModel.kind.intValue == 2){
-        GroupHeader *groupHeader = [[[NSBundle mainBundle]loadNibNamed:@"GroupHeader" owner:nil options:nil]firstObject];
-        self.tableView.tableHeaderView = groupHeader;
+    }else if ([_cubeModel.kind integerValue] == 2){
+        _groupHeader = [[[NSBundle mainBundle]loadNibNamed:@"GroupHeader" owner:nil options:nil]firstObject];
+        self.tableView.tableHeaderView = _groupHeader;
     }
-    
+       
     //加入该站的view
     _joinView = [[[NSBundle mainBundle]loadNibNamed:@"JoinIn" owner:nil options:nil] firstObject];
-    NSLog(@"kind  %@",self.kind);
-    if (self.kind.integerValue == 1) {
+
+    if (_cubeModel.kind.integerValue == 1) {
         [_joinView setTitle:@"加入该站"];
     }else{
         [_joinView setTitle:@"加入小组"];
@@ -74,6 +83,8 @@
     [_joinView addTarget:self action:@selector(focusMethod)];
     [self.view addSubview:_joinView];
     
+    NSLog(@"%@",_cubeModel.stateId);
+
     [self getData];
 
 }
@@ -82,14 +93,38 @@
 - (void)getData{
     NSString *header = @"0c596a400bb611e6b2805254006fe942";
     HTTPRequest *request = [HTTPRequest shareInstance];
-    [request getURL:[NSString stringWithFormat:@"http://mmmono.com/api/v3/group/%@/content/kind/%@/?",self.id,self.kind] parameterDic:nil headerValue:header success:^(id responsObj) {
+    
+    NSLog(@"%@",_cubeModel.stateId);
+    [request getURL:[NSString stringWithFormat:@"http://mmmono.com/api/v3/group/%@/content/kind/%@/?",_cubeModel.stateId,_cubeModel.kind] parameterDic:nil headerValue:header success:^(id responsObj) {
         
+        NSLog(@"%@",responsObj);
         
-        NSArray *meowlist = [responsObj objectForKey:@"meow_list"];
+        if ([[responsObj allKeys]containsObject:@"top_meow"]) {
+            NSDictionary *topMeowDic = [responsObj objectForKey:@"top_meow"];
+            _detailModel = [[CubeDetailModel alloc]initWithDic:topMeowDic];
+            [_detailArray addObject:_detailModel];
+            NSArray *meowlist = [responsObj objectForKey:@"meow_list"];
             for (NSDictionary *dic in meowlist) {
                 _detailModel = [[CubeDetailModel alloc]initWithDic:dic];
                 [_detailArray addObject:_detailModel];
             }
+        }else{
+            NSArray *meowlist = [responsObj objectForKey:@"meow_list"];
+            for (NSDictionary *dic in meowlist) {
+                _detailModel = [[CubeDetailModel alloc]initWithDic:dic];
+                [_detailArray addObject:_detailModel];
+                
+            }
+        }
+        
+        
+        if (_cubeModel.kind.integerValue == 1) {
+            _creatorHeader.cubeModel = _cubeModel;
+        }else{
+            _groupHeader.cubeModel = _cubeModel;
+            _groupHeader.imageDictArray = [responsObj objectForKey:@"recent_member"];
+        }
+
         [self.tableView reloadData];
     }fail:^(NSError *error) {
 
@@ -107,31 +142,39 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return screenHeight * 0.5 + 10;
+    return 308;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+  
     if (_detailModel.meowtype.integerValue == 9) {
-        CreaterContentTableViewCell *fourthCell = [tableView dequeueReusableCellWithIdentifier:@"createrCell" forIndexPath:indexPath];
+        CreaterContentTableViewCell *fourthCell = [tableView dequeueReusableCellWithIdentifier:@"contentsCell" forIndexPath:indexPath];
+
         fourthCell.cubeDetail = _detailArray[indexPath.row];
         return fourthCell;
-    }else{
-        ContentsStateTableViewCell *ninethCell =[tableView dequeueReusableCellWithIdentifier:@"contentsCell"];
+    }else if (_detailModel.meowtype.integerValue == 3){
+        GroupContentTableViewCell *thirdCell = [tableView dequeueReusableCellWithIdentifier:@"groupCell" forIndexPath:indexPath];
+        
+        thirdCell.cubeDetail = _detailArray[indexPath.row];
+        return thirdCell;
+    }
+    else{
+        ContentsStateTableViewCell *ninethCell =[tableView dequeueReusableCellWithIdentifier:@"createrCell"];
         ninethCell.cubeDetail = _detailArray[indexPath.row];
         return ninethCell;
     }
 }
 
-#pragma mark - 设置header
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (_detailModel.kind.integerValue == 1 && section == 0) {
-        return screenWidth / 3 * 2 ;
-    }else if (_detailModel.kind.integerValue == 2 && section == 0){
-        return screenWidth * 0.4;
-    }
-    return 0;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DirectoryListDeatilViewController *detailVC = [[DirectoryListDeatilViewController alloc]init];
+    
+    CubeDetailModel *detailModel = [[CubeDetailModel alloc]init];
+    detailModel = _detailArray[indexPath.row];
+    detailVC.selectedCellId = detailModel.cellId;
+    
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 #pragma mark - 切换cell

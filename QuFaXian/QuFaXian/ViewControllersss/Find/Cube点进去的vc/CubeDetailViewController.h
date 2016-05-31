@@ -7,11 +7,9 @@
 //
 
 #import "QFXCustomViewController.h"
-
+@class CubeModel;
 @interface CubeDetailViewController : QFXCustomViewController
 
-@property (nonatomic, strong) NSString *id;
-
-@property (nonatomic, strong) NSString *kind;
+@property (nonatomic, strong) CubeModel *cubeModel;
 
 @end

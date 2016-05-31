@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class CubeModel;
+@class CubeDetailModel;
 @interface GroupHeader : UITableViewHeaderFooterView
+
+@property (weak, nonatomic) IBOutlet UIImageView *backImage;
 
 @property (weak, nonatomic) IBOutlet UILabel *groupName;
 
@@ -19,5 +23,18 @@
 //点击该view会获取成员列表
 @property (weak, nonatomic) IBOutlet UIView *groupMemberMore;
 
+@property (nonatomic, strong) CubeModel *cubeModel;
+
+@property (nonatomic, strong) NSArray *imageDictArray;
+
+@property (weak, nonatomic) IBOutlet UIImageView *headF;
+
+@property (weak, nonatomic) IBOutlet UIImageView *headS;
+
+@property (weak, nonatomic) IBOutlet UIImageView *headT;
+
+@property (weak, nonatomic) IBOutlet UIImageView *headFour;
+
+@property (weak, nonatomic) IBOutlet UIImageView *headFif;
 
 @end

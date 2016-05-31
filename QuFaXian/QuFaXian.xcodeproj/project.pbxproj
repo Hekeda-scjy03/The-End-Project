@@ -84,10 +84,10 @@
 		D9424BF91CE814CF00DC3B76 /* GroupContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424BF71CE814CF00DC3B76 /* GroupContentTableViewCell.xib */; };
 		D9424BFD1CE814E300DC3B76 /* CreaterContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424BFB1CE814E300DC3B76 /* CreaterContentTableViewCell.m */; };
 		D9424BFE1CE814E300DC3B76 /* CreaterContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424BFC1CE814E300DC3B76 /* CreaterContentTableViewCell.xib */; };
-		D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424C001CE815ED00DC3B76 /* CreaterContentHeader.m */; };
+		D9424C011CE815ED00DC3B76 /* CreatorContentHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424C001CE815ED00DC3B76 /* CreatorContentHeader.m */; };
 		D9424C071CE8161300DC3B76 /* GroupHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9424C061CE8161300DC3B76 /* GroupHeader.m */; };
 		D9424C091CE8162900DC3B76 /* GroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C081CE8162900DC3B76 /* GroupHeader.xib */; };
-		D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C0A1CE8168300DC3B76 /* CreaterContentHeader.xib */; };
+		D9424C0B1CE8168300DC3B76 /* CreatorContentHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9424C0A1CE8168300DC3B76 /* CreatorContentHeader.xib */; };
 		D945995C1CF97C4B00AF0E9E /* TypeNineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D945995B1CF97C4B00AF0E9E /* TypeNineModel.m */; };
 		D94599601CF98A5500AF0E9E /* DirectoryTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = D945995F1CF98A5500AF0E9E /* DirectoryTagView.m */; };
 		D94599621CF98A6A00AF0E9E /* DirectoryTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94599611CF98A6A00AF0E9E /* DirectoryTagView.xib */; };
@@ -261,12 +261,12 @@
 		D9424BFA1CE814E300DC3B76 /* CreaterContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreaterContentTableViewCell.h; path = "发现/CreaterContentTableViewCell.h"; sourceTree = "<group>"; };
 		D9424BFB1CE814E300DC3B76 /* CreaterContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreaterContentTableViewCell.m; path = "发现/CreaterContentTableViewCell.m"; sourceTree = "<group>"; };
 		D9424BFC1CE814E300DC3B76 /* CreaterContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreaterContentTableViewCell.xib; path = "发现/CreaterContentTableViewCell.xib"; sourceTree = "<group>"; };
-		D9424BFF1CE815ED00DC3B76 /* CreaterContentHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreaterContentHeader.h; sourceTree = "<group>"; };
-		D9424C001CE815ED00DC3B76 /* CreaterContentHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreaterContentHeader.m; sourceTree = "<group>"; };
+		D9424BFF1CE815ED00DC3B76 /* CreatorContentHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatorContentHeader.h; sourceTree = "<group>"; };
+		D9424C001CE815ED00DC3B76 /* CreatorContentHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatorContentHeader.m; sourceTree = "<group>"; };
 		D9424C051CE8161300DC3B76 /* GroupHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupHeader.h; sourceTree = "<group>"; };
 		D9424C061CE8161300DC3B76 /* GroupHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupHeader.m; sourceTree = "<group>"; };
 		D9424C081CE8162900DC3B76 /* GroupHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeader.xib; sourceTree = "<group>"; };
-		D9424C0A1CE8168300DC3B76 /* CreaterContentHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreaterContentHeader.xib; sourceTree = "<group>"; };
+		D9424C0A1CE8168300DC3B76 /* CreatorContentHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatorContentHeader.xib; sourceTree = "<group>"; };
 		D945995A1CF97C4B00AF0E9E /* TypeNineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeNineModel.h; sourceTree = "<group>"; };
 		D945995B1CF97C4B00AF0E9E /* TypeNineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeNineModel.m; sourceTree = "<group>"; };
 		D945995E1CF98A5500AF0E9E /* DirectoryTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryTagView.h; sourceTree = "<group>"; };
@@ -877,26 +877,18 @@
 			isa = PBXGroup;
 			children = (
 				D9424BD71CE8124D00DC3B76 /* 小组 */,
-				D9424BD61CE8124700DC3B76 /* 造物主 */,
-				D9424BD51CE8123B00DC3B76 /* 内容站 */,
+				D9424BD61CE8124700DC3B76 /* 造物主和内容站 */,
 			);
 			name = "Cube点进去的详情Header";
 			sourceTree = "<group>";
 		};
-		D9424BD51CE8123B00DC3B76 /* 内容站 */ = {
+		D9424BD61CE8124700DC3B76 /* 造物主和内容站 */ = {
 			isa = PBXGroup;
 			children = (
 				D9524DF31CF198B8000A15E2 /* 置顶cell */,
-			);
-			name = "内容站";
-			sourceTree = "<group>";
-		};
-		D9424BD61CE8124700DC3B76 /* 造物主 */ = {
-			isa = PBXGroup;
-			children = (
 				D9424BDA1CE8137500DC3B76 /* Header */,
 			);
-			name = "造物主";
+			name = "造物主和内容站";
 			sourceTree = "<group>";
 		};
 		D9424BD71CE8124D00DC3B76 /* 小组 */ = {
@@ -920,9 +912,9 @@
 		D9424BDA1CE8137500DC3B76 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				D9424BFF1CE815ED00DC3B76 /* CreaterContentHeader.h */,
-				D9424C001CE815ED00DC3B76 /* CreaterContentHeader.m */,
-				D9424C0A1CE8168300DC3B76 /* CreaterContentHeader.xib */,
+				D9424BFF1CE815ED00DC3B76 /* CreatorContentHeader.h */,
+				D9424C001CE815ED00DC3B76 /* CreatorContentHeader.m */,
+				D9424C0A1CE8168300DC3B76 /* CreatorContentHeader.xib */,
 			);
 			name = Header;
 			sourceTree = "<group>";
@@ -1300,8 +1292,12 @@
 				D90B2FE91CDC76FF00B762CF /* DynamicViewController.xib in Resources */,
 				D94599621CF98A6A00AF0E9E /* DirectoryTagView.xib in Resources */,
 				D9871BB01CE3608500953D54 /* FindCreatorListTableViewCell.xib in Resources */,
+
+				D9424C0B1CE8168300DC3B76 /* CreatorContentHeader.xib in Resources */,
+
 				D9424C0B1CE8168300DC3B76 /* CreaterContentHeader.xib in Resources */,
 				44C52D2D1CF97E7B00575A15 /* DynamicHeaderView.xib in Resources */,
+
 				D90B2F991CDB4E2C00B762CF /* Main.storyboard in Resources */,
 				D9B63B181CEC8B1D00C5F3A1 /* DirectoryListCell.xib in Resources */,
 				D945996D1CF998DF00AF0E9E /* TopView.xib in Resources */,
@@ -1416,7 +1412,7 @@
 				D9B63B2B1CECA14D00C5F3A1 /* DirectoryListViewController.m in Sources */,
 				D9424BF81CE814CF00DC3B76 /* GroupContentTableViewCell.m in Sources */,
 				44B92F291CF89DA800869201 /* HomeHeaderView.m in Sources */,
-				D9424C011CE815ED00DC3B76 /* CreaterContentHeader.m in Sources */,
+				D9424C011CE815ED00DC3B76 /* CreatorContentHeader.m in Sources */,
 				D9A553471CEFF67100BE44A5 /* CubeModel.m in Sources */,
 				D9A553501CF0901000BE44A5 /* HeaderCollectionReusableView.m in Sources */,
 				D9A553411CEFF01800BE44A5 /* SecondGroupinfo.m in Sources */,

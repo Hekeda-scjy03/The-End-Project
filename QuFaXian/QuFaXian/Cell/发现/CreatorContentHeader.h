@@ -1,5 +1,5 @@
 //
-//  CreaterContentHeader.h
+//  CreatorContentHeader.h
 //  QuFaXian
 //
 //  Created by licong on 16/5/15.
@@ -16,9 +16,9 @@
 
 @end
 
-@class CubeDetailModel;
+@class CubeModel;
 
-@interface CreaterContentHeader : UITableViewHeaderFooterView
+@interface CreatorContentHeader : UITableViewHeaderFooterView
 
 @property (nonatomic, assign) id<ClickBtnToRefreshListDelegate> delegate;
 
@@ -45,6 +45,6 @@
 //header类型为内容站的时候显示该view
 @property (weak, nonatomic) IBOutlet UIView *contentsStateView;
 
-@property (nonatomic, strong) CubeDetailModel *cubeDetail;
+@property (nonatomic, strong) CubeModel *cubeModel;
 
 @end

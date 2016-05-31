@@ -11,16 +11,7 @@
 #import "CubeDetailModel.h"
 @implementation TypeTwoCollectionReusableView
 
-- (void)setCubeDetail:(CubeDetailModel *)cubeDetail{
-    _cubeDetail = cubeDetail;
-    [self.headImage.imageView sd_setImageWithURL:[NSURL URLWithString:cubeDetail.headImg]];
-    
-    self.time.text = [cubeDetail.time stringValue];
-    
-//    self.texts = cubeDetail.
-    
-    
-}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

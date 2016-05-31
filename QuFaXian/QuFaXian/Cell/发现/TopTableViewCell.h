@@ -20,4 +20,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *joinNum;
 
+@property (weak, nonatomic) IBOutlet UILabel *likeNum;
+
+@property (weak, nonatomic) IBOutlet UILabel *commentNum;
+
+
 @end

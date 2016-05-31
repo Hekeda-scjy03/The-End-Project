@@ -17,10 +17,9 @@
     self.contentStateSubTitle.text = [NSString stringWithFormat:@"%d张图",24]; //image_count
     self.contentStateType.text = cubeDetail.des;
     self.contentStateTitle.text = cubeDetail.title;
-    self.commentNum.text = [cubeDetail.cellCommentNum stringValue];
-    self.likeNum.text = [cubeDetail.cellZanNum stringValue];
-    NSLog(@" cubeDetail.backgroundImg %@",cubeDetail.backgroundImg);
-    [self.backImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backgroundImg]];
+    self.commentNum.text = [cubeDetail.commentNum stringValue];
+    self.likeNum.text = [cubeDetail.likeNum stringValue];
+    [self.backImage sd_setImageWithURL:[NSURL URLWithString:cubeDetail.backImg]];
 }
 
 - (void)awakeFromNib {

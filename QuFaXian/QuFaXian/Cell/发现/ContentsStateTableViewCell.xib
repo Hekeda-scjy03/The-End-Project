@@ -122,8 +122,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="街拍捕捉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qS-My-mVt">
-                        <rect key="frame" x="192" y="162" width="44" height="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="街拍捕捉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qS-My-mVt">
+                        <rect key="frame" x="28" y="162" width="370" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -186,6 +186,7 @@
                     <constraint firstItem="1Zw-4P-d3g" firstAttribute="top" secondItem="g9O-NT-bUV" secondAttribute="bottom" constant="5" id="noe-ca-JvA"/>
                     <constraint firstItem="XBU-AE-oRc" firstAttribute="top" secondItem="o18-6C-2cP" secondAttribute="bottom" id="q8D-3m-YKe"/>
                     <constraint firstItem="0qS-My-mVt" firstAttribute="centerX" secondItem="g9O-NT-bUV" secondAttribute="centerX" id="qa2-aS-Bmd"/>
+                    <constraint firstItem="0qS-My-mVt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="qbP-Rn-UhD"/>
                     <constraint firstItem="mVC-1A-34I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="s22-R6-2hc"/>
                     <constraint firstItem="g9O-NT-bUV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sAm-HY-jxM"/>
                     <constraint firstItem="M2j-dO-euv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-8" id="tBU-uK-f9F"/>
