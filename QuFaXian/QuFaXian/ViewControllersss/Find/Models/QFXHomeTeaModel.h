@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "QFXEntity_List.h"
-
+#import <MJExtension.h>
 @interface QFXHomeTeaModel : NSObject
+
+@property (nonatomic, copy) NSString *start;
 
 @property (nonatomic, strong) NSMutableArray *entity_list;
 
-//@property (nonatomic, strong) QFXEntity_List *entity_list;
-
++ (NSMutableArray *)refreshDataModelWithDict:(NSDictionary *)dict;
 
 @end

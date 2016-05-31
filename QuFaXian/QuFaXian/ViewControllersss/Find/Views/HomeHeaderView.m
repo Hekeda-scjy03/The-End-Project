@@ -72,7 +72,7 @@
 {
     self.scrollView.delegate = self;
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.height * 5, 0);
+    self.scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width * 5, 0);
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled = YES;
     
@@ -240,8 +240,6 @@
 }
 
 
-
-
 #pragma mark - 创建imageView
 - (void)createImageView
 {
@@ -251,7 +249,7 @@
     
     for (int i = 0; i < 5; i++)
     {
-        CGFloat imgX = self.scrollView.bounds.size.width * (i % 5);
+        CGFloat imgX = [UIScreen mainScreen].bounds.size.width * (i % 5);
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, imgY, imgW, imgH)];
         imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%02d",i + 1]];
         
@@ -266,9 +264,9 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat offSetX = scrollView.contentOffset.x;
-    offSetX = offSetX + (scrollView.frame.size.width * 0.5);
+    offSetX = offSetX + ([UIScreen mainScreen].bounds.size.width * 0.5);
     
-    int page = offSetX / scrollView.frame.size.width;
+    int page = offSetX / [UIScreen mainScreen].bounds.size.width;
     self.pageController.currentPage = page;
     
 }

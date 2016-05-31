@@ -11,6 +11,11 @@
 
 @interface QFXVideoTableViewCell : UITableViewCell
 
+
+@property (nonatomic, copy) NSString *dataID;
+
+
+
 // 数据模型
 @property (nonatomic, strong) QFXVideoMeowsModel *videoData;
 

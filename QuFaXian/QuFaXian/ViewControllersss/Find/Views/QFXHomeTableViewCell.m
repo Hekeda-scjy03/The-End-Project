@@ -8,6 +8,7 @@
 
 #import "QFXHomeTableViewCell.h"
 #import "QFXEntity_List.h"
+//#import "QFXHomeMeowModel.h"
 #import <UIButton+WebCache.h>
 #import <UIImageView+WebCache.h>
 #import <SDImageCache.h>
@@ -106,6 +107,8 @@
     
     
     
+    
+    
 }
 
 #pragma mark - 设置cell高度
@@ -143,8 +146,6 @@
     
     if (([meow_type isEqualToString:@"4"]) || ([meow_type isEqualToString:@"9"])) {
         
-        
-
         
          [self setupTypeViewAboutImageAndDesData:homeDataModel];
         
@@ -232,7 +233,10 @@
     // 设置描述
     self.desLabel.text = homeDataModel.meow.desc;
     
+    self.dataID = homeDataModel.meow.ID;
+    
     [self setupCellHeight];
+    
 }
 
 #pragma mark - 设置第2种样式的cell的数据
@@ -264,6 +268,8 @@
     
     // 设置描述
     self.desLabel2.text = descText;
+    
+    self.dataID = homeDataModel.meow.ID;
     
     // 计算cell的高度
     self.height = CGRectGetMaxY(self.pingLunBtn2.frame) + 90;
@@ -311,6 +317,8 @@
     
     // 设置描述
     self.desLabel3.text = descText;
+    
+    self.dataID = homeDataModel.meow.ID;
     
     // 计算cell的高度
     self.height = self.frame.size.width + 70;

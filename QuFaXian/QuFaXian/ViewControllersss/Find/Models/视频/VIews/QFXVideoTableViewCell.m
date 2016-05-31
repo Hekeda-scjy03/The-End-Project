@@ -84,6 +84,8 @@
     [self setupCellHeight];
     
     
+    self.dataID = videoData.ID;
+    
 }
 
 #pragma mark - 设置cell高度

@@ -10,6 +10,7 @@
 
 @interface QFXVideoDetailsViewController : UIViewController
 
+
 @property (nonatomic, copy) NSString *dataID;
 
 

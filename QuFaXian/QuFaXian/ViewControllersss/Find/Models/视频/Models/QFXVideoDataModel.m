@@ -11,10 +11,15 @@
 
 @implementation QFXVideoDataModel
 
-+ (NSMutableArray *)videoDataModelWithDict:(NSDictionary *)dict
+- (NSMutableArray *)videoDataModelWithDict:(NSDictionary *)dict
 {
-    QFXVideoDataModel *videoDataModel = [QFXVideoDataModel mj_objectWithKeyValues:dict];
     
+   
+    
+    QFXVideoDataModel *videoDataModel = [QFXVideoDataModel mj_objectWithKeyValues:dict];
+
+    self.start = videoDataModel.start;
+        NSLog(@"*****%@",self.start);
     return videoDataModel.meows;
     
 }
